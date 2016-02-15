@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.569 ns
+From           : rst
+To             : g20_HMS_Counter:mars_hms_counter|lpm_counter:hour_counter|cntr_67l:auto_generated|safe_q[1]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 21.532 ns
+From           : g20_YMD_counter:earth_ymd_counter|year_count[11]
+To             : hex2[4]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 21.064 ns
+From           : switches[4]
+To             : hex2[4]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.479 ns
+From           : switches[7]
+To             : g20_controller:main_controller|earth_sec_i[4]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 45.43 MHz ( period = 22.013 ns )
+From           : g20_UTC_to_MTC:utc_to_mtc|blah[2]
+To             : g20_UTC_to_MTC:utc_to_mtc|blah1[37]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

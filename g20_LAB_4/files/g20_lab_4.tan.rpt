@@ -1,0 +1,869 @@
+Classic Timing Analyzer report for g20_lab_4
+Fri Apr 04 22:19:44 2014
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tsu
+  8. tco
+  9. tpd
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                  ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------------------+--------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                       ; To                                         ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------------------+--------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 5.422 ns                         ; d_set[3]                                   ; g20_YMD_counter:YMD_counter|day_count[3]   ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 33.116 ns                        ; g20_YMD_counter:YMD_counter|year_count[11] ; hex0[5]                                    ; clk        ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 32.212 ns                        ; display_sel[1]                             ; hex0[5]                                    ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 0.069 ns                         ; m_set[0]                                   ; g20_YMD_counter:YMD_counter|month_count[0] ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 139.24 MHz ( period = 7.182 ns ) ; g20_YMD_counter:YMD_counter|day_count[3]   ; g20_YMD_counter:YMD_counter|year_count[8]  ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                            ;                                            ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------------------+--------------------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C20F484C7       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                                                                                                                                                                  ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                                                                       ; To                                                                                         ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 139.24 MHz ( period = 7.182 ns )                    ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; g20_YMD_counter:YMD_counter|year_count[10]                                                 ; clk        ; clk      ; None                        ; None                      ; 6.956 ns                ;
+; N/A                                     ; 139.24 MHz ( period = 7.182 ns )                    ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; g20_YMD_counter:YMD_counter|year_count[9]                                                  ; clk        ; clk      ; None                        ; None                      ; 6.956 ns                ;
+; N/A                                     ; 139.24 MHz ( period = 7.182 ns )                    ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; g20_YMD_counter:YMD_counter|year_count[8]                                                  ; clk        ; clk      ; None                        ; None                      ; 6.956 ns                ;
+; N/A                                     ; 142.17 MHz ( period = 7.034 ns )                    ; g20_YMD_counter:YMD_counter|day_count[4]                                                   ; g20_YMD_counter:YMD_counter|year_count[10]                                                 ; clk        ; clk      ; None                        ; None                      ; 6.808 ns                ;
+; N/A                                     ; 142.17 MHz ( period = 7.034 ns )                    ; g20_YMD_counter:YMD_counter|day_count[4]                                                   ; g20_YMD_counter:YMD_counter|year_count[9]                                                  ; clk        ; clk      ; None                        ; None                      ; 6.808 ns                ;
+; N/A                                     ; 142.17 MHz ( period = 7.034 ns )                    ; g20_YMD_counter:YMD_counter|day_count[4]                                                   ; g20_YMD_counter:YMD_counter|year_count[8]                                                  ; clk        ; clk      ; None                        ; None                      ; 6.808 ns                ;
+; N/A                                     ; 144.97 MHz ( period = 6.898 ns )                    ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; g20_YMD_counter:YMD_counter|year_count[11]                                                 ; clk        ; clk      ; None                        ; None                      ; 6.665 ns                ;
+; N/A                                     ; 145.12 MHz ( period = 6.891 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[1]  ; clk        ; clk      ; None                        ; None                      ; 6.656 ns                ;
+; N/A                                     ; 145.12 MHz ( period = 6.891 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[0]  ; clk        ; clk      ; None                        ; None                      ; 6.656 ns                ;
+; N/A                                     ; 145.12 MHz ( period = 6.891 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; clk        ; clk      ; None                        ; None                      ; 6.656 ns                ;
+; N/A                                     ; 145.12 MHz ( period = 6.891 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk        ; clk      ; None                        ; None                      ; 6.656 ns                ;
+; N/A                                     ; 145.12 MHz ( period = 6.891 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk        ; clk      ; None                        ; None                      ; 6.656 ns                ;
+; N/A                                     ; 145.12 MHz ( period = 6.891 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk        ; clk      ; None                        ; None                      ; 6.656 ns                ;
+; N/A                                     ; 145.12 MHz ( period = 6.891 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk        ; clk      ; None                        ; None                      ; 6.656 ns                ;
+; N/A                                     ; 145.12 MHz ( period = 6.891 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk        ; clk      ; None                        ; None                      ; 6.656 ns                ;
+; N/A                                     ; 145.12 MHz ( period = 6.891 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk        ; clk      ; None                        ; None                      ; 6.656 ns                ;
+; N/A                                     ; 145.12 MHz ( period = 6.891 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk        ; clk      ; None                        ; None                      ; 6.656 ns                ;
+; N/A                                     ; 145.12 MHz ( period = 6.891 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk        ; clk      ; None                        ; None                      ; 6.656 ns                ;
+; N/A                                     ; 145.12 MHz ( period = 6.891 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk        ; clk      ; None                        ; None                      ; 6.656 ns                ;
+; N/A                                     ; 145.12 MHz ( period = 6.891 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[9]  ; clk        ; clk      ; None                        ; None                      ; 6.656 ns                ;
+; N/A                                     ; 145.45 MHz ( period = 6.875 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_YMD_counter:YMD_counter|day_count[0]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.640 ns                ;
+; N/A                                     ; 145.58 MHz ( period = 6.869 ns )                    ; g20_YMD_counter:YMD_counter|day_count[2]                                                   ; g20_YMD_counter:YMD_counter|year_count[10]                                                 ; clk        ; clk      ; None                        ; None                      ; 6.643 ns                ;
+; N/A                                     ; 145.58 MHz ( period = 6.869 ns )                    ; g20_YMD_counter:YMD_counter|day_count[2]                                                   ; g20_YMD_counter:YMD_counter|year_count[9]                                                  ; clk        ; clk      ; None                        ; None                      ; 6.643 ns                ;
+; N/A                                     ; 145.58 MHz ( period = 6.869 ns )                    ; g20_YMD_counter:YMD_counter|day_count[2]                                                   ; g20_YMD_counter:YMD_counter|year_count[8]                                                  ; clk        ; clk      ; None                        ; None                      ; 6.643 ns                ;
+; N/A                                     ; 145.65 MHz ( period = 6.866 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[1]  ; clk        ; clk      ; None                        ; None                      ; 6.631 ns                ;
+; N/A                                     ; 145.65 MHz ( period = 6.866 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[0]  ; clk        ; clk      ; None                        ; None                      ; 6.631 ns                ;
+; N/A                                     ; 145.65 MHz ( period = 6.866 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; clk        ; clk      ; None                        ; None                      ; 6.631 ns                ;
+; N/A                                     ; 145.65 MHz ( period = 6.866 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk        ; clk      ; None                        ; None                      ; 6.631 ns                ;
+; N/A                                     ; 145.65 MHz ( period = 6.866 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk        ; clk      ; None                        ; None                      ; 6.631 ns                ;
+; N/A                                     ; 145.65 MHz ( period = 6.866 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk        ; clk      ; None                        ; None                      ; 6.631 ns                ;
+; N/A                                     ; 145.65 MHz ( period = 6.866 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk        ; clk      ; None                        ; None                      ; 6.631 ns                ;
+; N/A                                     ; 145.65 MHz ( period = 6.866 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk        ; clk      ; None                        ; None                      ; 6.631 ns                ;
+; N/A                                     ; 145.65 MHz ( period = 6.866 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk        ; clk      ; None                        ; None                      ; 6.631 ns                ;
+; N/A                                     ; 145.65 MHz ( period = 6.866 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk        ; clk      ; None                        ; None                      ; 6.631 ns                ;
+; N/A                                     ; 145.65 MHz ( period = 6.866 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk        ; clk      ; None                        ; None                      ; 6.631 ns                ;
+; N/A                                     ; 145.65 MHz ( period = 6.866 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk        ; clk      ; None                        ; None                      ; 6.631 ns                ;
+; N/A                                     ; 145.65 MHz ( period = 6.866 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[9]  ; clk        ; clk      ; None                        ; None                      ; 6.631 ns                ;
+; N/A                                     ; 145.67 MHz ( period = 6.865 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[1]  ; clk        ; clk      ; None                        ; None                      ; 6.630 ns                ;
+; N/A                                     ; 145.67 MHz ( period = 6.865 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[0]  ; clk        ; clk      ; None                        ; None                      ; 6.630 ns                ;
+; N/A                                     ; 145.67 MHz ( period = 6.865 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; clk        ; clk      ; None                        ; None                      ; 6.630 ns                ;
+; N/A                                     ; 145.67 MHz ( period = 6.865 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk        ; clk      ; None                        ; None                      ; 6.630 ns                ;
+; N/A                                     ; 145.67 MHz ( period = 6.865 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk        ; clk      ; None                        ; None                      ; 6.630 ns                ;
+; N/A                                     ; 145.67 MHz ( period = 6.865 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk        ; clk      ; None                        ; None                      ; 6.630 ns                ;
+; N/A                                     ; 145.67 MHz ( period = 6.865 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk        ; clk      ; None                        ; None                      ; 6.630 ns                ;
+; N/A                                     ; 145.67 MHz ( period = 6.865 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk        ; clk      ; None                        ; None                      ; 6.630 ns                ;
+; N/A                                     ; 145.67 MHz ( period = 6.865 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk        ; clk      ; None                        ; None                      ; 6.630 ns                ;
+; N/A                                     ; 145.67 MHz ( period = 6.865 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk        ; clk      ; None                        ; None                      ; 6.630 ns                ;
+; N/A                                     ; 145.67 MHz ( period = 6.865 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk        ; clk      ; None                        ; None                      ; 6.630 ns                ;
+; N/A                                     ; 145.67 MHz ( period = 6.865 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk        ; clk      ; None                        ; None                      ; 6.630 ns                ;
+; N/A                                     ; 145.67 MHz ( period = 6.865 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[9]  ; clk        ; clk      ; None                        ; None                      ; 6.630 ns                ;
+; N/A                                     ; 145.99 MHz ( period = 6.850 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_YMD_counter:YMD_counter|day_count[0]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.615 ns                ;
+; N/A                                     ; 146.01 MHz ( period = 6.849 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_YMD_counter:YMD_counter|day_count[0]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.614 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[1]  ; clk        ; clk      ; None                        ; None                      ; 6.596 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[0]  ; clk        ; clk      ; None                        ; None                      ; 6.596 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; clk        ; clk      ; None                        ; None                      ; 6.596 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk        ; clk      ; None                        ; None                      ; 6.596 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk        ; clk      ; None                        ; None                      ; 6.596 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk        ; clk      ; None                        ; None                      ; 6.596 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk        ; clk      ; None                        ; None                      ; 6.596 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk        ; clk      ; None                        ; None                      ; 6.596 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk        ; clk      ; None                        ; None                      ; 6.596 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk        ; clk      ; None                        ; None                      ; 6.596 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk        ; clk      ; None                        ; None                      ; 6.596 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk        ; clk      ; None                        ; None                      ; 6.596 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[9]  ; clk        ; clk      ; None                        ; None                      ; 6.596 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_YMD_counter:YMD_counter|day_count[0]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.580 ns                ;
+; N/A                                     ; 148.15 MHz ( period = 6.750 ns )                    ; g20_YMD_counter:YMD_counter|day_count[4]                                                   ; g20_YMD_counter:YMD_counter|year_count[11]                                                 ; clk        ; clk      ; None                        ; None                      ; 6.517 ns                ;
+; N/A                                     ; 148.24 MHz ( period = 6.746 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; g20_YMD_counter:YMD_counter|day_count[4]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.504 ns                ;
+; N/A                                     ; 148.32 MHz ( period = 6.742 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[1]  ; clk        ; clk      ; None                        ; None                      ; 6.507 ns                ;
+; N/A                                     ; 148.32 MHz ( period = 6.742 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[0]  ; clk        ; clk      ; None                        ; None                      ; 6.507 ns                ;
+; N/A                                     ; 148.32 MHz ( period = 6.742 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; clk        ; clk      ; None                        ; None                      ; 6.507 ns                ;
+; N/A                                     ; 148.32 MHz ( period = 6.742 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk        ; clk      ; None                        ; None                      ; 6.507 ns                ;
+; N/A                                     ; 148.32 MHz ( period = 6.742 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk        ; clk      ; None                        ; None                      ; 6.507 ns                ;
+; N/A                                     ; 148.32 MHz ( period = 6.742 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk        ; clk      ; None                        ; None                      ; 6.507 ns                ;
+; N/A                                     ; 148.32 MHz ( period = 6.742 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk        ; clk      ; None                        ; None                      ; 6.507 ns                ;
+; N/A                                     ; 148.32 MHz ( period = 6.742 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk        ; clk      ; None                        ; None                      ; 6.507 ns                ;
+; N/A                                     ; 148.32 MHz ( period = 6.742 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk        ; clk      ; None                        ; None                      ; 6.507 ns                ;
+; N/A                                     ; 148.32 MHz ( period = 6.742 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk        ; clk      ; None                        ; None                      ; 6.507 ns                ;
+; N/A                                     ; 148.32 MHz ( period = 6.742 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk        ; clk      ; None                        ; None                      ; 6.507 ns                ;
+; N/A                                     ; 148.32 MHz ( period = 6.742 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk        ; clk      ; None                        ; None                      ; 6.507 ns                ;
+; N/A                                     ; 148.32 MHz ( period = 6.742 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[9]  ; clk        ; clk      ; None                        ; None                      ; 6.507 ns                ;
+; N/A                                     ; 148.68 MHz ( period = 6.726 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_YMD_counter:YMD_counter|day_count[0]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.491 ns                ;
+; N/A                                     ; 148.77 MHz ( period = 6.722 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[1]  ; clk        ; clk      ; None                        ; None                      ; 6.487 ns                ;
+; N/A                                     ; 148.77 MHz ( period = 6.722 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[0]  ; clk        ; clk      ; None                        ; None                      ; 6.487 ns                ;
+; N/A                                     ; 148.77 MHz ( period = 6.722 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; clk        ; clk      ; None                        ; None                      ; 6.487 ns                ;
+; N/A                                     ; 148.77 MHz ( period = 6.722 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk        ; clk      ; None                        ; None                      ; 6.487 ns                ;
+; N/A                                     ; 148.77 MHz ( period = 6.722 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk        ; clk      ; None                        ; None                      ; 6.487 ns                ;
+; N/A                                     ; 148.77 MHz ( period = 6.722 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk        ; clk      ; None                        ; None                      ; 6.487 ns                ;
+; N/A                                     ; 148.77 MHz ( period = 6.722 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk        ; clk      ; None                        ; None                      ; 6.487 ns                ;
+; N/A                                     ; 148.77 MHz ( period = 6.722 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk        ; clk      ; None                        ; None                      ; 6.487 ns                ;
+; N/A                                     ; 148.77 MHz ( period = 6.722 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk        ; clk      ; None                        ; None                      ; 6.487 ns                ;
+; N/A                                     ; 148.77 MHz ( period = 6.722 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk        ; clk      ; None                        ; None                      ; 6.487 ns                ;
+; N/A                                     ; 148.77 MHz ( period = 6.722 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk        ; clk      ; None                        ; None                      ; 6.487 ns                ;
+; N/A                                     ; 148.77 MHz ( period = 6.722 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk        ; clk      ; None                        ; None                      ; 6.487 ns                ;
+; N/A                                     ; 148.77 MHz ( period = 6.722 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[9]  ; clk        ; clk      ; None                        ; None                      ; 6.487 ns                ;
+; N/A                                     ; 148.79 MHz ( period = 6.721 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; g20_YMD_counter:YMD_counter|day_count[4]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.479 ns                ;
+; N/A                                     ; 148.81 MHz ( period = 6.720 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; g20_YMD_counter:YMD_counter|day_count[4]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.478 ns                ;
+; N/A                                     ; 148.99 MHz ( period = 6.712 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[1]  ; clk        ; clk      ; None                        ; None                      ; 6.473 ns                ;
+; N/A                                     ; 148.99 MHz ( period = 6.712 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[0]  ; clk        ; clk      ; None                        ; None                      ; 6.473 ns                ;
+; N/A                                     ; 148.99 MHz ( period = 6.712 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; clk        ; clk      ; None                        ; None                      ; 6.473 ns                ;
+; N/A                                     ; 148.99 MHz ( period = 6.712 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk        ; clk      ; None                        ; None                      ; 6.473 ns                ;
+; N/A                                     ; 148.99 MHz ( period = 6.712 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk        ; clk      ; None                        ; None                      ; 6.473 ns                ;
+; N/A                                     ; 148.99 MHz ( period = 6.712 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk        ; clk      ; None                        ; None                      ; 6.473 ns                ;
+; N/A                                     ; 148.99 MHz ( period = 6.712 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk        ; clk      ; None                        ; None                      ; 6.473 ns                ;
+; N/A                                     ; 148.99 MHz ( period = 6.712 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk        ; clk      ; None                        ; None                      ; 6.473 ns                ;
+; N/A                                     ; 148.99 MHz ( period = 6.712 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk        ; clk      ; None                        ; None                      ; 6.473 ns                ;
+; N/A                                     ; 148.99 MHz ( period = 6.712 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk        ; clk      ; None                        ; None                      ; 6.473 ns                ;
+; N/A                                     ; 148.99 MHz ( period = 6.712 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk        ; clk      ; None                        ; None                      ; 6.473 ns                ;
+; N/A                                     ; 148.99 MHz ( period = 6.712 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk        ; clk      ; None                        ; None                      ; 6.473 ns                ;
+; N/A                                     ; 148.99 MHz ( period = 6.712 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[9]  ; clk        ; clk      ; None                        ; None                      ; 6.473 ns                ;
+; N/A                                     ; 149.12 MHz ( period = 6.706 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_YMD_counter:YMD_counter|day_count[0]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.471 ns                ;
+; N/A                                     ; 149.25 MHz ( period = 6.700 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[1]  ; clk        ; clk      ; None                        ; None                      ; 6.461 ns                ;
+; N/A                                     ; 149.25 MHz ( period = 6.700 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[0]  ; clk        ; clk      ; None                        ; None                      ; 6.461 ns                ;
+; N/A                                     ; 149.25 MHz ( period = 6.700 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; clk        ; clk      ; None                        ; None                      ; 6.461 ns                ;
+; N/A                                     ; 149.25 MHz ( period = 6.700 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk        ; clk      ; None                        ; None                      ; 6.461 ns                ;
+; N/A                                     ; 149.25 MHz ( period = 6.700 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk        ; clk      ; None                        ; None                      ; 6.461 ns                ;
+; N/A                                     ; 149.25 MHz ( period = 6.700 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk        ; clk      ; None                        ; None                      ; 6.461 ns                ;
+; N/A                                     ; 149.25 MHz ( period = 6.700 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk        ; clk      ; None                        ; None                      ; 6.461 ns                ;
+; N/A                                     ; 149.25 MHz ( period = 6.700 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk        ; clk      ; None                        ; None                      ; 6.461 ns                ;
+; N/A                                     ; 149.25 MHz ( period = 6.700 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk        ; clk      ; None                        ; None                      ; 6.461 ns                ;
+; N/A                                     ; 149.25 MHz ( period = 6.700 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk        ; clk      ; None                        ; None                      ; 6.461 ns                ;
+; N/A                                     ; 149.25 MHz ( period = 6.700 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk        ; clk      ; None                        ; None                      ; 6.461 ns                ;
+; N/A                                     ; 149.25 MHz ( period = 6.700 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk        ; clk      ; None                        ; None                      ; 6.461 ns                ;
+; N/A                                     ; 149.25 MHz ( period = 6.700 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[9]  ; clk        ; clk      ; None                        ; None                      ; 6.461 ns                ;
+; N/A                                     ; 149.30 MHz ( period = 6.698 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[1]  ; clk        ; clk      ; None                        ; None                      ; 6.463 ns                ;
+; N/A                                     ; 149.30 MHz ( period = 6.698 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[0]  ; clk        ; clk      ; None                        ; None                      ; 6.463 ns                ;
+; N/A                                     ; 149.30 MHz ( period = 6.698 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; clk        ; clk      ; None                        ; None                      ; 6.463 ns                ;
+; N/A                                     ; 149.30 MHz ( period = 6.698 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk        ; clk      ; None                        ; None                      ; 6.463 ns                ;
+; N/A                                     ; 149.30 MHz ( period = 6.698 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk        ; clk      ; None                        ; None                      ; 6.463 ns                ;
+; N/A                                     ; 149.30 MHz ( period = 6.698 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk        ; clk      ; None                        ; None                      ; 6.463 ns                ;
+; N/A                                     ; 149.30 MHz ( period = 6.698 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk        ; clk      ; None                        ; None                      ; 6.463 ns                ;
+; N/A                                     ; 149.30 MHz ( period = 6.698 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk        ; clk      ; None                        ; None                      ; 6.463 ns                ;
+; N/A                                     ; 149.30 MHz ( period = 6.698 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk        ; clk      ; None                        ; None                      ; 6.463 ns                ;
+; N/A                                     ; 149.30 MHz ( period = 6.698 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk        ; clk      ; None                        ; None                      ; 6.463 ns                ;
+; N/A                                     ; 149.30 MHz ( period = 6.698 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk        ; clk      ; None                        ; None                      ; 6.463 ns                ;
+; N/A                                     ; 149.30 MHz ( period = 6.698 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk        ; clk      ; None                        ; None                      ; 6.463 ns                ;
+; N/A                                     ; 149.30 MHz ( period = 6.698 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[9]  ; clk        ; clk      ; None                        ; None                      ; 6.463 ns                ;
+; N/A                                     ; 149.34 MHz ( period = 6.696 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; g20_YMD_counter:YMD_counter|day_count[0]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.457 ns                ;
+; N/A                                     ; 149.45 MHz ( period = 6.691 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[1]  ; clk        ; clk      ; None                        ; None                      ; 6.452 ns                ;
+; N/A                                     ; 149.45 MHz ( period = 6.691 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[0]  ; clk        ; clk      ; None                        ; None                      ; 6.452 ns                ;
+; N/A                                     ; 149.45 MHz ( period = 6.691 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; clk        ; clk      ; None                        ; None                      ; 6.452 ns                ;
+; N/A                                     ; 149.45 MHz ( period = 6.691 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk        ; clk      ; None                        ; None                      ; 6.452 ns                ;
+; N/A                                     ; 149.45 MHz ( period = 6.691 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk        ; clk      ; None                        ; None                      ; 6.452 ns                ;
+; N/A                                     ; 149.45 MHz ( period = 6.691 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk        ; clk      ; None                        ; None                      ; 6.452 ns                ;
+; N/A                                     ; 149.45 MHz ( period = 6.691 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk        ; clk      ; None                        ; None                      ; 6.452 ns                ;
+; N/A                                     ; 149.45 MHz ( period = 6.691 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk        ; clk      ; None                        ; None                      ; 6.452 ns                ;
+; N/A                                     ; 149.45 MHz ( period = 6.691 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk        ; clk      ; None                        ; None                      ; 6.452 ns                ;
+; N/A                                     ; 149.45 MHz ( period = 6.691 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk        ; clk      ; None                        ; None                      ; 6.452 ns                ;
+; N/A                                     ; 149.45 MHz ( period = 6.691 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk        ; clk      ; None                        ; None                      ; 6.452 ns                ;
+; N/A                                     ; 149.45 MHz ( period = 6.691 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk        ; clk      ; None                        ; None                      ; 6.452 ns                ;
+; N/A                                     ; 149.45 MHz ( period = 6.691 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[9]  ; clk        ; clk      ; None                        ; None                      ; 6.452 ns                ;
+; N/A                                     ; 149.48 MHz ( period = 6.690 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; g20_YMD_counter:YMD_counter|day_count[4]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.444 ns                ;
+; N/A                                     ; 149.66 MHz ( period = 6.682 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; g20_YMD_counter:YMD_counter|day_count[0]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.447 ns                ;
+; N/A                                     ; 150.26 MHz ( period = 6.655 ns )                    ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; g20_YMD_counter:YMD_counter|year_count[0]                                                  ; clk        ; clk      ; None                        ; None                      ; 6.423 ns                ;
+; N/A                                     ; 150.26 MHz ( period = 6.655 ns )                    ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; g20_YMD_counter:YMD_counter|year_count[1]                                                  ; clk        ; clk      ; None                        ; None                      ; 6.423 ns                ;
+; N/A                                     ; 150.26 MHz ( period = 6.655 ns )                    ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; g20_YMD_counter:YMD_counter|year_count[4]                                                  ; clk        ; clk      ; None                        ; None                      ; 6.423 ns                ;
+; N/A                                     ; 150.26 MHz ( period = 6.655 ns )                    ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; g20_YMD_counter:YMD_counter|year_count[2]                                                  ; clk        ; clk      ; None                        ; None                      ; 6.423 ns                ;
+; N/A                                     ; 150.26 MHz ( period = 6.655 ns )                    ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; g20_YMD_counter:YMD_counter|year_count[3]                                                  ; clk        ; clk      ; None                        ; None                      ; 6.423 ns                ;
+; N/A                                     ; 150.26 MHz ( period = 6.655 ns )                    ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; g20_YMD_counter:YMD_counter|year_count[6]                                                  ; clk        ; clk      ; None                        ; None                      ; 6.423 ns                ;
+; N/A                                     ; 150.26 MHz ( period = 6.655 ns )                    ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; g20_YMD_counter:YMD_counter|year_count[7]                                                  ; clk        ; clk      ; None                        ; None                      ; 6.423 ns                ;
+; N/A                                     ; 150.26 MHz ( period = 6.655 ns )                    ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; g20_YMD_counter:YMD_counter|year_count[5]                                                  ; clk        ; clk      ; None                        ; None                      ; 6.423 ns                ;
+; N/A                                     ; 151.58 MHz ( period = 6.597 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; g20_YMD_counter:YMD_counter|day_count[4]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.355 ns                ;
+; N/A                                     ; 151.75 MHz ( period = 6.590 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[1]  ; clk        ; clk      ; None                        ; None                      ; 6.351 ns                ;
+; N/A                                     ; 151.75 MHz ( period = 6.590 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[0]  ; clk        ; clk      ; None                        ; None                      ; 6.351 ns                ;
+; N/A                                     ; 151.75 MHz ( period = 6.590 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; clk        ; clk      ; None                        ; None                      ; 6.351 ns                ;
+; N/A                                     ; 151.75 MHz ( period = 6.590 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk        ; clk      ; None                        ; None                      ; 6.351 ns                ;
+; N/A                                     ; 151.75 MHz ( period = 6.590 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk        ; clk      ; None                        ; None                      ; 6.351 ns                ;
+; N/A                                     ; 151.75 MHz ( period = 6.590 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk        ; clk      ; None                        ; None                      ; 6.351 ns                ;
+; N/A                                     ; 151.75 MHz ( period = 6.590 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk        ; clk      ; None                        ; None                      ; 6.351 ns                ;
+; N/A                                     ; 151.75 MHz ( period = 6.590 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk        ; clk      ; None                        ; None                      ; 6.351 ns                ;
+; N/A                                     ; 151.75 MHz ( period = 6.590 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk        ; clk      ; None                        ; None                      ; 6.351 ns                ;
+; N/A                                     ; 151.75 MHz ( period = 6.590 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk        ; clk      ; None                        ; None                      ; 6.351 ns                ;
+; N/A                                     ; 151.75 MHz ( period = 6.590 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk        ; clk      ; None                        ; None                      ; 6.351 ns                ;
+; N/A                                     ; 151.75 MHz ( period = 6.590 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk        ; clk      ; None                        ; None                      ; 6.351 ns                ;
+; N/A                                     ; 151.75 MHz ( period = 6.590 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[9]  ; clk        ; clk      ; None                        ; None                      ; 6.351 ns                ;
+; N/A                                     ; 151.84 MHz ( period = 6.586 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[1]  ; clk        ; clk      ; None                        ; None                      ; 6.347 ns                ;
+; N/A                                     ; 151.84 MHz ( period = 6.586 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[0]  ; clk        ; clk      ; None                        ; None                      ; 6.347 ns                ;
+; N/A                                     ; 151.84 MHz ( period = 6.586 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; clk        ; clk      ; None                        ; None                      ; 6.347 ns                ;
+; N/A                                     ; 151.84 MHz ( period = 6.586 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk        ; clk      ; None                        ; None                      ; 6.347 ns                ;
+; N/A                                     ; 151.84 MHz ( period = 6.586 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk        ; clk      ; None                        ; None                      ; 6.347 ns                ;
+; N/A                                     ; 151.84 MHz ( period = 6.586 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk        ; clk      ; None                        ; None                      ; 6.347 ns                ;
+; N/A                                     ; 151.84 MHz ( period = 6.586 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk        ; clk      ; None                        ; None                      ; 6.347 ns                ;
+; N/A                                     ; 151.84 MHz ( period = 6.586 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk        ; clk      ; None                        ; None                      ; 6.347 ns                ;
+; N/A                                     ; 151.84 MHz ( period = 6.586 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk        ; clk      ; None                        ; None                      ; 6.347 ns                ;
+; N/A                                     ; 151.84 MHz ( period = 6.586 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk        ; clk      ; None                        ; None                      ; 6.347 ns                ;
+; N/A                                     ; 151.84 MHz ( period = 6.586 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk        ; clk      ; None                        ; None                      ; 6.347 ns                ;
+; N/A                                     ; 151.84 MHz ( period = 6.586 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk        ; clk      ; None                        ; None                      ; 6.347 ns                ;
+; N/A                                     ; 151.84 MHz ( period = 6.586 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[9]  ; clk        ; clk      ; None                        ; None                      ; 6.347 ns                ;
+; N/A                                     ; 151.86 MHz ( period = 6.585 ns )                    ; g20_YMD_counter:YMD_counter|day_count[2]                                                   ; g20_YMD_counter:YMD_counter|year_count[11]                                                 ; clk        ; clk      ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 152.05 MHz ( period = 6.577 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; g20_YMD_counter:YMD_counter|day_count[4]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.335 ns                ;
+; N/A                                     ; 152.11 MHz ( period = 6.574 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; g20_YMD_counter:YMD_counter|day_count[0]                                                   ; clk        ; clk      ; None                        ; None                      ; 6.335 ns                ;
+; N/A                                     ; 152.14 MHz ( period = 6.573 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[25] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk        ; clk      ; None                        ; None                      ; 6.338 ns                ;
+; N/A                                     ; 152.14 MHz ( period = 6.573 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[25] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk        ; clk      ; None                        ; None                      ; 6.338 ns                ;
+; N/A                                     ; 152.14 MHz ( period = 6.573 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[25] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk        ; clk      ; None                        ; None                      ; 6.338 ns                ;
+; N/A                                     ; 152.14 MHz ( period = 6.573 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[25] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk        ; clk      ; None                        ; None                      ; 6.338 ns                ;
+; N/A                                     ; 152.14 MHz ( period = 6.573 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[25] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk        ; clk      ; None                        ; None                      ; 6.338 ns                ;
+; N/A                                     ; 152.14 MHz ( period = 6.573 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[25] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk        ; clk      ; None                        ; None                      ; 6.338 ns                ;
+; N/A                                     ; 152.14 MHz ( period = 6.573 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[25] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk        ; clk      ; None                        ; None                      ; 6.338 ns                ;
+; N/A                                     ; 152.14 MHz ( period = 6.573 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[25] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk        ; clk      ; None                        ; None                      ; 6.338 ns                ;
+; N/A                                     ; 152.14 MHz ( period = 6.573 ns )                    ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[25] ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk        ; clk      ; None                        ; None                      ; 6.338 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                                                            ;                                                                                            ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                     ;
++-------+--------------+------------+-------------+--------------------------------------------------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From        ; To                                                                                         ; To Clock ;
++-------+--------------+------------+-------------+--------------------------------------------------------------------------------------------+----------+
+; N/A   ; None         ; 5.422 ns   ; d_set[3]    ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; clk      ;
+; N/A   ; None         ; 5.245 ns   ; d_set[4]    ; g20_YMD_counter:YMD_counter|day_count[4]                                                   ; clk      ;
+; N/A   ; None         ; 5.199 ns   ; d_set[2]    ; g20_YMD_counter:YMD_counter|day_count[2]                                                   ; clk      ;
+; N/A   ; None         ; 5.028 ns   ; y_set[4]    ; g20_YMD_counter:YMD_counter|year_count[4]                                                  ; clk      ;
+; N/A   ; None         ; 4.910 ns   ; y_set[6]    ; g20_YMD_counter:YMD_counter|year_count[6]                                                  ; clk      ;
+; N/A   ; None         ; 4.797 ns   ; y_set[9]    ; g20_YMD_counter:YMD_counter|year_count[9]                                                  ; clk      ;
+; N/A   ; None         ; 4.671 ns   ; y_set[2]    ; g20_YMD_counter:YMD_counter|year_count[2]                                                  ; clk      ;
+; N/A   ; None         ; 4.633 ns   ; y_set[7]    ; g20_YMD_counter:YMD_counter|year_count[7]                                                  ; clk      ;
+; N/A   ; None         ; 4.591 ns   ; d_set[1]    ; g20_YMD_counter:YMD_counter|day_count[1]                                                   ; clk      ;
+; N/A   ; None         ; 4.532 ns   ; y_set[11]   ; g20_YMD_counter:YMD_counter|year_count[11]                                                 ; clk      ;
+; N/A   ; None         ; 4.327 ns   ; d_set[0]    ; g20_YMD_counter:YMD_counter|day_count[0]                                                   ; clk      ;
+; N/A   ; None         ; 4.218 ns   ; y_set[10]   ; g20_YMD_counter:YMD_counter|year_count[10]                                                 ; clk      ;
+; N/A   ; None         ; 4.089 ns   ; y_set[1]    ; g20_YMD_counter:YMD_counter|year_count[1]                                                  ; clk      ;
+; N/A   ; None         ; 4.007 ns   ; y_set[0]    ; g20_YMD_counter:YMD_counter|year_count[0]                                                  ; clk      ;
+; N/A   ; None         ; 3.999 ns   ; y_set[5]    ; g20_YMD_counter:YMD_counter|year_count[5]                                                  ; clk      ;
+; N/A   ; None         ; 3.956 ns   ; y_set[8]    ; g20_YMD_counter:YMD_counter|year_count[8]                                                  ; clk      ;
+; N/A   ; None         ; 3.654 ns   ; y_set[3]    ; g20_YMD_counter:YMD_counter|year_count[3]                                                  ; clk      ;
+; N/A   ; None         ; 3.068 ns   ; load_enable ; g20_YMD_counter:YMD_counter|year_count[10]                                                 ; clk      ;
+; N/A   ; None         ; 3.068 ns   ; load_enable ; g20_YMD_counter:YMD_counter|year_count[9]                                                  ; clk      ;
+; N/A   ; None         ; 3.068 ns   ; load_enable ; g20_YMD_counter:YMD_counter|year_count[8]                                                  ; clk      ;
+; N/A   ; None         ; 2.784 ns   ; load_enable ; g20_YMD_counter:YMD_counter|year_count[11]                                                 ; clk      ;
+; N/A   ; None         ; 2.541 ns   ; load_enable ; g20_YMD_counter:YMD_counter|year_count[0]                                                  ; clk      ;
+; N/A   ; None         ; 2.541 ns   ; load_enable ; g20_YMD_counter:YMD_counter|year_count[1]                                                  ; clk      ;
+; N/A   ; None         ; 2.541 ns   ; load_enable ; g20_YMD_counter:YMD_counter|year_count[4]                                                  ; clk      ;
+; N/A   ; None         ; 2.541 ns   ; load_enable ; g20_YMD_counter:YMD_counter|year_count[2]                                                  ; clk      ;
+; N/A   ; None         ; 2.541 ns   ; load_enable ; g20_YMD_counter:YMD_counter|year_count[3]                                                  ; clk      ;
+; N/A   ; None         ; 2.541 ns   ; load_enable ; g20_YMD_counter:YMD_counter|year_count[6]                                                  ; clk      ;
+; N/A   ; None         ; 2.541 ns   ; load_enable ; g20_YMD_counter:YMD_counter|year_count[7]                                                  ; clk      ;
+; N/A   ; None         ; 2.541 ns   ; load_enable ; g20_YMD_counter:YMD_counter|year_count[5]                                                  ; clk      ;
+; N/A   ; None         ; 1.988 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[1]  ; clk      ;
+; N/A   ; None         ; 1.988 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[0]  ; clk      ;
+; N/A   ; None         ; 1.988 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; clk      ;
+; N/A   ; None         ; 1.988 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk      ;
+; N/A   ; None         ; 1.988 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk      ;
+; N/A   ; None         ; 1.988 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk      ;
+; N/A   ; None         ; 1.988 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk      ;
+; N/A   ; None         ; 1.988 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk      ;
+; N/A   ; None         ; 1.988 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk      ;
+; N/A   ; None         ; 1.988 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk      ;
+; N/A   ; None         ; 1.988 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk      ;
+; N/A   ; None         ; 1.988 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk      ;
+; N/A   ; None         ; 1.988 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[9]  ; clk      ;
+; N/A   ; None         ; 1.488 ns   ; load_enable ; g20_YMD_counter:YMD_counter|month_count[1]                                                 ; clk      ;
+; N/A   ; None         ; 1.488 ns   ; load_enable ; g20_YMD_counter:YMD_counter|month_count[2]                                                 ; clk      ;
+; N/A   ; None         ; 1.488 ns   ; load_enable ; g20_YMD_counter:YMD_counter|month_count[3]                                                 ; clk      ;
+; N/A   ; None         ; 1.410 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; clk      ;
+; N/A   ; None         ; 1.410 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; clk      ;
+; N/A   ; None         ; 1.410 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; clk      ;
+; N/A   ; None         ; 1.410 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[15] ; clk      ;
+; N/A   ; None         ; 1.410 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; clk      ;
+; N/A   ; None         ; 1.410 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; clk      ;
+; N/A   ; None         ; 1.410 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; clk      ;
+; N/A   ; None         ; 1.410 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[25] ; clk      ;
+; N/A   ; None         ; 1.410 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[22] ; clk      ;
+; N/A   ; None         ; 1.410 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[19] ; clk      ;
+; N/A   ; None         ; 1.410 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[20] ; clk      ;
+; N/A   ; None         ; 1.410 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[21] ; clk      ;
+; N/A   ; None         ; 1.410 ns   ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[18] ; clk      ;
+; N/A   ; None         ; 1.313 ns   ; load_enable ; g20_YMD_counter:YMD_counter|month_count[0]                                                 ; clk      ;
+; N/A   ; None         ; 0.771 ns   ; m_set[2]    ; g20_YMD_counter:YMD_counter|month_count[2]                                                 ; clk      ;
+; N/A   ; None         ; 0.619 ns   ; m_set[3]    ; g20_YMD_counter:YMD_counter|month_count[3]                                                 ; clk      ;
+; N/A   ; None         ; 0.544 ns   ; load_enable ; g20_YMD_counter:YMD_counter|day_count[0]                                                   ; clk      ;
+; N/A   ; None         ; 0.538 ns   ; load_enable ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; clk      ;
+; N/A   ; None         ; 0.464 ns   ; m_set[1]    ; g20_YMD_counter:YMD_counter|month_count[1]                                                 ; clk      ;
+; N/A   ; None         ; 0.230 ns   ; load_enable ; g20_YMD_counter:YMD_counter|day_count[4]                                                   ; clk      ;
+; N/A   ; None         ; 0.230 ns   ; load_enable ; g20_YMD_counter:YMD_counter|day_count[2]                                                   ; clk      ;
+; N/A   ; None         ; 0.229 ns   ; load_enable ; g20_YMD_counter:YMD_counter|day_count[1]                                                   ; clk      ;
+; N/A   ; None         ; 0.179 ns   ; m_set[0]    ; g20_YMD_counter:YMD_counter|month_count[0]                                                 ; clk      ;
++-------+--------------+------------+-------------+--------------------------------------------------------------------------------------------+----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                                            ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------------------------------------+---------+------------+
+; Slack                                   ; Required tco                                        ; Actual tco ; From                                       ; To      ; From Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------------------------------------+---------+------------+
+; N/A                                     ; None                                                ; 33.116 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex0[5] ; clk        ;
+; N/A                                     ; None                                                ; 33.078 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex0[0] ; clk        ;
+; N/A                                     ; None                                                ; 33.027 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex0[4] ; clk        ;
+; N/A                                     ; None                                                ; 32.883 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex0[3] ; clk        ;
+; N/A                                     ; None                                                ; 32.677 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex0[2] ; clk        ;
+; N/A                                     ; None                                                ; 32.621 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex0[1] ; clk        ;
+; N/A                                     ; None                                                ; 32.536 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex0[5] ; clk        ;
+; N/A                                     ; None                                                ; 32.498 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex0[0] ; clk        ;
+; N/A                                     ; None                                                ; 32.447 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex0[4] ; clk        ;
+; N/A                                     ; None                                                ; 32.326 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex0[5] ; clk        ;
+; N/A                                     ; None                                                ; 32.303 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex0[3] ; clk        ;
+; N/A                                     ; None                                                ; 32.288 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex0[0] ; clk        ;
+; N/A                                     ; None                                                ; 32.237 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex0[4] ; clk        ;
+; N/A                                     ; None                                                ; 32.141 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex0[5] ; clk        ;
+; N/A                                     ; None                                                ; 32.103 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex0[0] ; clk        ;
+; N/A                                     ; None                                                ; 32.097 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex0[2] ; clk        ;
+; N/A                                     ; None                                                ; 32.093 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex0[3] ; clk        ;
+; N/A                                     ; None                                                ; 32.080 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex1[5] ; clk        ;
+; N/A                                     ; None                                                ; 32.052 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex0[4] ; clk        ;
+; N/A                                     ; None                                                ; 32.044 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex1[0] ; clk        ;
+; N/A                                     ; None                                                ; 32.041 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex0[1] ; clk        ;
+; N/A                                     ; None                                                ; 31.908 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex0[3] ; clk        ;
+; N/A                                     ; None                                                ; 31.887 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex0[2] ; clk        ;
+; N/A                                     ; None                                                ; 31.831 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex0[1] ; clk        ;
+; N/A                                     ; None                                                ; 31.702 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex0[2] ; clk        ;
+; N/A                                     ; None                                                ; 31.676 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex1[4] ; clk        ;
+; N/A                                     ; None                                                ; 31.663 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex1[3] ; clk        ;
+; N/A                                     ; None                                                ; 31.646 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex0[1] ; clk        ;
+; N/A                                     ; None                                                ; 31.500 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex1[5] ; clk        ;
+; N/A                                     ; None                                                ; 31.477 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex1[2] ; clk        ;
+; N/A                                     ; None                                                ; 31.464 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex1[0] ; clk        ;
+; N/A                                     ; None                                                ; 31.445 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex0[5] ; clk        ;
+; N/A                                     ; None                                                ; 31.407 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex0[0] ; clk        ;
+; N/A                                     ; None                                                ; 31.356 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex0[4] ; clk        ;
+; N/A                                     ; None                                                ; 31.290 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex1[5] ; clk        ;
+; N/A                                     ; None                                                ; 31.254 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex1[0] ; clk        ;
+; N/A                                     ; None                                                ; 31.212 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex0[3] ; clk        ;
+; N/A                                     ; None                                                ; 31.135 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex2[0] ; clk        ;
+; N/A                                     ; None                                                ; 31.105 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex1[5] ; clk        ;
+; N/A                                     ; None                                                ; 31.096 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex1[4] ; clk        ;
+; N/A                                     ; None                                                ; 31.083 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex1[3] ; clk        ;
+; N/A                                     ; None                                                ; 31.069 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex1[0] ; clk        ;
+; N/A                                     ; None                                                ; 31.006 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex0[2] ; clk        ;
+; N/A                                     ; None                                                ; 30.984 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex2[5] ; clk        ;
+; N/A                                     ; None                                                ; 30.950 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex0[1] ; clk        ;
+; N/A                                     ; None                                                ; 30.945 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex2[4] ; clk        ;
+; N/A                                     ; None                                                ; 30.897 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex1[2] ; clk        ;
+; N/A                                     ; None                                                ; 30.886 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex1[4] ; clk        ;
+; N/A                                     ; None                                                ; 30.873 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex1[3] ; clk        ;
+; N/A                                     ; None                                                ; 30.868 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex1[1] ; clk        ;
+; N/A                                     ; None                                                ; 30.856 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex2[2] ; clk        ;
+; N/A                                     ; None                                                ; 30.855 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex2[3] ; clk        ;
+; N/A                                     ; None                                                ; 30.701 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex1[4] ; clk        ;
+; N/A                                     ; None                                                ; 30.688 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex1[3] ; clk        ;
+; N/A                                     ; None                                                ; 30.687 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex1[2] ; clk        ;
+; N/A                                     ; None                                                ; 30.555 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex2[0] ; clk        ;
+; N/A                                     ; None                                                ; 30.502 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex1[2] ; clk        ;
+; N/A                                     ; None                                                ; 30.409 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex1[5] ; clk        ;
+; N/A                                     ; None                                                ; 30.404 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex2[5] ; clk        ;
+; N/A                                     ; None                                                ; 30.373 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex1[0] ; clk        ;
+; N/A                                     ; None                                                ; 30.365 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex2[4] ; clk        ;
+; N/A                                     ; None                                                ; 30.345 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex2[0] ; clk        ;
+; N/A                                     ; None                                                ; 30.288 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex1[1] ; clk        ;
+; N/A                                     ; None                                                ; 30.276 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex2[2] ; clk        ;
+; N/A                                     ; None                                                ; 30.275 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex2[3] ; clk        ;
+; N/A                                     ; None                                                ; 30.194 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex2[5] ; clk        ;
+; N/A                                     ; None                                                ; 30.160 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex2[0] ; clk        ;
+; N/A                                     ; None                                                ; 30.155 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex2[4] ; clk        ;
+; N/A                                     ; None                                                ; 30.111 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex2[1] ; clk        ;
+; N/A                                     ; None                                                ; 30.078 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex1[1] ; clk        ;
+; N/A                                     ; None                                                ; 30.066 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex2[2] ; clk        ;
+; N/A                                     ; None                                                ; 30.065 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex2[3] ; clk        ;
+; N/A                                     ; None                                                ; 30.009 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex2[5] ; clk        ;
+; N/A                                     ; None                                                ; 30.005 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex1[4] ; clk        ;
+; N/A                                     ; None                                                ; 29.992 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex1[3] ; clk        ;
+; N/A                                     ; None                                                ; 29.970 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex2[4] ; clk        ;
+; N/A                                     ; None                                                ; 29.893 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex1[1] ; clk        ;
+; N/A                                     ; None                                                ; 29.881 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex2[2] ; clk        ;
+; N/A                                     ; None                                                ; 29.880 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex2[3] ; clk        ;
+; N/A                                     ; None                                                ; 29.816 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex2[6] ; clk        ;
+; N/A                                     ; None                                                ; 29.806 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex1[2] ; clk        ;
+; N/A                                     ; None                                                ; 29.531 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex2[1] ; clk        ;
+; N/A                                     ; None                                                ; 29.464 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex2[0] ; clk        ;
+; N/A                                     ; None                                                ; 29.321 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex2[1] ; clk        ;
+; N/A                                     ; None                                                ; 29.313 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex2[5] ; clk        ;
+; N/A                                     ; None                                                ; 29.274 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex2[4] ; clk        ;
+; N/A                                     ; None                                                ; 29.264 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex3[3] ; clk        ;
+; N/A                                     ; None                                                ; 29.236 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex2[6] ; clk        ;
+; N/A                                     ; None                                                ; 29.197 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex1[1] ; clk        ;
+; N/A                                     ; None                                                ; 29.185 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex2[2] ; clk        ;
+; N/A                                     ; None                                                ; 29.184 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex2[3] ; clk        ;
+; N/A                                     ; None                                                ; 29.183 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex3[2] ; clk        ;
+; N/A                                     ; None                                                ; 29.136 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex2[1] ; clk        ;
+; N/A                                     ; None                                                ; 29.096 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex3[6] ; clk        ;
+; N/A                                     ; None                                                ; 29.086 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex3[1] ; clk        ;
+; N/A                                     ; None                                                ; 29.026 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex2[6] ; clk        ;
+; N/A                                     ; None                                                ; 29.009 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex3[5] ; clk        ;
+; N/A                                     ; None                                                ; 29.009 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex3[0] ; clk        ;
+; N/A                                     ; None                                                ; 28.841 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex2[6] ; clk        ;
+; N/A                                     ; None                                                ; 28.684 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex3[3] ; clk        ;
+; N/A                                     ; None                                                ; 28.683 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex1[6] ; clk        ;
+; N/A                                     ; None                                                ; 28.633 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex3[4] ; clk        ;
+; N/A                                     ; None                                                ; 28.603 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex3[2] ; clk        ;
+; N/A                                     ; None                                                ; 28.516 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex3[6] ; clk        ;
+; N/A                                     ; None                                                ; 28.506 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex3[1] ; clk        ;
+; N/A                                     ; None                                                ; 28.474 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex3[3] ; clk        ;
+; N/A                                     ; None                                                ; 28.440 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex2[1] ; clk        ;
+; N/A                                     ; None                                                ; 28.429 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex3[5] ; clk        ;
+; N/A                                     ; None                                                ; 28.429 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex3[0] ; clk        ;
+; N/A                                     ; None                                                ; 28.393 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex3[2] ; clk        ;
+; N/A                                     ; None                                                ; 28.306 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex3[6] ; clk        ;
+; N/A                                     ; None                                                ; 28.296 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex3[1] ; clk        ;
+; N/A                                     ; None                                                ; 28.289 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex3[3] ; clk        ;
+; N/A                                     ; None                                                ; 28.219 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex3[5] ; clk        ;
+; N/A                                     ; None                                                ; 28.219 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex3[0] ; clk        ;
+; N/A                                     ; None                                                ; 28.208 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex3[2] ; clk        ;
+; N/A                                     ; None                                                ; 28.145 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex2[6] ; clk        ;
+; N/A                                     ; None                                                ; 28.121 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex3[6] ; clk        ;
+; N/A                                     ; None                                                ; 28.111 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex3[1] ; clk        ;
+; N/A                                     ; None                                                ; 28.103 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex1[6] ; clk        ;
+; N/A                                     ; None                                                ; 28.053 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex3[4] ; clk        ;
+; N/A                                     ; None                                                ; 28.034 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex3[5] ; clk        ;
+; N/A                                     ; None                                                ; 28.034 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex3[0] ; clk        ;
+; N/A                                     ; None                                                ; 27.893 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex1[6] ; clk        ;
+; N/A                                     ; None                                                ; 27.887 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex0[5] ; clk        ;
+; N/A                                     ; None                                                ; 27.849 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex0[0] ; clk        ;
+; N/A                                     ; None                                                ; 27.843 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex3[4] ; clk        ;
+; N/A                                     ; None                                                ; 27.798 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex0[4] ; clk        ;
+; N/A                                     ; None                                                ; 27.708 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex1[6] ; clk        ;
+; N/A                                     ; None                                                ; 27.658 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex3[4] ; clk        ;
+; N/A                                     ; None                                                ; 27.654 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex0[3] ; clk        ;
+; N/A                                     ; None                                                ; 27.593 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex3[3] ; clk        ;
+; N/A                                     ; None                                                ; 27.512 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex3[2] ; clk        ;
+; N/A                                     ; None                                                ; 27.448 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex0[2] ; clk        ;
+; N/A                                     ; None                                                ; 27.425 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex3[6] ; clk        ;
+; N/A                                     ; None                                                ; 27.415 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex3[1] ; clk        ;
+; N/A                                     ; None                                                ; 27.392 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex0[1] ; clk        ;
+; N/A                                     ; None                                                ; 27.338 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex3[5] ; clk        ;
+; N/A                                     ; None                                                ; 27.338 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex3[0] ; clk        ;
+; N/A                                     ; None                                                ; 27.184 ns  ; g20_YMD_counter:YMD_counter|year_count[11] ; hex0[6] ; clk        ;
+; N/A                                     ; None                                                ; 27.012 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex1[6] ; clk        ;
+; N/A                                     ; None                                                ; 26.962 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex3[4] ; clk        ;
+; N/A                                     ; None                                                ; 26.851 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex1[5] ; clk        ;
+; N/A                                     ; None                                                ; 26.815 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex1[0] ; clk        ;
+; N/A                                     ; None                                                ; 26.604 ns  ; g20_YMD_counter:YMD_counter|year_count[10] ; hex0[6] ; clk        ;
+; N/A                                     ; None                                                ; 26.447 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex1[4] ; clk        ;
+; N/A                                     ; None                                                ; 26.434 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex1[3] ; clk        ;
+; N/A                                     ; None                                                ; 26.394 ns  ; g20_YMD_counter:YMD_counter|year_count[9]  ; hex0[6] ; clk        ;
+; N/A                                     ; None                                                ; 26.248 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex1[2] ; clk        ;
+; N/A                                     ; None                                                ; 26.209 ns  ; g20_YMD_counter:YMD_counter|year_count[8]  ; hex0[6] ; clk        ;
+; N/A                                     ; None                                                ; 25.906 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex2[0] ; clk        ;
+; N/A                                     ; None                                                ; 25.755 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex2[5] ; clk        ;
+; N/A                                     ; None                                                ; 25.716 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex2[4] ; clk        ;
+; N/A                                     ; None                                                ; 25.678 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex0[5] ; clk        ;
+; N/A                                     ; None                                                ; 25.640 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex0[0] ; clk        ;
+; N/A                                     ; None                                                ; 25.639 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex1[1] ; clk        ;
+; N/A                                     ; None                                                ; 25.627 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex2[2] ; clk        ;
+; N/A                                     ; None                                                ; 25.626 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex2[3] ; clk        ;
+; N/A                                     ; None                                                ; 25.589 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex0[4] ; clk        ;
+; N/A                                     ; None                                                ; 25.513 ns  ; g20_YMD_counter:YMD_counter|year_count[7]  ; hex0[6] ; clk        ;
+; N/A                                     ; None                                                ; 25.445 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex0[3] ; clk        ;
+; N/A                                     ; None                                                ; 25.239 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex0[2] ; clk        ;
+; N/A                                     ; None                                                ; 25.183 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex0[1] ; clk        ;
+; N/A                                     ; None                                                ; 24.882 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex2[1] ; clk        ;
+; N/A                                     ; None                                                ; 24.642 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex1[5] ; clk        ;
+; N/A                                     ; None                                                ; 24.606 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex1[0] ; clk        ;
+; N/A                                     ; None                                                ; 24.587 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex2[6] ; clk        ;
+; N/A                                     ; None                                                ; 24.238 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex1[4] ; clk        ;
+; N/A                                     ; None                                                ; 24.225 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex1[3] ; clk        ;
+; N/A                                     ; None                                                ; 24.039 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex1[2] ; clk        ;
+; N/A                                     ; None                                                ; 24.035 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex3[3] ; clk        ;
+; N/A                                     ; None                                                ; 23.954 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex3[2] ; clk        ;
+; N/A                                     ; None                                                ; 23.867 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex3[6] ; clk        ;
+; N/A                                     ; None                                                ; 23.857 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex3[1] ; clk        ;
+; N/A                                     ; None                                                ; 23.780 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex3[5] ; clk        ;
+; N/A                                     ; None                                                ; 23.780 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex3[0] ; clk        ;
+; N/A                                     ; None                                                ; 23.697 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex2[0] ; clk        ;
+; N/A                                     ; None                                                ; 23.546 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex2[5] ; clk        ;
+; N/A                                     ; None                                                ; 23.507 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex2[4] ; clk        ;
+; N/A                                     ; None                                                ; 23.454 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex1[6] ; clk        ;
+; N/A                                     ; None                                                ; 23.430 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex1[1] ; clk        ;
+; N/A                                     ; None                                                ; 23.418 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex2[2] ; clk        ;
+; N/A                                     ; None                                                ; 23.417 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex2[3] ; clk        ;
+; N/A                                     ; None                                                ; 23.404 ns  ; g20_YMD_counter:YMD_counter|year_count[6]  ; hex3[4] ; clk        ;
+; N/A                                     ; None                                                ; 23.401 ns  ; g20_YMD_counter:YMD_counter|year_count[4]  ; hex0[5] ; clk        ;
+; N/A                                     ; None                                                ; 23.363 ns  ; g20_YMD_counter:YMD_counter|year_count[4]  ; hex0[0] ; clk        ;
+; N/A                                     ; None                                                ; 23.312 ns  ; g20_YMD_counter:YMD_counter|year_count[4]  ; hex0[4] ; clk        ;
+; N/A                                     ; None                                                ; 23.168 ns  ; g20_YMD_counter:YMD_counter|year_count[4]  ; hex0[3] ; clk        ;
+; N/A                                     ; None                                                ; 22.962 ns  ; g20_YMD_counter:YMD_counter|year_count[4]  ; hex0[2] ; clk        ;
+; N/A                                     ; None                                                ; 22.906 ns  ; g20_YMD_counter:YMD_counter|year_count[4]  ; hex0[1] ; clk        ;
+; N/A                                     ; None                                                ; 22.835 ns  ; g20_YMD_counter:YMD_counter|day_count[4]   ; hex0[5] ; clk        ;
+; N/A                                     ; None                                                ; 22.797 ns  ; g20_YMD_counter:YMD_counter|day_count[4]   ; hex0[0] ; clk        ;
+; N/A                                     ; None                                                ; 22.746 ns  ; g20_YMD_counter:YMD_counter|day_count[4]   ; hex0[4] ; clk        ;
+; N/A                                     ; None                                                ; 22.673 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex2[1] ; clk        ;
+; N/A                                     ; None                                                ; 22.602 ns  ; g20_YMD_counter:YMD_counter|day_count[4]   ; hex0[3] ; clk        ;
+; N/A                                     ; None                                                ; 22.396 ns  ; g20_YMD_counter:YMD_counter|day_count[4]   ; hex0[2] ; clk        ;
+; N/A                                     ; None                                                ; 22.378 ns  ; g20_YMD_counter:YMD_counter|year_count[5]  ; hex2[6] ; clk        ;
+; N/A                                     ; None                                                ; 22.365 ns  ; g20_YMD_counter:YMD_counter|year_count[4]  ; hex1[5] ; clk        ;
+; N/A                                     ; None                                                ; 22.340 ns  ; g20_YMD_counter:YMD_counter|day_count[4]   ; hex0[1] ; clk        ;
+; N/A                                     ; None                                                ; 22.329 ns  ; g20_YMD_counter:YMD_counter|year_count[4]  ; hex1[0] ; clk        ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;                                            ;         ;            ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------------------------------------+---------+------------+
+
+
++------------------------------------------------------------------------+
+; tpd                                                                    ;
++-------+-------------------+-----------------+----------------+---------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From           ; To      ;
++-------+-------------------+-----------------+----------------+---------+
+; N/A   ; None              ; 32.212 ns       ; display_sel[1] ; hex0[5] ;
+; N/A   ; None              ; 32.174 ns       ; display_sel[1] ; hex0[0] ;
+; N/A   ; None              ; 32.123 ns       ; display_sel[1] ; hex0[4] ;
+; N/A   ; None              ; 31.979 ns       ; display_sel[1] ; hex0[3] ;
+; N/A   ; None              ; 31.773 ns       ; display_sel[1] ; hex0[2] ;
+; N/A   ; None              ; 31.717 ns       ; display_sel[1] ; hex0[1] ;
+; N/A   ; None              ; 31.176 ns       ; display_sel[1] ; hex1[5] ;
+; N/A   ; None              ; 31.140 ns       ; display_sel[1] ; hex1[0] ;
+; N/A   ; None              ; 30.772 ns       ; display_sel[1] ; hex1[4] ;
+; N/A   ; None              ; 30.759 ns       ; display_sel[1] ; hex1[3] ;
+; N/A   ; None              ; 30.573 ns       ; display_sel[1] ; hex1[2] ;
+; N/A   ; None              ; 30.231 ns       ; display_sel[1] ; hex2[0] ;
+; N/A   ; None              ; 30.080 ns       ; display_sel[1] ; hex2[5] ;
+; N/A   ; None              ; 30.041 ns       ; display_sel[1] ; hex2[4] ;
+; N/A   ; None              ; 29.964 ns       ; display_sel[1] ; hex1[1] ;
+; N/A   ; None              ; 29.952 ns       ; display_sel[1] ; hex2[2] ;
+; N/A   ; None              ; 29.951 ns       ; display_sel[1] ; hex2[3] ;
+; N/A   ; None              ; 29.207 ns       ; display_sel[1] ; hex2[1] ;
+; N/A   ; None              ; 28.912 ns       ; display_sel[1] ; hex2[6] ;
+; N/A   ; None              ; 28.360 ns       ; display_sel[1] ; hex3[3] ;
+; N/A   ; None              ; 28.279 ns       ; display_sel[1] ; hex3[2] ;
+; N/A   ; None              ; 28.192 ns       ; display_sel[1] ; hex3[6] ;
+; N/A   ; None              ; 28.182 ns       ; display_sel[1] ; hex3[1] ;
+; N/A   ; None              ; 28.105 ns       ; display_sel[1] ; hex3[5] ;
+; N/A   ; None              ; 28.105 ns       ; display_sel[1] ; hex3[0] ;
+; N/A   ; None              ; 27.779 ns       ; display_sel[1] ; hex1[6] ;
+; N/A   ; None              ; 27.729 ns       ; display_sel[1] ; hex3[4] ;
+; N/A   ; None              ; 26.280 ns       ; display_sel[1] ; hex0[6] ;
+; N/A   ; None              ; 21.244 ns       ; display_sel[0] ; hex0[5] ;
+; N/A   ; None              ; 21.206 ns       ; display_sel[0] ; hex0[0] ;
+; N/A   ; None              ; 21.155 ns       ; display_sel[0] ; hex0[4] ;
+; N/A   ; None              ; 21.011 ns       ; display_sel[0] ; hex0[3] ;
+; N/A   ; None              ; 20.805 ns       ; display_sel[0] ; hex0[2] ;
+; N/A   ; None              ; 20.749 ns       ; display_sel[0] ; hex0[1] ;
+; N/A   ; None              ; 20.208 ns       ; display_sel[0] ; hex1[5] ;
+; N/A   ; None              ; 20.172 ns       ; display_sel[0] ; hex1[0] ;
+; N/A   ; None              ; 19.804 ns       ; display_sel[0] ; hex1[4] ;
+; N/A   ; None              ; 19.791 ns       ; display_sel[0] ; hex1[3] ;
+; N/A   ; None              ; 19.605 ns       ; display_sel[0] ; hex1[2] ;
+; N/A   ; None              ; 19.263 ns       ; display_sel[0] ; hex2[0] ;
+; N/A   ; None              ; 19.112 ns       ; display_sel[0] ; hex2[5] ;
+; N/A   ; None              ; 19.073 ns       ; display_sel[0] ; hex2[4] ;
+; N/A   ; None              ; 18.996 ns       ; display_sel[0] ; hex1[1] ;
+; N/A   ; None              ; 18.984 ns       ; display_sel[0] ; hex2[2] ;
+; N/A   ; None              ; 18.983 ns       ; display_sel[0] ; hex2[3] ;
+; N/A   ; None              ; 18.239 ns       ; display_sel[0] ; hex2[1] ;
+; N/A   ; None              ; 17.944 ns       ; display_sel[0] ; hex2[6] ;
+; N/A   ; None              ; 17.392 ns       ; display_sel[0] ; hex3[3] ;
+; N/A   ; None              ; 17.311 ns       ; display_sel[0] ; hex3[2] ;
+; N/A   ; None              ; 17.224 ns       ; display_sel[0] ; hex3[6] ;
+; N/A   ; None              ; 17.214 ns       ; display_sel[0] ; hex3[1] ;
+; N/A   ; None              ; 17.137 ns       ; display_sel[0] ; hex3[5] ;
+; N/A   ; None              ; 17.137 ns       ; display_sel[0] ; hex3[0] ;
+; N/A   ; None              ; 16.811 ns       ; display_sel[0] ; hex1[6] ;
+; N/A   ; None              ; 16.761 ns       ; display_sel[0] ; hex3[4] ;
+; N/A   ; None              ; 15.312 ns       ; display_sel[0] ; hex0[6] ;
++-------+-------------------+-----------------+----------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                            ;
++---------------+-------------+-----------+-------------+--------------------------------------------------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From        ; To                                                                                         ; To Clock ;
++---------------+-------------+-----------+-------------+--------------------------------------------------------------------------------------------+----------+
+; N/A           ; None        ; 0.069 ns  ; m_set[0]    ; g20_YMD_counter:YMD_counter|month_count[0]                                                 ; clk      ;
+; N/A           ; None        ; 0.019 ns  ; load_enable ; g20_YMD_counter:YMD_counter|day_count[1]                                                   ; clk      ;
+; N/A           ; None        ; 0.018 ns  ; load_enable ; g20_YMD_counter:YMD_counter|day_count[4]                                                   ; clk      ;
+; N/A           ; None        ; 0.018 ns  ; load_enable ; g20_YMD_counter:YMD_counter|day_count[2]                                                   ; clk      ;
+; N/A           ; None        ; -0.216 ns ; m_set[1]    ; g20_YMD_counter:YMD_counter|month_count[1]                                                 ; clk      ;
+; N/A           ; None        ; -0.290 ns ; load_enable ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; clk      ;
+; N/A           ; None        ; -0.296 ns ; load_enable ; g20_YMD_counter:YMD_counter|day_count[0]                                                   ; clk      ;
+; N/A           ; None        ; -0.299 ns ; load_enable ; g20_YMD_counter:YMD_counter|month_count[0]                                                 ; clk      ;
+; N/A           ; None        ; -0.347 ns ; load_enable ; g20_YMD_counter:YMD_counter|month_count[1]                                                 ; clk      ;
+; N/A           ; None        ; -0.347 ns ; load_enable ; g20_YMD_counter:YMD_counter|month_count[2]                                                 ; clk      ;
+; N/A           ; None        ; -0.347 ns ; load_enable ; g20_YMD_counter:YMD_counter|month_count[3]                                                 ; clk      ;
+; N/A           ; None        ; -0.371 ns ; m_set[3]    ; g20_YMD_counter:YMD_counter|month_count[3]                                                 ; clk      ;
+; N/A           ; None        ; -0.523 ns ; m_set[2]    ; g20_YMD_counter:YMD_counter|month_count[2]                                                 ; clk      ;
+; N/A           ; None        ; -0.658 ns ; load_enable ; g20_YMD_counter:YMD_counter|year_count[11]                                                 ; clk      ;
+; N/A           ; None        ; -0.938 ns ; load_enable ; g20_YMD_counter:YMD_counter|year_count[10]                                                 ; clk      ;
+; N/A           ; None        ; -1.032 ns ; load_enable ; g20_YMD_counter:YMD_counter|year_count[9]                                                  ; clk      ;
+; N/A           ; None        ; -1.032 ns ; load_enable ; g20_YMD_counter:YMD_counter|year_count[8]                                                  ; clk      ;
+; N/A           ; None        ; -1.162 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[14] ; clk      ;
+; N/A           ; None        ; -1.162 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[17] ; clk      ;
+; N/A           ; None        ; -1.162 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[16] ; clk      ;
+; N/A           ; None        ; -1.162 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[15] ; clk      ;
+; N/A           ; None        ; -1.162 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[13] ; clk      ;
+; N/A           ; None        ; -1.162 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[23] ; clk      ;
+; N/A           ; None        ; -1.162 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[24] ; clk      ;
+; N/A           ; None        ; -1.162 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[25] ; clk      ;
+; N/A           ; None        ; -1.162 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[22] ; clk      ;
+; N/A           ; None        ; -1.162 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[19] ; clk      ;
+; N/A           ; None        ; -1.162 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[20] ; clk      ;
+; N/A           ; None        ; -1.162 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[21] ; clk      ;
+; N/A           ; None        ; -1.162 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[18] ; clk      ;
+; N/A           ; None        ; -1.323 ns ; load_enable ; g20_YMD_counter:YMD_counter|year_count[1]                                                  ; clk      ;
+; N/A           ; None        ; -1.324 ns ; load_enable ; g20_YMD_counter:YMD_counter|year_count[6]                                                  ; clk      ;
+; N/A           ; None        ; -1.325 ns ; load_enable ; g20_YMD_counter:YMD_counter|year_count[0]                                                  ; clk      ;
+; N/A           ; None        ; -1.325 ns ; load_enable ; g20_YMD_counter:YMD_counter|year_count[4]                                                  ; clk      ;
+; N/A           ; None        ; -1.325 ns ; load_enable ; g20_YMD_counter:YMD_counter|year_count[2]                                                  ; clk      ;
+; N/A           ; None        ; -1.325 ns ; load_enable ; g20_YMD_counter:YMD_counter|year_count[3]                                                  ; clk      ;
+; N/A           ; None        ; -1.325 ns ; load_enable ; g20_YMD_counter:YMD_counter|year_count[7]                                                  ; clk      ;
+; N/A           ; None        ; -1.326 ns ; load_enable ; g20_YMD_counter:YMD_counter|year_count[5]                                                  ; clk      ;
+; N/A           ; None        ; -1.740 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[1]  ; clk      ;
+; N/A           ; None        ; -1.740 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[0]  ; clk      ;
+; N/A           ; None        ; -1.740 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[12] ; clk      ;
+; N/A           ; None        ; -1.740 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[10] ; clk      ;
+; N/A           ; None        ; -1.740 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[11] ; clk      ;
+; N/A           ; None        ; -1.740 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[5]  ; clk      ;
+; N/A           ; None        ; -1.740 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[2]  ; clk      ;
+; N/A           ; None        ; -1.740 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[4]  ; clk      ;
+; N/A           ; None        ; -1.740 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[3]  ; clk      ;
+; N/A           ; None        ; -1.740 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[6]  ; clk      ;
+; N/A           ; None        ; -1.740 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[8]  ; clk      ;
+; N/A           ; None        ; -1.740 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[7]  ; clk      ;
+; N/A           ; None        ; -1.740 ns ; rst         ; g20_Basic_Timer:pulse_gen|lpm_counter:lpm_counter_earth|cntr_1rk:auto_generated|safe_q[9]  ; clk      ;
+; N/A           ; None        ; -3.406 ns ; y_set[3]    ; g20_YMD_counter:YMD_counter|year_count[3]                                                  ; clk      ;
+; N/A           ; None        ; -3.708 ns ; y_set[8]    ; g20_YMD_counter:YMD_counter|year_count[8]                                                  ; clk      ;
+; N/A           ; None        ; -3.751 ns ; y_set[5]    ; g20_YMD_counter:YMD_counter|year_count[5]                                                  ; clk      ;
+; N/A           ; None        ; -3.759 ns ; y_set[0]    ; g20_YMD_counter:YMD_counter|year_count[0]                                                  ; clk      ;
+; N/A           ; None        ; -3.841 ns ; y_set[1]    ; g20_YMD_counter:YMD_counter|year_count[1]                                                  ; clk      ;
+; N/A           ; None        ; -3.970 ns ; y_set[10]   ; g20_YMD_counter:YMD_counter|year_count[10]                                                 ; clk      ;
+; N/A           ; None        ; -4.079 ns ; d_set[0]    ; g20_YMD_counter:YMD_counter|day_count[0]                                                   ; clk      ;
+; N/A           ; None        ; -4.284 ns ; y_set[11]   ; g20_YMD_counter:YMD_counter|year_count[11]                                                 ; clk      ;
+; N/A           ; None        ; -4.343 ns ; d_set[1]    ; g20_YMD_counter:YMD_counter|day_count[1]                                                   ; clk      ;
+; N/A           ; None        ; -4.385 ns ; y_set[7]    ; g20_YMD_counter:YMD_counter|year_count[7]                                                  ; clk      ;
+; N/A           ; None        ; -4.423 ns ; y_set[2]    ; g20_YMD_counter:YMD_counter|year_count[2]                                                  ; clk      ;
+; N/A           ; None        ; -4.549 ns ; y_set[9]    ; g20_YMD_counter:YMD_counter|year_count[9]                                                  ; clk      ;
+; N/A           ; None        ; -4.662 ns ; y_set[6]    ; g20_YMD_counter:YMD_counter|year_count[6]                                                  ; clk      ;
+; N/A           ; None        ; -4.780 ns ; y_set[4]    ; g20_YMD_counter:YMD_counter|year_count[4]                                                  ; clk      ;
+; N/A           ; None        ; -4.951 ns ; d_set[2]    ; g20_YMD_counter:YMD_counter|day_count[2]                                                   ; clk      ;
+; N/A           ; None        ; -4.997 ns ; d_set[4]    ; g20_YMD_counter:YMD_counter|day_count[4]                                                   ; clk      ;
+; N/A           ; None        ; -5.174 ns ; d_set[3]    ; g20_YMD_counter:YMD_counter|day_count[3]                                                   ; clk      ;
++---------------+-------------+-----------+-------------+--------------------------------------------------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Fri Apr 04 22:19:43 2014
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off g20_lab_4 -c g20_lab_4 --timing_analysis_only
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Info: Clock "clk" has Internal fmax of 139.24 MHz between source register "g20_YMD_counter:YMD_counter|day_count[3]" and destination register "g20_YMD_counter:YMD_counter|year_count[10]" (period= 7.182 ns)
+    Info: + Longest register to register delay is 6.956 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X25_Y18_N5; Fanout = 4; REG Node = 'g20_YMD_counter:YMD_counter|day_count[3]'
+        Info: 2: + IC(0.962 ns) + CELL(0.491 ns) = 1.453 ns; Loc. = LCCOMB_X24_Y19_N20; Fanout = 2; COMB Node = 'g20_YMD_counter:YMD_counter|day_rst~0'
+        Info: 3: + IC(1.157 ns) + CELL(0.178 ns) = 2.788 ns; Loc. = LCCOMB_X19_Y15_N4; Fanout = 7; COMB Node = 'g20_YMD_counter:YMD_counter|month_rst~1'
+        Info: 4: + IC(2.422 ns) + CELL(0.178 ns) = 5.388 ns; Loc. = LCCOMB_X40_Y24_N20; Fanout = 12; COMB Node = 'g20_YMD_counter:YMD_counter|year_count[7]~2'
+        Info: 5: + IC(0.810 ns) + CELL(0.758 ns) = 6.956 ns; Loc. = LCFF_X42_Y24_N19; Fanout = 11; REG Node = 'g20_YMD_counter:YMD_counter|year_count[10]'
+        Info: Total cell delay = 1.605 ns ( 23.07 % )
+        Info: Total interconnect delay = 5.351 ns ( 76.93 % )
+    Info: - Smallest clock skew is 0.013 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 2.864 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 1; CLK Node = 'clk'
+            Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G2; Fanout = 47; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(0.998 ns) + CELL(0.602 ns) = 2.864 ns; Loc. = LCFF_X42_Y24_N19; Fanout = 11; REG Node = 'g20_YMD_counter:YMD_counter|year_count[10]'
+            Info: Total cell delay = 1.628 ns ( 56.84 % )
+            Info: Total interconnect delay = 1.236 ns ( 43.16 % )
+        Info: - Longest clock path from clock "clk" to source register is 2.851 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 1; CLK Node = 'clk'
+            Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G2; Fanout = 47; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(0.985 ns) + CELL(0.602 ns) = 2.851 ns; Loc. = LCFF_X25_Y18_N5; Fanout = 4; REG Node = 'g20_YMD_counter:YMD_counter|day_count[3]'
+            Info: Total cell delay = 1.628 ns ( 57.10 % )
+            Info: Total interconnect delay = 1.223 ns ( 42.90 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Micro setup delay of destination is -0.038 ns
+Info: tsu for register "g20_YMD_counter:YMD_counter|day_count[3]" (data pin = "d_set[3]", clock pin = "clk") is 5.422 ns
+    Info: + Longest pin to register delay is 8.311 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N15; Fanout = 1; PIN Node = 'd_set[3]'
+        Info: 2: + IC(6.816 ns) + CELL(0.545 ns) = 8.215 ns; Loc. = LCCOMB_X25_Y18_N4; Fanout = 1; COMB Node = 'g20_YMD_counter:YMD_counter|day_count~2'
+        Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 8.311 ns; Loc. = LCFF_X25_Y18_N5; Fanout = 4; REG Node = 'g20_YMD_counter:YMD_counter|day_count[3]'
+        Info: Total cell delay = 1.495 ns ( 17.99 % )
+        Info: Total interconnect delay = 6.816 ns ( 82.01 % )
+    Info: + Micro setup delay of destination is -0.038 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 2.851 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G2; Fanout = 47; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.985 ns) + CELL(0.602 ns) = 2.851 ns; Loc. = LCFF_X25_Y18_N5; Fanout = 4; REG Node = 'g20_YMD_counter:YMD_counter|day_count[3]'
+        Info: Total cell delay = 1.628 ns ( 57.10 % )
+        Info: Total interconnect delay = 1.223 ns ( 42.90 % )
+Info: tco from clock "clk" to destination pin "hex0[5]" through register "g20_YMD_counter:YMD_counter|year_count[11]" is 33.116 ns
+    Info: + Longest clock path from clock "clk" to source register is 2.857 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G2; Fanout = 47; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.991 ns) + CELL(0.602 ns) = 2.857 ns; Loc. = LCFF_X39_Y24_N1; Fanout = 11; REG Node = 'g20_YMD_counter:YMD_counter|year_count[11]'
+        Info: Total cell delay = 1.628 ns ( 56.98 % )
+        Info: Total interconnect delay = 1.229 ns ( 43.02 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Longest register to pin delay is 29.982 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X39_Y24_N1; Fanout = 11; REG Node = 'g20_YMD_counter:YMD_counter|year_count[11]'
+        Info: 2: + IC(1.006 ns) + CELL(0.542 ns) = 1.548 ns; Loc. = LCCOMB_X42_Y24_N8; Fanout = 1; COMB Node = 'g20_lab2_7_segment_decoder:ones~8'
+        Info: 3: + IC(1.176 ns) + CELL(0.178 ns) = 2.902 ns; Loc. = LCCOMB_X39_Y21_N10; Fanout = 3; COMB Node = 'g20_lab2_7_segment_decoder:ones~9'
+        Info: 4: + IC(0.915 ns) + CELL(0.521 ns) = 4.338 ns; Loc. = LCCOMB_X40_Y24_N30; Fanout = 3; COMB Node = 'LessThan2~0'
+        Info: 5: + IC(0.889 ns) + CELL(0.545 ns) = 5.772 ns; Loc. = LCCOMB_X40_Y24_N22; Fanout = 4; COMB Node = 'LessThan4~3'
+        Info: 6: + IC(1.228 ns) + CELL(0.319 ns) = 7.319 ns; Loc. = LCCOMB_X39_Y22_N16; Fanout = 2; COMB Node = 'LessThan4~2'
+        Info: 7: + IC(0.927 ns) + CELL(0.544 ns) = 8.790 ns; Loc. = LCCOMB_X40_Y24_N6; Fanout = 3; COMB Node = 'g20_lab2_7_segment_decoder:ones~14'
+        Info: 8: + IC(2.366 ns) + CELL(0.319 ns) = 11.475 ns; Loc. = LCCOMB_X24_Y19_N28; Fanout = 3; COMB Node = 'LessThan6~0'
+        Info: 9: + IC(0.317 ns) + CELL(0.521 ns) = 12.313 ns; Loc. = LCCOMB_X24_Y19_N6; Fanout = 4; COMB Node = 'g20_lab2_7_segment_decoder:ones~16'
+        Info: 10: + IC(0.354 ns) + CELL(0.542 ns) = 13.209 ns; Loc. = LCCOMB_X24_Y19_N18; Fanout = 4; COMB Node = 'g20_lab2_7_segment_decoder:ones~30'
+        Info: 11: + IC(2.078 ns) + CELL(0.521 ns) = 15.808 ns; Loc. = LCCOMB_X39_Y21_N14; Fanout = 4; COMB Node = 'g20_lab2_7_segment_decoder:tens~11'
+        Info: 12: + IC(2.043 ns) + CELL(0.507 ns) = 18.358 ns; Loc. = LCCOMB_X20_Y21_N12; Fanout = 5; COMB Node = 'g20_lab2_7_segment_decoder:tens~13'
+        Info: 13: + IC(1.739 ns) + CELL(0.322 ns) = 20.419 ns; Loc. = LCCOMB_X11_Y20_N26; Fanout = 10; COMB Node = 'display_bcd[8]~4'
+        Info: 14: + IC(1.110 ns) + CELL(0.512 ns) = 22.041 ns; Loc. = LCCOMB_X16_Y20_N22; Fanout = 7; COMB Node = 'g20_lab2_7_segment_decoder:hundreds|Mux0~2'
+        Info: 15: + IC(1.754 ns) + CELL(0.322 ns) = 24.117 ns; Loc. = LCCOMB_X4_Y21_N16; Fanout = 6; COMB Node = 'g20_lab2_7_segment_decoder:tens|Mux0~1'
+        Info: 16: + IC(1.195 ns) + CELL(0.178 ns) = 25.490 ns; Loc. = LCCOMB_X1_Y19_N2; Fanout = 1; COMB Node = 'g20_lab2_7_segment_decoder:ones|Mux2~0'
+        Info: 17: + IC(0.293 ns) + CELL(0.491 ns) = 26.274 ns; Loc. = LCCOMB_X1_Y19_N4; Fanout = 1; COMB Node = 'g20_lab2_7_segment_decoder:ones|Mux2~1'
+        Info: 18: + IC(0.858 ns) + CELL(2.850 ns) = 29.982 ns; Loc. = PIN_F1; Fanout = 0; PIN Node = 'hex0[5]'
+        Info: Total cell delay = 9.734 ns ( 32.47 % )
+        Info: Total interconnect delay = 20.248 ns ( 67.53 % )
+Info: Longest tpd from source pin "display_sel[1]" to destination pin "hex0[5]" is 32.212 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L2; Fanout = 31; PIN Node = 'display_sel[1]'
+    Info: 2: + IC(2.326 ns) + CELL(0.491 ns) = 3.843 ns; Loc. = LCCOMB_X42_Y24_N28; Fanout = 3; COMB Node = 'g20_lab2_7_segment_decoder:ones~5'
+    Info: 3: + IC(0.853 ns) + CELL(0.516 ns) = 5.212 ns; Loc. = LCCOMB_X42_Y23_N0; Fanout = 4; COMB Node = 'g20_lab2_7_segment_decoder:ones~7'
+    Info: 4: + IC(1.178 ns) + CELL(0.178 ns) = 6.568 ns; Loc. = LCCOMB_X40_Y24_N30; Fanout = 3; COMB Node = 'LessThan2~0'
+    Info: 5: + IC(0.889 ns) + CELL(0.545 ns) = 8.002 ns; Loc. = LCCOMB_X40_Y24_N22; Fanout = 4; COMB Node = 'LessThan4~3'
+    Info: 6: + IC(1.228 ns) + CELL(0.319 ns) = 9.549 ns; Loc. = LCCOMB_X39_Y22_N16; Fanout = 2; COMB Node = 'LessThan4~2'
+    Info: 7: + IC(0.927 ns) + CELL(0.544 ns) = 11.020 ns; Loc. = LCCOMB_X40_Y24_N6; Fanout = 3; COMB Node = 'g20_lab2_7_segment_decoder:ones~14'
+    Info: 8: + IC(2.366 ns) + CELL(0.319 ns) = 13.705 ns; Loc. = LCCOMB_X24_Y19_N28; Fanout = 3; COMB Node = 'LessThan6~0'
+    Info: 9: + IC(0.317 ns) + CELL(0.521 ns) = 14.543 ns; Loc. = LCCOMB_X24_Y19_N6; Fanout = 4; COMB Node = 'g20_lab2_7_segment_decoder:ones~16'
+    Info: 10: + IC(0.354 ns) + CELL(0.542 ns) = 15.439 ns; Loc. = LCCOMB_X24_Y19_N18; Fanout = 4; COMB Node = 'g20_lab2_7_segment_decoder:ones~30'
+    Info: 11: + IC(2.078 ns) + CELL(0.521 ns) = 18.038 ns; Loc. = LCCOMB_X39_Y21_N14; Fanout = 4; COMB Node = 'g20_lab2_7_segment_decoder:tens~11'
+    Info: 12: + IC(2.043 ns) + CELL(0.507 ns) = 20.588 ns; Loc. = LCCOMB_X20_Y21_N12; Fanout = 5; COMB Node = 'g20_lab2_7_segment_decoder:tens~13'
+    Info: 13: + IC(1.739 ns) + CELL(0.322 ns) = 22.649 ns; Loc. = LCCOMB_X11_Y20_N26; Fanout = 10; COMB Node = 'display_bcd[8]~4'
+    Info: 14: + IC(1.110 ns) + CELL(0.512 ns) = 24.271 ns; Loc. = LCCOMB_X16_Y20_N22; Fanout = 7; COMB Node = 'g20_lab2_7_segment_decoder:hundreds|Mux0~2'
+    Info: 15: + IC(1.754 ns) + CELL(0.322 ns) = 26.347 ns; Loc. = LCCOMB_X4_Y21_N16; Fanout = 6; COMB Node = 'g20_lab2_7_segment_decoder:tens|Mux0~1'
+    Info: 16: + IC(1.195 ns) + CELL(0.178 ns) = 27.720 ns; Loc. = LCCOMB_X1_Y19_N2; Fanout = 1; COMB Node = 'g20_lab2_7_segment_decoder:ones|Mux2~0'
+    Info: 17: + IC(0.293 ns) + CELL(0.491 ns) = 28.504 ns; Loc. = LCCOMB_X1_Y19_N4; Fanout = 1; COMB Node = 'g20_lab2_7_segment_decoder:ones|Mux2~1'
+    Info: 18: + IC(0.858 ns) + CELL(2.850 ns) = 32.212 ns; Loc. = PIN_F1; Fanout = 0; PIN Node = 'hex0[5]'
+    Info: Total cell delay = 10.704 ns ( 33.23 % )
+    Info: Total interconnect delay = 21.508 ns ( 66.77 % )
+Info: th for register "g20_YMD_counter:YMD_counter|month_count[0]" (data pin = "m_set[0]", clock pin = "clk") is 0.069 ns
+    Info: + Longest clock path from clock "clk" to destination register is 2.858 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G2; Fanout = 47; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.992 ns) + CELL(0.602 ns) = 2.858 ns; Loc. = LCFF_X19_Y15_N25; Fanout = 8; REG Node = 'g20_YMD_counter:YMD_counter|month_count[0]'
+        Info: Total cell delay = 1.628 ns ( 56.96 % )
+        Info: Total interconnect delay = 1.230 ns ( 43.04 % )
+    Info: + Micro hold delay of destination is 0.286 ns
+    Info: - Shortest pin to register delay is 3.075 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.036 ns) = 1.036 ns; Loc. = PIN_M22; Fanout = 1; PIN Node = 'm_set[0]'
+        Info: 2: + IC(1.765 ns) + CELL(0.178 ns) = 2.979 ns; Loc. = LCCOMB_X19_Y15_N24; Fanout = 1; COMB Node = 'g20_YMD_counter:YMD_counter|month_count~5'
+        Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 3.075 ns; Loc. = LCFF_X19_Y15_N25; Fanout = 8; REG Node = 'g20_YMD_counter:YMD_counter|month_count[0]'
+        Info: Total cell delay = 1.310 ns ( 42.60 % )
+        Info: Total interconnect delay = 1.765 ns ( 57.40 % )
+Info: Quartus II 64-Bit Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 220 megabytes
+    Info: Processing ended: Fri Apr 04 22:19:44 2014
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

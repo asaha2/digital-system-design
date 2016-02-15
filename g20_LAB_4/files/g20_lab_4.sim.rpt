@@ -1,0 +1,417 @@
+Simulator report for g20_lab_4
+Thu Apr 03 19:48:38 2014
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 30.0 us      ;
+; Simulation Netlist Size     ; 202 nodes    ;
+; Simulation Coverage         ;      74.75 % ;
+; Total Number of Transitions ; 33538        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                             ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                           ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                        ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                              ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                                                                              ;               ;
+; Vector input source                                                                        ; //campus.mcgill.ca/EMF/ELE/asaha2/Desktop/g20_lab_4/g20_lab_4/g20_YMD_counter.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                                ; On            ;
+; Check outputs                                                                              ; Off                                                                               ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                                ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                                ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                                ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                                ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                               ; Off           ;
+; Detect glitches                                                                            ; Off                                                                               ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                               ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                               ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                               ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                               ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                                ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                        ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                               ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                                                                                ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                              ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      74.75 % ;
+; Total nodes checked                                 ; 202          ;
+; Total output ports checked                          ; 202          ;
+; Total output ports with complete 1/0-value coverage ; 151          ;
+; Total output ports with no 1/0-value coverage       ; 51           ;
+; Total output ports with no 1-value coverage         ; 51           ;
+; Total output ports with no 0-value coverage         ; 51           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                          ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |g20_YMD_counter|month_31~0     ; |g20_YMD_counter|month_31~0     ; out0             ;
+; |g20_YMD_counter|month_31~1     ; |g20_YMD_counter|month_31~1     ; out0             ;
+; |g20_YMD_counter|month_31~2     ; |g20_YMD_counter|month_31~2     ; out0             ;
+; |g20_YMD_counter|month_31~3     ; |g20_YMD_counter|month_31~3     ; out0             ;
+; |g20_YMD_counter|month_31~4     ; |g20_YMD_counter|month_31~4     ; out0             ;
+; |g20_YMD_counter|month_31       ; |g20_YMD_counter|month_31       ; out0             ;
+; |g20_YMD_counter|month_30~0     ; |g20_YMD_counter|month_30~0     ; out0             ;
+; |g20_YMD_counter|month_30~1     ; |g20_YMD_counter|month_30~1     ; out0             ;
+; |g20_YMD_counter|month_30       ; |g20_YMD_counter|month_30       ; out0             ;
+; |g20_YMD_counter|day_rst~0      ; |g20_YMD_counter|day_rst~0      ; out0             ;
+; |g20_YMD_counter|day_rst~1      ; |g20_YMD_counter|day_rst~1      ; out0             ;
+; |g20_YMD_counter|day_rst~2      ; |g20_YMD_counter|day_rst~2      ; out0             ;
+; |g20_YMD_counter|day_rst~3      ; |g20_YMD_counter|day_rst~3      ; out0             ;
+; |g20_YMD_counter|day_rst~4      ; |g20_YMD_counter|day_rst~4      ; out0             ;
+; |g20_YMD_counter|day_rst~5      ; |g20_YMD_counter|day_rst~5      ; out0             ;
+; |g20_YMD_counter|day_rst~6      ; |g20_YMD_counter|day_rst~6      ; out0             ;
+; |g20_YMD_counter|day_rst        ; |g20_YMD_counter|day_rst        ; out0             ;
+; |g20_YMD_counter|month_rst      ; |g20_YMD_counter|month_rst      ; out0             ;
+; |g20_YMD_counter|year_count[0]  ; |g20_YMD_counter|year_count[0]  ; regout           ;
+; |g20_YMD_counter|day_count~0    ; |g20_YMD_counter|day_count~0    ; out              ;
+; |g20_YMD_counter|day_count~1    ; |g20_YMD_counter|day_count~1    ; out              ;
+; |g20_YMD_counter|day_count~2    ; |g20_YMD_counter|day_count~2    ; out              ;
+; |g20_YMD_counter|day_count~3    ; |g20_YMD_counter|day_count~3    ; out              ;
+; |g20_YMD_counter|day_count~4    ; |g20_YMD_counter|day_count~4    ; out              ;
+; |g20_YMD_counter|day_count~5    ; |g20_YMD_counter|day_count~5    ; out              ;
+; |g20_YMD_counter|day_count~6    ; |g20_YMD_counter|day_count~6    ; out              ;
+; |g20_YMD_counter|day_count~7    ; |g20_YMD_counter|day_count~7    ; out              ;
+; |g20_YMD_counter|day_count~8    ; |g20_YMD_counter|day_count~8    ; out              ;
+; |g20_YMD_counter|day_count~9    ; |g20_YMD_counter|day_count~9    ; out              ;
+; |g20_YMD_counter|counters~0     ; |g20_YMD_counter|counters~0     ; out0             ;
+; |g20_YMD_counter|month_count~0  ; |g20_YMD_counter|month_count~0  ; out              ;
+; |g20_YMD_counter|month_count~1  ; |g20_YMD_counter|month_count~1  ; out              ;
+; |g20_YMD_counter|month_count~2  ; |g20_YMD_counter|month_count~2  ; out              ;
+; |g20_YMD_counter|month_count~3  ; |g20_YMD_counter|month_count~3  ; out              ;
+; |g20_YMD_counter|month_count~4  ; |g20_YMD_counter|month_count~4  ; out              ;
+; |g20_YMD_counter|month_count~5  ; |g20_YMD_counter|month_count~5  ; out              ;
+; |g20_YMD_counter|month_count~6  ; |g20_YMD_counter|month_count~6  ; out              ;
+; |g20_YMD_counter|month_count~7  ; |g20_YMD_counter|month_count~7  ; out              ;
+; |g20_YMD_counter|counters~1     ; |g20_YMD_counter|counters~1     ; out0             ;
+; |g20_YMD_counter|year_count~1   ; |g20_YMD_counter|year_count~1   ; out              ;
+; |g20_YMD_counter|year_count~2   ; |g20_YMD_counter|year_count~2   ; out              ;
+; |g20_YMD_counter|year_count~3   ; |g20_YMD_counter|year_count~3   ; out              ;
+; |g20_YMD_counter|year_count~4   ; |g20_YMD_counter|year_count~4   ; out              ;
+; |g20_YMD_counter|year_count~6   ; |g20_YMD_counter|year_count~6   ; out              ;
+; |g20_YMD_counter|year_count~7   ; |g20_YMD_counter|year_count~7   ; out              ;
+; |g20_YMD_counter|year_count~9   ; |g20_YMD_counter|year_count~9   ; out              ;
+; |g20_YMD_counter|year_count~10  ; |g20_YMD_counter|year_count~10  ; out              ;
+; |g20_YMD_counter|year_count~11  ; |g20_YMD_counter|year_count~11  ; out              ;
+; |g20_YMD_counter|year_count~13  ; |g20_YMD_counter|year_count~13  ; out              ;
+; |g20_YMD_counter|year_count~14  ; |g20_YMD_counter|year_count~14  ; out              ;
+; |g20_YMD_counter|year_count~15  ; |g20_YMD_counter|year_count~15  ; out              ;
+; |g20_YMD_counter|year_count~16  ; |g20_YMD_counter|year_count~16  ; out              ;
+; |g20_YMD_counter|year_count~18  ; |g20_YMD_counter|year_count~18  ; out              ;
+; |g20_YMD_counter|year_count~19  ; |g20_YMD_counter|year_count~19  ; out              ;
+; |g20_YMD_counter|year_count~21  ; |g20_YMD_counter|year_count~21  ; out              ;
+; |g20_YMD_counter|year_count~22  ; |g20_YMD_counter|year_count~22  ; out              ;
+; |g20_YMD_counter|year_count~23  ; |g20_YMD_counter|year_count~23  ; out              ;
+; |g20_YMD_counter|day_count~10   ; |g20_YMD_counter|day_count~10   ; out              ;
+; |g20_YMD_counter|day_count~11   ; |g20_YMD_counter|day_count~11   ; out              ;
+; |g20_YMD_counter|day_count~12   ; |g20_YMD_counter|day_count~12   ; out              ;
+; |g20_YMD_counter|day_count~13   ; |g20_YMD_counter|day_count~13   ; out              ;
+; |g20_YMD_counter|day_count~14   ; |g20_YMD_counter|day_count~14   ; out              ;
+; |g20_YMD_counter|month_count~8  ; |g20_YMD_counter|month_count~8  ; out              ;
+; |g20_YMD_counter|month_count~9  ; |g20_YMD_counter|month_count~9  ; out              ;
+; |g20_YMD_counter|month_count~10 ; |g20_YMD_counter|month_count~10 ; out              ;
+; |g20_YMD_counter|month_count~11 ; |g20_YMD_counter|month_count~11 ; out              ;
+; |g20_YMD_counter|year_count~25  ; |g20_YMD_counter|year_count~25  ; out              ;
+; |g20_YMD_counter|year_count~26  ; |g20_YMD_counter|year_count~26  ; out              ;
+; |g20_YMD_counter|year_count~27  ; |g20_YMD_counter|year_count~27  ; out              ;
+; |g20_YMD_counter|year_count~28  ; |g20_YMD_counter|year_count~28  ; out              ;
+; |g20_YMD_counter|year_count~30  ; |g20_YMD_counter|year_count~30  ; out              ;
+; |g20_YMD_counter|year_count~31  ; |g20_YMD_counter|year_count~31  ; out              ;
+; |g20_YMD_counter|year_count~33  ; |g20_YMD_counter|year_count~33  ; out              ;
+; |g20_YMD_counter|year_count~34  ; |g20_YMD_counter|year_count~34  ; out              ;
+; |g20_YMD_counter|year_count~35  ; |g20_YMD_counter|year_count~35  ; out              ;
+; |g20_YMD_counter|day_count[4]   ; |g20_YMD_counter|day_count[4]   ; regout           ;
+; |g20_YMD_counter|day_count[3]   ; |g20_YMD_counter|day_count[3]   ; regout           ;
+; |g20_YMD_counter|day_count[2]   ; |g20_YMD_counter|day_count[2]   ; regout           ;
+; |g20_YMD_counter|day_count[1]   ; |g20_YMD_counter|day_count[1]   ; regout           ;
+; |g20_YMD_counter|day_count[0]   ; |g20_YMD_counter|day_count[0]   ; regout           ;
+; |g20_YMD_counter|month_count[3] ; |g20_YMD_counter|month_count[3] ; regout           ;
+; |g20_YMD_counter|month_count[2] ; |g20_YMD_counter|month_count[2] ; regout           ;
+; |g20_YMD_counter|month_count[1] ; |g20_YMD_counter|month_count[1] ; regout           ;
+; |g20_YMD_counter|month_count[0] ; |g20_YMD_counter|month_count[0] ; regout           ;
+; |g20_YMD_counter|year_count[10] ; |g20_YMD_counter|year_count[10] ; regout           ;
+; |g20_YMD_counter|year_count[9]  ; |g20_YMD_counter|year_count[9]  ; regout           ;
+; |g20_YMD_counter|year_count[8]  ; |g20_YMD_counter|year_count[8]  ; regout           ;
+; |g20_YMD_counter|year_count[7]  ; |g20_YMD_counter|year_count[7]  ; regout           ;
+; |g20_YMD_counter|year_count[5]  ; |g20_YMD_counter|year_count[5]  ; regout           ;
+; |g20_YMD_counter|year_count[4]  ; |g20_YMD_counter|year_count[4]  ; regout           ;
+; |g20_YMD_counter|year_count[2]  ; |g20_YMD_counter|year_count[2]  ; regout           ;
+; |g20_YMD_counter|year_count[1]  ; |g20_YMD_counter|year_count[1]  ; regout           ;
+; |g20_YMD_counter|clk            ; |g20_YMD_counter|clk            ; out              ;
+; |g20_YMD_counter|rst            ; |g20_YMD_counter|rst            ; out              ;
+; |g20_YMD_counter|load_enable    ; |g20_YMD_counter|load_enable    ; out              ;
+; |g20_YMD_counter|years[0]       ; |g20_YMD_counter|years[0]       ; pin_out          ;
+; |g20_YMD_counter|years[1]       ; |g20_YMD_counter|years[1]       ; pin_out          ;
+; |g20_YMD_counter|years[2]       ; |g20_YMD_counter|years[2]       ; pin_out          ;
+; |g20_YMD_counter|years[4]       ; |g20_YMD_counter|years[4]       ; pin_out          ;
+; |g20_YMD_counter|years[5]       ; |g20_YMD_counter|years[5]       ; pin_out          ;
+; |g20_YMD_counter|years[7]       ; |g20_YMD_counter|years[7]       ; pin_out          ;
+; |g20_YMD_counter|years[8]       ; |g20_YMD_counter|years[8]       ; pin_out          ;
+; |g20_YMD_counter|years[9]       ; |g20_YMD_counter|years[9]       ; pin_out          ;
+; |g20_YMD_counter|years[10]      ; |g20_YMD_counter|years[10]      ; pin_out          ;
+; |g20_YMD_counter|months[0]      ; |g20_YMD_counter|months[0]      ; pin_out          ;
+; |g20_YMD_counter|months[1]      ; |g20_YMD_counter|months[1]      ; pin_out          ;
+; |g20_YMD_counter|months[2]      ; |g20_YMD_counter|months[2]      ; pin_out          ;
+; |g20_YMD_counter|months[3]      ; |g20_YMD_counter|months[3]      ; pin_out          ;
+; |g20_YMD_counter|days[0]        ; |g20_YMD_counter|days[0]        ; pin_out          ;
+; |g20_YMD_counter|days[1]        ; |g20_YMD_counter|days[1]        ; pin_out          ;
+; |g20_YMD_counter|days[2]        ; |g20_YMD_counter|days[2]        ; pin_out          ;
+; |g20_YMD_counter|days[3]        ; |g20_YMD_counter|days[3]        ; pin_out          ;
+; |g20_YMD_counter|days[4]        ; |g20_YMD_counter|days[4]        ; pin_out          ;
+; |g20_YMD_counter|Add0~0         ; |g20_YMD_counter|Add0~0         ; out0             ;
+; |g20_YMD_counter|Add0~1         ; |g20_YMD_counter|Add0~1         ; out0             ;
+; |g20_YMD_counter|Add0~2         ; |g20_YMD_counter|Add0~2         ; out0             ;
+; |g20_YMD_counter|Add0~3         ; |g20_YMD_counter|Add0~3         ; out0             ;
+; |g20_YMD_counter|Add0~4         ; |g20_YMD_counter|Add0~4         ; out0             ;
+; |g20_YMD_counter|Add0~5         ; |g20_YMD_counter|Add0~5         ; out0             ;
+; |g20_YMD_counter|Add0~6         ; |g20_YMD_counter|Add0~6         ; out0             ;
+; |g20_YMD_counter|Add1~0         ; |g20_YMD_counter|Add1~0         ; out0             ;
+; |g20_YMD_counter|Add1~1         ; |g20_YMD_counter|Add1~1         ; out0             ;
+; |g20_YMD_counter|Add1~2         ; |g20_YMD_counter|Add1~2         ; out0             ;
+; |g20_YMD_counter|Add1~3         ; |g20_YMD_counter|Add1~3         ; out0             ;
+; |g20_YMD_counter|Add1~4         ; |g20_YMD_counter|Add1~4         ; out0             ;
+; |g20_YMD_counter|Add2~0         ; |g20_YMD_counter|Add2~0         ; out0             ;
+; |g20_YMD_counter|Add2~1         ; |g20_YMD_counter|Add2~1         ; out0             ;
+; |g20_YMD_counter|Add2~2         ; |g20_YMD_counter|Add2~2         ; out0             ;
+; |g20_YMD_counter|Add2~6         ; |g20_YMD_counter|Add2~6         ; out0             ;
+; |g20_YMD_counter|Add2~8         ; |g20_YMD_counter|Add2~8         ; out0             ;
+; |g20_YMD_counter|Add2~12        ; |g20_YMD_counter|Add2~12        ; out0             ;
+; |g20_YMD_counter|Add2~14        ; |g20_YMD_counter|Add2~14        ; out0             ;
+; |g20_YMD_counter|Add2~16        ; |g20_YMD_counter|Add2~16        ; out0             ;
+; |g20_YMD_counter|Add2~18        ; |g20_YMD_counter|Add2~18        ; out0             ;
+; |g20_YMD_counter|Equal0~0       ; |g20_YMD_counter|Equal0~0       ; out0             ;
+; |g20_YMD_counter|Equal1~0       ; |g20_YMD_counter|Equal1~0       ; out0             ;
+; |g20_YMD_counter|Equal2~0       ; |g20_YMD_counter|Equal2~0       ; out0             ;
+; |g20_YMD_counter|Equal3~0       ; |g20_YMD_counter|Equal3~0       ; out0             ;
+; |g20_YMD_counter|Equal4~0       ; |g20_YMD_counter|Equal4~0       ; out0             ;
+; |g20_YMD_counter|Equal5~0       ; |g20_YMD_counter|Equal5~0       ; out0             ;
+; |g20_YMD_counter|Equal6~0       ; |g20_YMD_counter|Equal6~0       ; out0             ;
+; |g20_YMD_counter|Equal7~0       ; |g20_YMD_counter|Equal7~0       ; out0             ;
+; |g20_YMD_counter|Equal8~0       ; |g20_YMD_counter|Equal8~0       ; out0             ;
+; |g20_YMD_counter|Equal9~0       ; |g20_YMD_counter|Equal9~0       ; out0             ;
+; |g20_YMD_counter|Equal10~0      ; |g20_YMD_counter|Equal10~0      ; out0             ;
+; |g20_YMD_counter|Equal11~0      ; |g20_YMD_counter|Equal11~0      ; out0             ;
+; |g20_YMD_counter|Equal12~0      ; |g20_YMD_counter|Equal12~0      ; out0             ;
+; |g20_YMD_counter|Equal13~0      ; |g20_YMD_counter|Equal13~0      ; out0             ;
+; |g20_YMD_counter|Equal14~0      ; |g20_YMD_counter|Equal14~0      ; out0             ;
+; |g20_YMD_counter|Equal15~0      ; |g20_YMD_counter|Equal15~0      ; out0             ;
+; |g20_YMD_counter|Equal16~0      ; |g20_YMD_counter|Equal16~0      ; out0             ;
++---------------------------------+---------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                             ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |g20_YMD_counter|year_rst       ; |g20_YMD_counter|year_rst       ; out0             ;
+; |g20_YMD_counter|year_count~0   ; |g20_YMD_counter|year_count~0   ; out              ;
+; |g20_YMD_counter|year_count~5   ; |g20_YMD_counter|year_count~5   ; out              ;
+; |g20_YMD_counter|year_count~8   ; |g20_YMD_counter|year_count~8   ; out              ;
+; |g20_YMD_counter|year_count~12  ; |g20_YMD_counter|year_count~12  ; out              ;
+; |g20_YMD_counter|year_count~17  ; |g20_YMD_counter|year_count~17  ; out              ;
+; |g20_YMD_counter|year_count~20  ; |g20_YMD_counter|year_count~20  ; out              ;
+; |g20_YMD_counter|year_count~24  ; |g20_YMD_counter|year_count~24  ; out              ;
+; |g20_YMD_counter|year_count~29  ; |g20_YMD_counter|year_count~29  ; out              ;
+; |g20_YMD_counter|year_count~32  ; |g20_YMD_counter|year_count~32  ; out              ;
+; |g20_YMD_counter|year_count[11] ; |g20_YMD_counter|year_count[11] ; regout           ;
+; |g20_YMD_counter|year_count[6]  ; |g20_YMD_counter|year_count[6]  ; regout           ;
+; |g20_YMD_counter|year_count[3]  ; |g20_YMD_counter|year_count[3]  ; regout           ;
+; |g20_YMD_counter|day_count_en   ; |g20_YMD_counter|day_count_en   ; out              ;
+; |g20_YMD_counter|y_set[0]       ; |g20_YMD_counter|y_set[0]       ; out              ;
+; |g20_YMD_counter|y_set[1]       ; |g20_YMD_counter|y_set[1]       ; out              ;
+; |g20_YMD_counter|y_set[2]       ; |g20_YMD_counter|y_set[2]       ; out              ;
+; |g20_YMD_counter|y_set[3]       ; |g20_YMD_counter|y_set[3]       ; out              ;
+; |g20_YMD_counter|y_set[4]       ; |g20_YMD_counter|y_set[4]       ; out              ;
+; |g20_YMD_counter|y_set[5]       ; |g20_YMD_counter|y_set[5]       ; out              ;
+; |g20_YMD_counter|y_set[6]       ; |g20_YMD_counter|y_set[6]       ; out              ;
+; |g20_YMD_counter|y_set[7]       ; |g20_YMD_counter|y_set[7]       ; out              ;
+; |g20_YMD_counter|y_set[8]       ; |g20_YMD_counter|y_set[8]       ; out              ;
+; |g20_YMD_counter|y_set[9]       ; |g20_YMD_counter|y_set[9]       ; out              ;
+; |g20_YMD_counter|y_set[10]      ; |g20_YMD_counter|y_set[10]      ; out              ;
+; |g20_YMD_counter|y_set[11]      ; |g20_YMD_counter|y_set[11]      ; out              ;
+; |g20_YMD_counter|m_set[0]       ; |g20_YMD_counter|m_set[0]       ; out              ;
+; |g20_YMD_counter|m_set[1]       ; |g20_YMD_counter|m_set[1]       ; out              ;
+; |g20_YMD_counter|m_set[2]       ; |g20_YMD_counter|m_set[2]       ; out              ;
+; |g20_YMD_counter|m_set[3]       ; |g20_YMD_counter|m_set[3]       ; out              ;
+; |g20_YMD_counter|d_set[0]       ; |g20_YMD_counter|d_set[0]       ; out              ;
+; |g20_YMD_counter|d_set[1]       ; |g20_YMD_counter|d_set[1]       ; out              ;
+; |g20_YMD_counter|d_set[2]       ; |g20_YMD_counter|d_set[2]       ; out              ;
+; |g20_YMD_counter|d_set[3]       ; |g20_YMD_counter|d_set[3]       ; out              ;
+; |g20_YMD_counter|d_set[4]       ; |g20_YMD_counter|d_set[4]       ; out              ;
+; |g20_YMD_counter|years[3]       ; |g20_YMD_counter|years[3]       ; pin_out          ;
+; |g20_YMD_counter|years[6]       ; |g20_YMD_counter|years[6]       ; pin_out          ;
+; |g20_YMD_counter|years[11]      ; |g20_YMD_counter|years[11]      ; pin_out          ;
+; |g20_YMD_counter|Add2~3         ; |g20_YMD_counter|Add2~3         ; out0             ;
+; |g20_YMD_counter|Add2~4         ; |g20_YMD_counter|Add2~4         ; out0             ;
+; |g20_YMD_counter|Add2~5         ; |g20_YMD_counter|Add2~5         ; out0             ;
+; |g20_YMD_counter|Add2~7         ; |g20_YMD_counter|Add2~7         ; out0             ;
+; |g20_YMD_counter|Add2~9         ; |g20_YMD_counter|Add2~9         ; out0             ;
+; |g20_YMD_counter|Add2~10        ; |g20_YMD_counter|Add2~10        ; out0             ;
+; |g20_YMD_counter|Add2~11        ; |g20_YMD_counter|Add2~11        ; out0             ;
+; |g20_YMD_counter|Add2~13        ; |g20_YMD_counter|Add2~13        ; out0             ;
+; |g20_YMD_counter|Add2~15        ; |g20_YMD_counter|Add2~15        ; out0             ;
+; |g20_YMD_counter|Add2~17        ; |g20_YMD_counter|Add2~17        ; out0             ;
+; |g20_YMD_counter|Add2~19        ; |g20_YMD_counter|Add2~19        ; out0             ;
+; |g20_YMD_counter|Add2~20        ; |g20_YMD_counter|Add2~20        ; out0             ;
+; |g20_YMD_counter|Equal17~0      ; |g20_YMD_counter|Equal17~0      ; out0             ;
++---------------------------------+---------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                             ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |g20_YMD_counter|year_rst       ; |g20_YMD_counter|year_rst       ; out0             ;
+; |g20_YMD_counter|year_count~0   ; |g20_YMD_counter|year_count~0   ; out              ;
+; |g20_YMD_counter|year_count~5   ; |g20_YMD_counter|year_count~5   ; out              ;
+; |g20_YMD_counter|year_count~8   ; |g20_YMD_counter|year_count~8   ; out              ;
+; |g20_YMD_counter|year_count~12  ; |g20_YMD_counter|year_count~12  ; out              ;
+; |g20_YMD_counter|year_count~17  ; |g20_YMD_counter|year_count~17  ; out              ;
+; |g20_YMD_counter|year_count~20  ; |g20_YMD_counter|year_count~20  ; out              ;
+; |g20_YMD_counter|year_count~24  ; |g20_YMD_counter|year_count~24  ; out              ;
+; |g20_YMD_counter|year_count~29  ; |g20_YMD_counter|year_count~29  ; out              ;
+; |g20_YMD_counter|year_count~32  ; |g20_YMD_counter|year_count~32  ; out              ;
+; |g20_YMD_counter|year_count[11] ; |g20_YMD_counter|year_count[11] ; regout           ;
+; |g20_YMD_counter|year_count[6]  ; |g20_YMD_counter|year_count[6]  ; regout           ;
+; |g20_YMD_counter|year_count[3]  ; |g20_YMD_counter|year_count[3]  ; regout           ;
+; |g20_YMD_counter|day_count_en   ; |g20_YMD_counter|day_count_en   ; out              ;
+; |g20_YMD_counter|y_set[0]       ; |g20_YMD_counter|y_set[0]       ; out              ;
+; |g20_YMD_counter|y_set[1]       ; |g20_YMD_counter|y_set[1]       ; out              ;
+; |g20_YMD_counter|y_set[2]       ; |g20_YMD_counter|y_set[2]       ; out              ;
+; |g20_YMD_counter|y_set[3]       ; |g20_YMD_counter|y_set[3]       ; out              ;
+; |g20_YMD_counter|y_set[4]       ; |g20_YMD_counter|y_set[4]       ; out              ;
+; |g20_YMD_counter|y_set[5]       ; |g20_YMD_counter|y_set[5]       ; out              ;
+; |g20_YMD_counter|y_set[6]       ; |g20_YMD_counter|y_set[6]       ; out              ;
+; |g20_YMD_counter|y_set[7]       ; |g20_YMD_counter|y_set[7]       ; out              ;
+; |g20_YMD_counter|y_set[8]       ; |g20_YMD_counter|y_set[8]       ; out              ;
+; |g20_YMD_counter|y_set[9]       ; |g20_YMD_counter|y_set[9]       ; out              ;
+; |g20_YMD_counter|y_set[10]      ; |g20_YMD_counter|y_set[10]      ; out              ;
+; |g20_YMD_counter|y_set[11]      ; |g20_YMD_counter|y_set[11]      ; out              ;
+; |g20_YMD_counter|m_set[0]       ; |g20_YMD_counter|m_set[0]       ; out              ;
+; |g20_YMD_counter|m_set[1]       ; |g20_YMD_counter|m_set[1]       ; out              ;
+; |g20_YMD_counter|m_set[2]       ; |g20_YMD_counter|m_set[2]       ; out              ;
+; |g20_YMD_counter|m_set[3]       ; |g20_YMD_counter|m_set[3]       ; out              ;
+; |g20_YMD_counter|d_set[0]       ; |g20_YMD_counter|d_set[0]       ; out              ;
+; |g20_YMD_counter|d_set[1]       ; |g20_YMD_counter|d_set[1]       ; out              ;
+; |g20_YMD_counter|d_set[2]       ; |g20_YMD_counter|d_set[2]       ; out              ;
+; |g20_YMD_counter|d_set[3]       ; |g20_YMD_counter|d_set[3]       ; out              ;
+; |g20_YMD_counter|d_set[4]       ; |g20_YMD_counter|d_set[4]       ; out              ;
+; |g20_YMD_counter|years[3]       ; |g20_YMD_counter|years[3]       ; pin_out          ;
+; |g20_YMD_counter|years[6]       ; |g20_YMD_counter|years[6]       ; pin_out          ;
+; |g20_YMD_counter|years[11]      ; |g20_YMD_counter|years[11]      ; pin_out          ;
+; |g20_YMD_counter|Add2~3         ; |g20_YMD_counter|Add2~3         ; out0             ;
+; |g20_YMD_counter|Add2~4         ; |g20_YMD_counter|Add2~4         ; out0             ;
+; |g20_YMD_counter|Add2~5         ; |g20_YMD_counter|Add2~5         ; out0             ;
+; |g20_YMD_counter|Add2~7         ; |g20_YMD_counter|Add2~7         ; out0             ;
+; |g20_YMD_counter|Add2~9         ; |g20_YMD_counter|Add2~9         ; out0             ;
+; |g20_YMD_counter|Add2~10        ; |g20_YMD_counter|Add2~10        ; out0             ;
+; |g20_YMD_counter|Add2~11        ; |g20_YMD_counter|Add2~11        ; out0             ;
+; |g20_YMD_counter|Add2~13        ; |g20_YMD_counter|Add2~13        ; out0             ;
+; |g20_YMD_counter|Add2~15        ; |g20_YMD_counter|Add2~15        ; out0             ;
+; |g20_YMD_counter|Add2~17        ; |g20_YMD_counter|Add2~17        ; out0             ;
+; |g20_YMD_counter|Add2~19        ; |g20_YMD_counter|Add2~19        ; out0             ;
+; |g20_YMD_counter|Add2~20        ; |g20_YMD_counter|Add2~20        ; out0             ;
+; |g20_YMD_counter|Equal17~0      ; |g20_YMD_counter|Equal17~0      ; out0             ;
++---------------------------------+---------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Thu Apr 03 19:48:37 2014
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off g20_lab_4 -c g20_lab_4
+Info: Using vector source file "//campus.mcgill.ca/EMF/ELE/asaha2/Desktop/g20_lab_4/g20_lab_4/g20_YMD_counter.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of g20_YMD_counter.vwf called g20_lab_4.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      74.75 %
+Info: Number of transitions in simulation is 33538
+Info: Vector file g20_YMD_counter.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 177 megabytes
+    Info: Processing ended: Thu Apr 03 19:48:42 2014
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Apr 14 03:20:04 2014
+Quartus II 64-Bit Version : 9.1 Build 350 03/24/2010 SP 2 SJ Full Version
+Revision Name : g20_lab5
+Top-level Entity Name : g20_lab5
+Family : Cyclone II
+Total logic elements : 1,015
+    Total combinational functions : 950
+    Dedicated logic registers : 316
+Total registers : 316
+Total pins : 42
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 18
+Total PLLs : 0

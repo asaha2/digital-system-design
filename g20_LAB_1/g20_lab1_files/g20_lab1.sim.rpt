@@ -1,0 +1,1015 @@
+Simulator report for g20_lab1
+Fri Feb 07 20:34:24 2014
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 746 nodes    ;
+; Simulation Coverage         ;      85.92 % ;
+; Total Number of Transitions ; 19714        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                         ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Option                                                                                     ; Setting       ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Simulation mode                                                                            ; Functional    ; Timing        ;
+; Start time                                                                                 ; 0 ns          ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF          ;               ;
+; Vector input source                                                                        ; Waveform1.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On            ; On            ;
+; Check outputs                                                                              ; Off           ; Off           ;
+; Report simulation coverage                                                                 ; On            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On            ; On            ;
+; Display missing 1-value coverage report                                                    ; On            ; On            ;
+; Display missing 0-value coverage report                                                    ; On            ; On            ;
+; Detect setup and hold time violations                                                      ; Off           ; Off           ;
+; Detect glitches                                                                            ; Off           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off           ; Off           ;
+; Generate Signal Activity File                                                              ; Off           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On            ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto          ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      85.92 % ;
+; Total nodes checked                                 ; 746          ;
+; Total output ports checked                          ; 746          ;
+; Total output ports with complete 1/0-value coverage ; 641          ;
+; Total output ports with no 1/0-value coverage       ; 105          ;
+; Total output ports with no 1-value coverage         ; 105          ;
+; Total output ports with no 0-value coverage         ; 105          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                      ;
++---------------------------------------+---------------------------------------+------------------+
+; Node Name                             ; Output Port Name                      ; Output Port Type ;
++---------------------------------------+---------------------------------------+------------------+
+; |g20_Seconds_to_Days|seconds[0]       ; |g20_Seconds_to_Days|seconds[0]       ; out              ;
+; |g20_Seconds_to_Days|seconds[1]       ; |g20_Seconds_to_Days|seconds[1]       ; out              ;
+; |g20_Seconds_to_Days|seconds[2]       ; |g20_Seconds_to_Days|seconds[2]       ; out              ;
+; |g20_Seconds_to_Days|seconds[3]       ; |g20_Seconds_to_Days|seconds[3]       ; out              ;
+; |g20_Seconds_to_Days|seconds[4]       ; |g20_Seconds_to_Days|seconds[4]       ; out              ;
+; |g20_Seconds_to_Days|seconds[5]       ; |g20_Seconds_to_Days|seconds[5]       ; out              ;
+; |g20_Seconds_to_Days|seconds[6]       ; |g20_Seconds_to_Days|seconds[6]       ; out              ;
+; |g20_Seconds_to_Days|seconds[7]       ; |g20_Seconds_to_Days|seconds[7]       ; out              ;
+; |g20_Seconds_to_Days|seconds[8]       ; |g20_Seconds_to_Days|seconds[8]       ; out              ;
+; |g20_Seconds_to_Days|seconds[9]       ; |g20_Seconds_to_Days|seconds[9]       ; out              ;
+; |g20_Seconds_to_Days|seconds[10]      ; |g20_Seconds_to_Days|seconds[10]      ; out              ;
+; |g20_Seconds_to_Days|seconds[11]      ; |g20_Seconds_to_Days|seconds[11]      ; out              ;
+; |g20_Seconds_to_Days|seconds[12]      ; |g20_Seconds_to_Days|seconds[12]      ; out              ;
+; |g20_Seconds_to_Days|seconds[14]      ; |g20_Seconds_to_Days|seconds[14]      ; out              ;
+; |g20_Seconds_to_Days|seconds[16]      ; |g20_Seconds_to_Days|seconds[16]      ; out              ;
+; |g20_Seconds_to_Days|day_fraction[0]  ; |g20_Seconds_to_Days|day_fraction[0]  ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[1]  ; |g20_Seconds_to_Days|day_fraction[1]  ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[2]  ; |g20_Seconds_to_Days|day_fraction[2]  ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[3]  ; |g20_Seconds_to_Days|day_fraction[3]  ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[4]  ; |g20_Seconds_to_Days|day_fraction[4]  ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[5]  ; |g20_Seconds_to_Days|day_fraction[5]  ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[6]  ; |g20_Seconds_to_Days|day_fraction[6]  ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[7]  ; |g20_Seconds_to_Days|day_fraction[7]  ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[8]  ; |g20_Seconds_to_Days|day_fraction[8]  ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[9]  ; |g20_Seconds_to_Days|day_fraction[9]  ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[10] ; |g20_Seconds_to_Days|day_fraction[10] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[11] ; |g20_Seconds_to_Days|day_fraction[11] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[12] ; |g20_Seconds_to_Days|day_fraction[12] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[13] ; |g20_Seconds_to_Days|day_fraction[13] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[14] ; |g20_Seconds_to_Days|day_fraction[14] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[15] ; |g20_Seconds_to_Days|day_fraction[15] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[16] ; |g20_Seconds_to_Days|day_fraction[16] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[17] ; |g20_Seconds_to_Days|day_fraction[17] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[18] ; |g20_Seconds_to_Days|day_fraction[18] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[19] ; |g20_Seconds_to_Days|day_fraction[19] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[20] ; |g20_Seconds_to_Days|day_fraction[20] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[21] ; |g20_Seconds_to_Days|day_fraction[21] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[22] ; |g20_Seconds_to_Days|day_fraction[22] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[23] ; |g20_Seconds_to_Days|day_fraction[23] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[24] ; |g20_Seconds_to_Days|day_fraction[24] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[25] ; |g20_Seconds_to_Days|day_fraction[25] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[26] ; |g20_Seconds_to_Days|day_fraction[26] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[27] ; |g20_Seconds_to_Days|day_fraction[27] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[28] ; |g20_Seconds_to_Days|day_fraction[28] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[29] ; |g20_Seconds_to_Days|day_fraction[29] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[30] ; |g20_Seconds_to_Days|day_fraction[30] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[31] ; |g20_Seconds_to_Days|day_fraction[31] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[32] ; |g20_Seconds_to_Days|day_fraction[32] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[33] ; |g20_Seconds_to_Days|day_fraction[33] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[34] ; |g20_Seconds_to_Days|day_fraction[34] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[35] ; |g20_Seconds_to_Days|day_fraction[35] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[36] ; |g20_Seconds_to_Days|day_fraction[36] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[37] ; |g20_Seconds_to_Days|day_fraction[37] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[38] ; |g20_Seconds_to_Days|day_fraction[38] ; pin_out          ;
+; |g20_Seconds_to_Days|day_fraction[39] ; |g20_Seconds_to_Days|day_fraction[39] ; pin_out          ;
+; |g20_Seconds_to_Days|Add0~0           ; |g20_Seconds_to_Days|Add0~0           ; out0             ;
+; |g20_Seconds_to_Days|Add0~1           ; |g20_Seconds_to_Days|Add0~1           ; out0             ;
+; |g20_Seconds_to_Days|Add0~2           ; |g20_Seconds_to_Days|Add0~2           ; out0             ;
+; |g20_Seconds_to_Days|Add0~3           ; |g20_Seconds_to_Days|Add0~3           ; out0             ;
+; |g20_Seconds_to_Days|Add0~4           ; |g20_Seconds_to_Days|Add0~4           ; out0             ;
+; |g20_Seconds_to_Days|Add0~5           ; |g20_Seconds_to_Days|Add0~5           ; out0             ;
+; |g20_Seconds_to_Days|Add0~6           ; |g20_Seconds_to_Days|Add0~6           ; out0             ;
+; |g20_Seconds_to_Days|Add0~7           ; |g20_Seconds_to_Days|Add0~7           ; out0             ;
+; |g20_Seconds_to_Days|Add0~8           ; |g20_Seconds_to_Days|Add0~8           ; out0             ;
+; |g20_Seconds_to_Days|Add0~9           ; |g20_Seconds_to_Days|Add0~9           ; out0             ;
+; |g20_Seconds_to_Days|Add0~10          ; |g20_Seconds_to_Days|Add0~10          ; out0             ;
+; |g20_Seconds_to_Days|Add0~11          ; |g20_Seconds_to_Days|Add0~11          ; out0             ;
+; |g20_Seconds_to_Days|Add0~12          ; |g20_Seconds_to_Days|Add0~12          ; out0             ;
+; |g20_Seconds_to_Days|Add0~13          ; |g20_Seconds_to_Days|Add0~13          ; out0             ;
+; |g20_Seconds_to_Days|Add0~14          ; |g20_Seconds_to_Days|Add0~14          ; out0             ;
+; |g20_Seconds_to_Days|Add0~15          ; |g20_Seconds_to_Days|Add0~15          ; out0             ;
+; |g20_Seconds_to_Days|Add0~16          ; |g20_Seconds_to_Days|Add0~16          ; out0             ;
+; |g20_Seconds_to_Days|Add0~17          ; |g20_Seconds_to_Days|Add0~17          ; out0             ;
+; |g20_Seconds_to_Days|Add0~18          ; |g20_Seconds_to_Days|Add0~18          ; out0             ;
+; |g20_Seconds_to_Days|Add0~19          ; |g20_Seconds_to_Days|Add0~19          ; out0             ;
+; |g20_Seconds_to_Days|Add0~20          ; |g20_Seconds_to_Days|Add0~20          ; out0             ;
+; |g20_Seconds_to_Days|Add0~21          ; |g20_Seconds_to_Days|Add0~21          ; out0             ;
+; |g20_Seconds_to_Days|Add0~22          ; |g20_Seconds_to_Days|Add0~22          ; out0             ;
+; |g20_Seconds_to_Days|Add0~23          ; |g20_Seconds_to_Days|Add0~23          ; out0             ;
+; |g20_Seconds_to_Days|Add0~26          ; |g20_Seconds_to_Days|Add0~26          ; out0             ;
+; |g20_Seconds_to_Days|Add0~27          ; |g20_Seconds_to_Days|Add0~27          ; out0             ;
+; |g20_Seconds_to_Days|Add0~28          ; |g20_Seconds_to_Days|Add0~28          ; out0             ;
+; |g20_Seconds_to_Days|Add0~29          ; |g20_Seconds_to_Days|Add0~29          ; out0             ;
+; |g20_Seconds_to_Days|Add0~30          ; |g20_Seconds_to_Days|Add0~30          ; out0             ;
+; |g20_Seconds_to_Days|Add0~31          ; |g20_Seconds_to_Days|Add0~31          ; out0             ;
+; |g20_Seconds_to_Days|Add0~32          ; |g20_Seconds_to_Days|Add0~32          ; out0             ;
+; |g20_Seconds_to_Days|Add0~33          ; |g20_Seconds_to_Days|Add0~33          ; out0             ;
+; |g20_Seconds_to_Days|Add0~34          ; |g20_Seconds_to_Days|Add0~34          ; out0             ;
+; |g20_Seconds_to_Days|Add0~35          ; |g20_Seconds_to_Days|Add0~35          ; out0             ;
+; |g20_Seconds_to_Days|Add0~37          ; |g20_Seconds_to_Days|Add0~37          ; out0             ;
+; |g20_Seconds_to_Days|Add0~38          ; |g20_Seconds_to_Days|Add0~38          ; out0             ;
+; |g20_Seconds_to_Days|Add0~39          ; |g20_Seconds_to_Days|Add0~39          ; out0             ;
+; |g20_Seconds_to_Days|Add0~40          ; |g20_Seconds_to_Days|Add0~40          ; out0             ;
+; |g20_Seconds_to_Days|Add0~41          ; |g20_Seconds_to_Days|Add0~41          ; out0             ;
+; |g20_Seconds_to_Days|Add0~42          ; |g20_Seconds_to_Days|Add0~42          ; out0             ;
+; |g20_Seconds_to_Days|Add0~43          ; |g20_Seconds_to_Days|Add0~43          ; out0             ;
+; |g20_Seconds_to_Days|Add0~44          ; |g20_Seconds_to_Days|Add0~44          ; out0             ;
+; |g20_Seconds_to_Days|Add0~45          ; |g20_Seconds_to_Days|Add0~45          ; out0             ;
+; |g20_Seconds_to_Days|Add0~46          ; |g20_Seconds_to_Days|Add0~46          ; out0             ;
+; |g20_Seconds_to_Days|Add0~47          ; |g20_Seconds_to_Days|Add0~47          ; out0             ;
+; |g20_Seconds_to_Days|Add0~48          ; |g20_Seconds_to_Days|Add0~48          ; out0             ;
+; |g20_Seconds_to_Days|Add0~49          ; |g20_Seconds_to_Days|Add0~49          ; out0             ;
+; |g20_Seconds_to_Days|Add0~50          ; |g20_Seconds_to_Days|Add0~50          ; out0             ;
+; |g20_Seconds_to_Days|Add0~51          ; |g20_Seconds_to_Days|Add0~51          ; out0             ;
+; |g20_Seconds_to_Days|Add0~52          ; |g20_Seconds_to_Days|Add0~52          ; out0             ;
+; |g20_Seconds_to_Days|Add0~53          ; |g20_Seconds_to_Days|Add0~53          ; out0             ;
+; |g20_Seconds_to_Days|Add0~56          ; |g20_Seconds_to_Days|Add0~56          ; out0             ;
+; |g20_Seconds_to_Days|Add0~57          ; |g20_Seconds_to_Days|Add0~57          ; out0             ;
+; |g20_Seconds_to_Days|Add0~58          ; |g20_Seconds_to_Days|Add0~58          ; out0             ;
+; |g20_Seconds_to_Days|Add0~60          ; |g20_Seconds_to_Days|Add0~60          ; out0             ;
+; |g20_Seconds_to_Days|Add0~61          ; |g20_Seconds_to_Days|Add0~61          ; out0             ;
+; |g20_Seconds_to_Days|Add0~62          ; |g20_Seconds_to_Days|Add0~62          ; out0             ;
+; |g20_Seconds_to_Days|Add0~68          ; |g20_Seconds_to_Days|Add0~68          ; out0             ;
+; |g20_Seconds_to_Days|Add0~70          ; |g20_Seconds_to_Days|Add0~70          ; out0             ;
+; |g20_Seconds_to_Days|Add0~72          ; |g20_Seconds_to_Days|Add0~72          ; out0             ;
+; |g20_Seconds_to_Days|Add0~74          ; |g20_Seconds_to_Days|Add0~74          ; out0             ;
+; |g20_Seconds_to_Days|Add1~0           ; |g20_Seconds_to_Days|Add1~0           ; out0             ;
+; |g20_Seconds_to_Days|Add1~1           ; |g20_Seconds_to_Days|Add1~1           ; out0             ;
+; |g20_Seconds_to_Days|Add1~2           ; |g20_Seconds_to_Days|Add1~2           ; out0             ;
+; |g20_Seconds_to_Days|Add1~3           ; |g20_Seconds_to_Days|Add1~3           ; out0             ;
+; |g20_Seconds_to_Days|Add1~4           ; |g20_Seconds_to_Days|Add1~4           ; out0             ;
+; |g20_Seconds_to_Days|Add1~5           ; |g20_Seconds_to_Days|Add1~5           ; out0             ;
+; |g20_Seconds_to_Days|Add1~6           ; |g20_Seconds_to_Days|Add1~6           ; out0             ;
+; |g20_Seconds_to_Days|Add1~7           ; |g20_Seconds_to_Days|Add1~7           ; out0             ;
+; |g20_Seconds_to_Days|Add1~8           ; |g20_Seconds_to_Days|Add1~8           ; out0             ;
+; |g20_Seconds_to_Days|Add1~9           ; |g20_Seconds_to_Days|Add1~9           ; out0             ;
+; |g20_Seconds_to_Days|Add1~10          ; |g20_Seconds_to_Days|Add1~10          ; out0             ;
+; |g20_Seconds_to_Days|Add1~11          ; |g20_Seconds_to_Days|Add1~11          ; out0             ;
+; |g20_Seconds_to_Days|Add1~12          ; |g20_Seconds_to_Days|Add1~12          ; out0             ;
+; |g20_Seconds_to_Days|Add1~13          ; |g20_Seconds_to_Days|Add1~13          ; out0             ;
+; |g20_Seconds_to_Days|Add1~15          ; |g20_Seconds_to_Days|Add1~15          ; out0             ;
+; |g20_Seconds_to_Days|Add1~16          ; |g20_Seconds_to_Days|Add1~16          ; out0             ;
+; |g20_Seconds_to_Days|Add1~17          ; |g20_Seconds_to_Days|Add1~17          ; out0             ;
+; |g20_Seconds_to_Days|Add1~18          ; |g20_Seconds_to_Days|Add1~18          ; out0             ;
+; |g20_Seconds_to_Days|Add1~20          ; |g20_Seconds_to_Days|Add1~20          ; out0             ;
+; |g20_Seconds_to_Days|Add1~21          ; |g20_Seconds_to_Days|Add1~21          ; out0             ;
+; |g20_Seconds_to_Days|Add1~22          ; |g20_Seconds_to_Days|Add1~22          ; out0             ;
+; |g20_Seconds_to_Days|Add1~23          ; |g20_Seconds_to_Days|Add1~23          ; out0             ;
+; |g20_Seconds_to_Days|Add1~24          ; |g20_Seconds_to_Days|Add1~24          ; out0             ;
+; |g20_Seconds_to_Days|Add1~25          ; |g20_Seconds_to_Days|Add1~25          ; out0             ;
+; |g20_Seconds_to_Days|Add1~26          ; |g20_Seconds_to_Days|Add1~26          ; out0             ;
+; |g20_Seconds_to_Days|Add1~27          ; |g20_Seconds_to_Days|Add1~27          ; out0             ;
+; |g20_Seconds_to_Days|Add1~28          ; |g20_Seconds_to_Days|Add1~28          ; out0             ;
+; |g20_Seconds_to_Days|Add1~29          ; |g20_Seconds_to_Days|Add1~29          ; out0             ;
+; |g20_Seconds_to_Days|Add1~30          ; |g20_Seconds_to_Days|Add1~30          ; out0             ;
+; |g20_Seconds_to_Days|Add1~31          ; |g20_Seconds_to_Days|Add1~31          ; out0             ;
+; |g20_Seconds_to_Days|Add1~32          ; |g20_Seconds_to_Days|Add1~32          ; out0             ;
+; |g20_Seconds_to_Days|Add1~33          ; |g20_Seconds_to_Days|Add1~33          ; out0             ;
+; |g20_Seconds_to_Days|Add1~34          ; |g20_Seconds_to_Days|Add1~34          ; out0             ;
+; |g20_Seconds_to_Days|Add1~35          ; |g20_Seconds_to_Days|Add1~35          ; out0             ;
+; |g20_Seconds_to_Days|Add1~36          ; |g20_Seconds_to_Days|Add1~36          ; out0             ;
+; |g20_Seconds_to_Days|Add1~37          ; |g20_Seconds_to_Days|Add1~37          ; out0             ;
+; |g20_Seconds_to_Days|Add1~38          ; |g20_Seconds_to_Days|Add1~38          ; out0             ;
+; |g20_Seconds_to_Days|Add1~39          ; |g20_Seconds_to_Days|Add1~39          ; out0             ;
+; |g20_Seconds_to_Days|Add1~40          ; |g20_Seconds_to_Days|Add1~40          ; out0             ;
+; |g20_Seconds_to_Days|Add1~41          ; |g20_Seconds_to_Days|Add1~41          ; out0             ;
+; |g20_Seconds_to_Days|Add1~42          ; |g20_Seconds_to_Days|Add1~42          ; out0             ;
+; |g20_Seconds_to_Days|Add1~43          ; |g20_Seconds_to_Days|Add1~43          ; out0             ;
+; |g20_Seconds_to_Days|Add1~45          ; |g20_Seconds_to_Days|Add1~45          ; out0             ;
+; |g20_Seconds_to_Days|Add1~46          ; |g20_Seconds_to_Days|Add1~46          ; out0             ;
+; |g20_Seconds_to_Days|Add1~47          ; |g20_Seconds_to_Days|Add1~47          ; out0             ;
+; |g20_Seconds_to_Days|Add1~48          ; |g20_Seconds_to_Days|Add1~48          ; out0             ;
+; |g20_Seconds_to_Days|Add1~51          ; |g20_Seconds_to_Days|Add1~51          ; out0             ;
+; |g20_Seconds_to_Days|Add1~52          ; |g20_Seconds_to_Days|Add1~52          ; out0             ;
+; |g20_Seconds_to_Days|Add1~53          ; |g20_Seconds_to_Days|Add1~53          ; out0             ;
+; |g20_Seconds_to_Days|Add1~55          ; |g20_Seconds_to_Days|Add1~55          ; out0             ;
+; |g20_Seconds_to_Days|Add1~56          ; |g20_Seconds_to_Days|Add1~56          ; out0             ;
+; |g20_Seconds_to_Days|Add1~57          ; |g20_Seconds_to_Days|Add1~57          ; out0             ;
+; |g20_Seconds_to_Days|Add1~58          ; |g20_Seconds_to_Days|Add1~58          ; out0             ;
+; |g20_Seconds_to_Days|Add1~60          ; |g20_Seconds_to_Days|Add1~60          ; out0             ;
+; |g20_Seconds_to_Days|Add1~61          ; |g20_Seconds_to_Days|Add1~61          ; out0             ;
+; |g20_Seconds_to_Days|Add1~62          ; |g20_Seconds_to_Days|Add1~62          ; out0             ;
+; |g20_Seconds_to_Days|Add1~67          ; |g20_Seconds_to_Days|Add1~67          ; out0             ;
+; |g20_Seconds_to_Days|Add1~71          ; |g20_Seconds_to_Days|Add1~71          ; out0             ;
+; |g20_Seconds_to_Days|Add2~0           ; |g20_Seconds_to_Days|Add2~0           ; out0             ;
+; |g20_Seconds_to_Days|Add2~1           ; |g20_Seconds_to_Days|Add2~1           ; out0             ;
+; |g20_Seconds_to_Days|Add2~2           ; |g20_Seconds_to_Days|Add2~2           ; out0             ;
+; |g20_Seconds_to_Days|Add2~3           ; |g20_Seconds_to_Days|Add2~3           ; out0             ;
+; |g20_Seconds_to_Days|Add2~4           ; |g20_Seconds_to_Days|Add2~4           ; out0             ;
+; |g20_Seconds_to_Days|Add2~5           ; |g20_Seconds_to_Days|Add2~5           ; out0             ;
+; |g20_Seconds_to_Days|Add2~6           ; |g20_Seconds_to_Days|Add2~6           ; out0             ;
+; |g20_Seconds_to_Days|Add2~7           ; |g20_Seconds_to_Days|Add2~7           ; out0             ;
+; |g20_Seconds_to_Days|Add2~8           ; |g20_Seconds_to_Days|Add2~8           ; out0             ;
+; |g20_Seconds_to_Days|Add2~9           ; |g20_Seconds_to_Days|Add2~9           ; out0             ;
+; |g20_Seconds_to_Days|Add2~10          ; |g20_Seconds_to_Days|Add2~10          ; out0             ;
+; |g20_Seconds_to_Days|Add2~11          ; |g20_Seconds_to_Days|Add2~11          ; out0             ;
+; |g20_Seconds_to_Days|Add2~12          ; |g20_Seconds_to_Days|Add2~12          ; out0             ;
+; |g20_Seconds_to_Days|Add2~13          ; |g20_Seconds_to_Days|Add2~13          ; out0             ;
+; |g20_Seconds_to_Days|Add2~14          ; |g20_Seconds_to_Days|Add2~14          ; out0             ;
+; |g20_Seconds_to_Days|Add2~15          ; |g20_Seconds_to_Days|Add2~15          ; out0             ;
+; |g20_Seconds_to_Days|Add2~16          ; |g20_Seconds_to_Days|Add2~16          ; out0             ;
+; |g20_Seconds_to_Days|Add2~17          ; |g20_Seconds_to_Days|Add2~17          ; out0             ;
+; |g20_Seconds_to_Days|Add2~18          ; |g20_Seconds_to_Days|Add2~18          ; out0             ;
+; |g20_Seconds_to_Days|Add2~19          ; |g20_Seconds_to_Days|Add2~19          ; out0             ;
+; |g20_Seconds_to_Days|Add2~20          ; |g20_Seconds_to_Days|Add2~20          ; out0             ;
+; |g20_Seconds_to_Days|Add2~21          ; |g20_Seconds_to_Days|Add2~21          ; out0             ;
+; |g20_Seconds_to_Days|Add2~22          ; |g20_Seconds_to_Days|Add2~22          ; out0             ;
+; |g20_Seconds_to_Days|Add2~23          ; |g20_Seconds_to_Days|Add2~23          ; out0             ;
+; |g20_Seconds_to_Days|Add2~24          ; |g20_Seconds_to_Days|Add2~24          ; out0             ;
+; |g20_Seconds_to_Days|Add2~25          ; |g20_Seconds_to_Days|Add2~25          ; out0             ;
+; |g20_Seconds_to_Days|Add2~26          ; |g20_Seconds_to_Days|Add2~26          ; out0             ;
+; |g20_Seconds_to_Days|Add2~27          ; |g20_Seconds_to_Days|Add2~27          ; out0             ;
+; |g20_Seconds_to_Days|Add2~28          ; |g20_Seconds_to_Days|Add2~28          ; out0             ;
+; |g20_Seconds_to_Days|Add2~29          ; |g20_Seconds_to_Days|Add2~29          ; out0             ;
+; |g20_Seconds_to_Days|Add2~30          ; |g20_Seconds_to_Days|Add2~30          ; out0             ;
+; |g20_Seconds_to_Days|Add2~31          ; |g20_Seconds_to_Days|Add2~31          ; out0             ;
+; |g20_Seconds_to_Days|Add2~32          ; |g20_Seconds_to_Days|Add2~32          ; out0             ;
+; |g20_Seconds_to_Days|Add2~33          ; |g20_Seconds_to_Days|Add2~33          ; out0             ;
+; |g20_Seconds_to_Days|Add2~34          ; |g20_Seconds_to_Days|Add2~34          ; out0             ;
+; |g20_Seconds_to_Days|Add2~35          ; |g20_Seconds_to_Days|Add2~35          ; out0             ;
+; |g20_Seconds_to_Days|Add2~36          ; |g20_Seconds_to_Days|Add2~36          ; out0             ;
+; |g20_Seconds_to_Days|Add2~37          ; |g20_Seconds_to_Days|Add2~37          ; out0             ;
+; |g20_Seconds_to_Days|Add2~38          ; |g20_Seconds_to_Days|Add2~38          ; out0             ;
+; |g20_Seconds_to_Days|Add2~40          ; |g20_Seconds_to_Days|Add2~40          ; out0             ;
+; |g20_Seconds_to_Days|Add2~41          ; |g20_Seconds_to_Days|Add2~41          ; out0             ;
+; |g20_Seconds_to_Days|Add2~42          ; |g20_Seconds_to_Days|Add2~42          ; out0             ;
+; |g20_Seconds_to_Days|Add2~43          ; |g20_Seconds_to_Days|Add2~43          ; out0             ;
+; |g20_Seconds_to_Days|Add2~44          ; |g20_Seconds_to_Days|Add2~44          ; out0             ;
+; |g20_Seconds_to_Days|Add2~45          ; |g20_Seconds_to_Days|Add2~45          ; out0             ;
+; |g20_Seconds_to_Days|Add2~46          ; |g20_Seconds_to_Days|Add2~46          ; out0             ;
+; |g20_Seconds_to_Days|Add2~47          ; |g20_Seconds_to_Days|Add2~47          ; out0             ;
+; |g20_Seconds_to_Days|Add2~48          ; |g20_Seconds_to_Days|Add2~48          ; out0             ;
+; |g20_Seconds_to_Days|Add2~49          ; |g20_Seconds_to_Days|Add2~49          ; out0             ;
+; |g20_Seconds_to_Days|Add2~50          ; |g20_Seconds_to_Days|Add2~50          ; out0             ;
+; |g20_Seconds_to_Days|Add2~51          ; |g20_Seconds_to_Days|Add2~51          ; out0             ;
+; |g20_Seconds_to_Days|Add2~52          ; |g20_Seconds_to_Days|Add2~52          ; out0             ;
+; |g20_Seconds_to_Days|Add2~53          ; |g20_Seconds_to_Days|Add2~53          ; out0             ;
+; |g20_Seconds_to_Days|Add2~55          ; |g20_Seconds_to_Days|Add2~55          ; out0             ;
+; |g20_Seconds_to_Days|Add2~56          ; |g20_Seconds_to_Days|Add2~56          ; out0             ;
+; |g20_Seconds_to_Days|Add2~57          ; |g20_Seconds_to_Days|Add2~57          ; out0             ;
+; |g20_Seconds_to_Days|Add2~58          ; |g20_Seconds_to_Days|Add2~58          ; out0             ;
+; |g20_Seconds_to_Days|Add2~61          ; |g20_Seconds_to_Days|Add2~61          ; out0             ;
+; |g20_Seconds_to_Days|Add2~62          ; |g20_Seconds_to_Days|Add2~62          ; out0             ;
+; |g20_Seconds_to_Days|Add2~67          ; |g20_Seconds_to_Days|Add2~67          ; out0             ;
+; |g20_Seconds_to_Days|Add2~74          ; |g20_Seconds_to_Days|Add2~74          ; out0             ;
+; |g20_Seconds_to_Days|Add3~0           ; |g20_Seconds_to_Days|Add3~0           ; out0             ;
+; |g20_Seconds_to_Days|Add3~1           ; |g20_Seconds_to_Days|Add3~1           ; out0             ;
+; |g20_Seconds_to_Days|Add3~2           ; |g20_Seconds_to_Days|Add3~2           ; out0             ;
+; |g20_Seconds_to_Days|Add3~3           ; |g20_Seconds_to_Days|Add3~3           ; out0             ;
+; |g20_Seconds_to_Days|Add3~4           ; |g20_Seconds_to_Days|Add3~4           ; out0             ;
+; |g20_Seconds_to_Days|Add3~5           ; |g20_Seconds_to_Days|Add3~5           ; out0             ;
+; |g20_Seconds_to_Days|Add3~6           ; |g20_Seconds_to_Days|Add3~6           ; out0             ;
+; |g20_Seconds_to_Days|Add3~7           ; |g20_Seconds_to_Days|Add3~7           ; out0             ;
+; |g20_Seconds_to_Days|Add3~8           ; |g20_Seconds_to_Days|Add3~8           ; out0             ;
+; |g20_Seconds_to_Days|Add3~9           ; |g20_Seconds_to_Days|Add3~9           ; out0             ;
+; |g20_Seconds_to_Days|Add3~10          ; |g20_Seconds_to_Days|Add3~10          ; out0             ;
+; |g20_Seconds_to_Days|Add3~11          ; |g20_Seconds_to_Days|Add3~11          ; out0             ;
+; |g20_Seconds_to_Days|Add3~12          ; |g20_Seconds_to_Days|Add3~12          ; out0             ;
+; |g20_Seconds_to_Days|Add3~13          ; |g20_Seconds_to_Days|Add3~13          ; out0             ;
+; |g20_Seconds_to_Days|Add3~14          ; |g20_Seconds_to_Days|Add3~14          ; out0             ;
+; |g20_Seconds_to_Days|Add3~15          ; |g20_Seconds_to_Days|Add3~15          ; out0             ;
+; |g20_Seconds_to_Days|Add3~16          ; |g20_Seconds_to_Days|Add3~16          ; out0             ;
+; |g20_Seconds_to_Days|Add3~17          ; |g20_Seconds_to_Days|Add3~17          ; out0             ;
+; |g20_Seconds_to_Days|Add3~18          ; |g20_Seconds_to_Days|Add3~18          ; out0             ;
+; |g20_Seconds_to_Days|Add3~19          ; |g20_Seconds_to_Days|Add3~19          ; out0             ;
+; |g20_Seconds_to_Days|Add3~20          ; |g20_Seconds_to_Days|Add3~20          ; out0             ;
+; |g20_Seconds_to_Days|Add3~21          ; |g20_Seconds_to_Days|Add3~21          ; out0             ;
+; |g20_Seconds_to_Days|Add3~22          ; |g20_Seconds_to_Days|Add3~22          ; out0             ;
+; |g20_Seconds_to_Days|Add3~23          ; |g20_Seconds_to_Days|Add3~23          ; out0             ;
+; |g20_Seconds_to_Days|Add3~24          ; |g20_Seconds_to_Days|Add3~24          ; out0             ;
+; |g20_Seconds_to_Days|Add3~25          ; |g20_Seconds_to_Days|Add3~25          ; out0             ;
+; |g20_Seconds_to_Days|Add3~26          ; |g20_Seconds_to_Days|Add3~26          ; out0             ;
+; |g20_Seconds_to_Days|Add3~27          ; |g20_Seconds_to_Days|Add3~27          ; out0             ;
+; |g20_Seconds_to_Days|Add3~28          ; |g20_Seconds_to_Days|Add3~28          ; out0             ;
+; |g20_Seconds_to_Days|Add3~29          ; |g20_Seconds_to_Days|Add3~29          ; out0             ;
+; |g20_Seconds_to_Days|Add3~30          ; |g20_Seconds_to_Days|Add3~30          ; out0             ;
+; |g20_Seconds_to_Days|Add3~31          ; |g20_Seconds_to_Days|Add3~31          ; out0             ;
+; |g20_Seconds_to_Days|Add3~32          ; |g20_Seconds_to_Days|Add3~32          ; out0             ;
+; |g20_Seconds_to_Days|Add3~33          ; |g20_Seconds_to_Days|Add3~33          ; out0             ;
+; |g20_Seconds_to_Days|Add3~34          ; |g20_Seconds_to_Days|Add3~34          ; out0             ;
+; |g20_Seconds_to_Days|Add3~35          ; |g20_Seconds_to_Days|Add3~35          ; out0             ;
+; |g20_Seconds_to_Days|Add3~36          ; |g20_Seconds_to_Days|Add3~36          ; out0             ;
+; |g20_Seconds_to_Days|Add3~37          ; |g20_Seconds_to_Days|Add3~37          ; out0             ;
+; |g20_Seconds_to_Days|Add3~38          ; |g20_Seconds_to_Days|Add3~38          ; out0             ;
+; |g20_Seconds_to_Days|Add3~39          ; |g20_Seconds_to_Days|Add3~39          ; out0             ;
+; |g20_Seconds_to_Days|Add3~40          ; |g20_Seconds_to_Days|Add3~40          ; out0             ;
+; |g20_Seconds_to_Days|Add3~41          ; |g20_Seconds_to_Days|Add3~41          ; out0             ;
+; |g20_Seconds_to_Days|Add3~42          ; |g20_Seconds_to_Days|Add3~42          ; out0             ;
+; |g20_Seconds_to_Days|Add3~43          ; |g20_Seconds_to_Days|Add3~43          ; out0             ;
+; |g20_Seconds_to_Days|Add3~44          ; |g20_Seconds_to_Days|Add3~44          ; out0             ;
+; |g20_Seconds_to_Days|Add3~45          ; |g20_Seconds_to_Days|Add3~45          ; out0             ;
+; |g20_Seconds_to_Days|Add3~46          ; |g20_Seconds_to_Days|Add3~46          ; out0             ;
+; |g20_Seconds_to_Days|Add3~47          ; |g20_Seconds_to_Days|Add3~47          ; out0             ;
+; |g20_Seconds_to_Days|Add3~48          ; |g20_Seconds_to_Days|Add3~48          ; out0             ;
+; |g20_Seconds_to_Days|Add3~49          ; |g20_Seconds_to_Days|Add3~49          ; out0             ;
+; |g20_Seconds_to_Days|Add3~50          ; |g20_Seconds_to_Days|Add3~50          ; out0             ;
+; |g20_Seconds_to_Days|Add3~51          ; |g20_Seconds_to_Days|Add3~51          ; out0             ;
+; |g20_Seconds_to_Days|Add3~52          ; |g20_Seconds_to_Days|Add3~52          ; out0             ;
+; |g20_Seconds_to_Days|Add3~53          ; |g20_Seconds_to_Days|Add3~53          ; out0             ;
+; |g20_Seconds_to_Days|Add3~54          ; |g20_Seconds_to_Days|Add3~54          ; out0             ;
+; |g20_Seconds_to_Days|Add3~55          ; |g20_Seconds_to_Days|Add3~55          ; out0             ;
+; |g20_Seconds_to_Days|Add3~56          ; |g20_Seconds_to_Days|Add3~56          ; out0             ;
+; |g20_Seconds_to_Days|Add3~57          ; |g20_Seconds_to_Days|Add3~57          ; out0             ;
+; |g20_Seconds_to_Days|Add3~58          ; |g20_Seconds_to_Days|Add3~58          ; out0             ;
+; |g20_Seconds_to_Days|Add3~59          ; |g20_Seconds_to_Days|Add3~59          ; out0             ;
+; |g20_Seconds_to_Days|Add3~60          ; |g20_Seconds_to_Days|Add3~60          ; out0             ;
+; |g20_Seconds_to_Days|Add3~61          ; |g20_Seconds_to_Days|Add3~61          ; out0             ;
+; |g20_Seconds_to_Days|Add3~62          ; |g20_Seconds_to_Days|Add3~62          ; out0             ;
+; |g20_Seconds_to_Days|Add3~63          ; |g20_Seconds_to_Days|Add3~63          ; out0             ;
+; |g20_Seconds_to_Days|Add3~64          ; |g20_Seconds_to_Days|Add3~64          ; out0             ;
+; |g20_Seconds_to_Days|Add3~67          ; |g20_Seconds_to_Days|Add3~67          ; out0             ;
+; |g20_Seconds_to_Days|Add3~68          ; |g20_Seconds_to_Days|Add3~68          ; out0             ;
+; |g20_Seconds_to_Days|Add3~71          ; |g20_Seconds_to_Days|Add3~71          ; out0             ;
+; |g20_Seconds_to_Days|Add3~72          ; |g20_Seconds_to_Days|Add3~72          ; out0             ;
+; |g20_Seconds_to_Days|Add3~73          ; |g20_Seconds_to_Days|Add3~73          ; out0             ;
+; |g20_Seconds_to_Days|Add3~74          ; |g20_Seconds_to_Days|Add3~74          ; out0             ;
+; |g20_Seconds_to_Days|Add3~77          ; |g20_Seconds_to_Days|Add3~77          ; out0             ;
+; |g20_Seconds_to_Days|Add3~78          ; |g20_Seconds_to_Days|Add3~78          ; out0             ;
+; |g20_Seconds_to_Days|Add3~81          ; |g20_Seconds_to_Days|Add3~81          ; out0             ;
+; |g20_Seconds_to_Days|Add4~0           ; |g20_Seconds_to_Days|Add4~0           ; out0             ;
+; |g20_Seconds_to_Days|Add4~1           ; |g20_Seconds_to_Days|Add4~1           ; out0             ;
+; |g20_Seconds_to_Days|Add4~2           ; |g20_Seconds_to_Days|Add4~2           ; out0             ;
+; |g20_Seconds_to_Days|Add4~3           ; |g20_Seconds_to_Days|Add4~3           ; out0             ;
+; |g20_Seconds_to_Days|Add4~4           ; |g20_Seconds_to_Days|Add4~4           ; out0             ;
+; |g20_Seconds_to_Days|Add4~5           ; |g20_Seconds_to_Days|Add4~5           ; out0             ;
+; |g20_Seconds_to_Days|Add4~6           ; |g20_Seconds_to_Days|Add4~6           ; out0             ;
+; |g20_Seconds_to_Days|Add4~7           ; |g20_Seconds_to_Days|Add4~7           ; out0             ;
+; |g20_Seconds_to_Days|Add4~8           ; |g20_Seconds_to_Days|Add4~8           ; out0             ;
+; |g20_Seconds_to_Days|Add4~9           ; |g20_Seconds_to_Days|Add4~9           ; out0             ;
+; |g20_Seconds_to_Days|Add4~10          ; |g20_Seconds_to_Days|Add4~10          ; out0             ;
+; |g20_Seconds_to_Days|Add4~11          ; |g20_Seconds_to_Days|Add4~11          ; out0             ;
+; |g20_Seconds_to_Days|Add4~12          ; |g20_Seconds_to_Days|Add4~12          ; out0             ;
+; |g20_Seconds_to_Days|Add4~13          ; |g20_Seconds_to_Days|Add4~13          ; out0             ;
+; |g20_Seconds_to_Days|Add4~14          ; |g20_Seconds_to_Days|Add4~14          ; out0             ;
+; |g20_Seconds_to_Days|Add4~15          ; |g20_Seconds_to_Days|Add4~15          ; out0             ;
+; |g20_Seconds_to_Days|Add4~16          ; |g20_Seconds_to_Days|Add4~16          ; out0             ;
+; |g20_Seconds_to_Days|Add4~17          ; |g20_Seconds_to_Days|Add4~17          ; out0             ;
+; |g20_Seconds_to_Days|Add4~18          ; |g20_Seconds_to_Days|Add4~18          ; out0             ;
+; |g20_Seconds_to_Days|Add4~19          ; |g20_Seconds_to_Days|Add4~19          ; out0             ;
+; |g20_Seconds_to_Days|Add4~20          ; |g20_Seconds_to_Days|Add4~20          ; out0             ;
+; |g20_Seconds_to_Days|Add4~21          ; |g20_Seconds_to_Days|Add4~21          ; out0             ;
+; |g20_Seconds_to_Days|Add4~22          ; |g20_Seconds_to_Days|Add4~22          ; out0             ;
+; |g20_Seconds_to_Days|Add4~23          ; |g20_Seconds_to_Days|Add4~23          ; out0             ;
+; |g20_Seconds_to_Days|Add4~24          ; |g20_Seconds_to_Days|Add4~24          ; out0             ;
+; |g20_Seconds_to_Days|Add4~25          ; |g20_Seconds_to_Days|Add4~25          ; out0             ;
+; |g20_Seconds_to_Days|Add4~26          ; |g20_Seconds_to_Days|Add4~26          ; out0             ;
+; |g20_Seconds_to_Days|Add4~27          ; |g20_Seconds_to_Days|Add4~27          ; out0             ;
+; |g20_Seconds_to_Days|Add4~28          ; |g20_Seconds_to_Days|Add4~28          ; out0             ;
+; |g20_Seconds_to_Days|Add4~29          ; |g20_Seconds_to_Days|Add4~29          ; out0             ;
+; |g20_Seconds_to_Days|Add4~30          ; |g20_Seconds_to_Days|Add4~30          ; out0             ;
+; |g20_Seconds_to_Days|Add4~31          ; |g20_Seconds_to_Days|Add4~31          ; out0             ;
+; |g20_Seconds_to_Days|Add4~32          ; |g20_Seconds_to_Days|Add4~32          ; out0             ;
+; |g20_Seconds_to_Days|Add4~33          ; |g20_Seconds_to_Days|Add4~33          ; out0             ;
+; |g20_Seconds_to_Days|Add4~34          ; |g20_Seconds_to_Days|Add4~34          ; out0             ;
+; |g20_Seconds_to_Days|Add4~35          ; |g20_Seconds_to_Days|Add4~35          ; out0             ;
+; |g20_Seconds_to_Days|Add4~36          ; |g20_Seconds_to_Days|Add4~36          ; out0             ;
+; |g20_Seconds_to_Days|Add4~37          ; |g20_Seconds_to_Days|Add4~37          ; out0             ;
+; |g20_Seconds_to_Days|Add4~38          ; |g20_Seconds_to_Days|Add4~38          ; out0             ;
+; |g20_Seconds_to_Days|Add4~39          ; |g20_Seconds_to_Days|Add4~39          ; out0             ;
+; |g20_Seconds_to_Days|Add4~40          ; |g20_Seconds_to_Days|Add4~40          ; out0             ;
+; |g20_Seconds_to_Days|Add4~41          ; |g20_Seconds_to_Days|Add4~41          ; out0             ;
+; |g20_Seconds_to_Days|Add4~42          ; |g20_Seconds_to_Days|Add4~42          ; out0             ;
+; |g20_Seconds_to_Days|Add4~43          ; |g20_Seconds_to_Days|Add4~43          ; out0             ;
+; |g20_Seconds_to_Days|Add4~44          ; |g20_Seconds_to_Days|Add4~44          ; out0             ;
+; |g20_Seconds_to_Days|Add4~45          ; |g20_Seconds_to_Days|Add4~45          ; out0             ;
+; |g20_Seconds_to_Days|Add4~46          ; |g20_Seconds_to_Days|Add4~46          ; out0             ;
+; |g20_Seconds_to_Days|Add4~47          ; |g20_Seconds_to_Days|Add4~47          ; out0             ;
+; |g20_Seconds_to_Days|Add4~48          ; |g20_Seconds_to_Days|Add4~48          ; out0             ;
+; |g20_Seconds_to_Days|Add4~49          ; |g20_Seconds_to_Days|Add4~49          ; out0             ;
+; |g20_Seconds_to_Days|Add4~50          ; |g20_Seconds_to_Days|Add4~50          ; out0             ;
+; |g20_Seconds_to_Days|Add4~51          ; |g20_Seconds_to_Days|Add4~51          ; out0             ;
+; |g20_Seconds_to_Days|Add4~52          ; |g20_Seconds_to_Days|Add4~52          ; out0             ;
+; |g20_Seconds_to_Days|Add4~53          ; |g20_Seconds_to_Days|Add4~53          ; out0             ;
+; |g20_Seconds_to_Days|Add4~54          ; |g20_Seconds_to_Days|Add4~54          ; out0             ;
+; |g20_Seconds_to_Days|Add4~55          ; |g20_Seconds_to_Days|Add4~55          ; out0             ;
+; |g20_Seconds_to_Days|Add4~56          ; |g20_Seconds_to_Days|Add4~56          ; out0             ;
+; |g20_Seconds_to_Days|Add4~57          ; |g20_Seconds_to_Days|Add4~57          ; out0             ;
+; |g20_Seconds_to_Days|Add4~58          ; |g20_Seconds_to_Days|Add4~58          ; out0             ;
+; |g20_Seconds_to_Days|Add4~59          ; |g20_Seconds_to_Days|Add4~59          ; out0             ;
+; |g20_Seconds_to_Days|Add4~60          ; |g20_Seconds_to_Days|Add4~60          ; out0             ;
+; |g20_Seconds_to_Days|Add4~61          ; |g20_Seconds_to_Days|Add4~61          ; out0             ;
+; |g20_Seconds_to_Days|Add4~62          ; |g20_Seconds_to_Days|Add4~62          ; out0             ;
+; |g20_Seconds_to_Days|Add4~63          ; |g20_Seconds_to_Days|Add4~63          ; out0             ;
+; |g20_Seconds_to_Days|Add4~64          ; |g20_Seconds_to_Days|Add4~64          ; out0             ;
+; |g20_Seconds_to_Days|Add4~67          ; |g20_Seconds_to_Days|Add4~67          ; out0             ;
+; |g20_Seconds_to_Days|Add4~68          ; |g20_Seconds_to_Days|Add4~68          ; out0             ;
+; |g20_Seconds_to_Days|Add4~69          ; |g20_Seconds_to_Days|Add4~69          ; out0             ;
+; |g20_Seconds_to_Days|Add4~70          ; |g20_Seconds_to_Days|Add4~70          ; out0             ;
+; |g20_Seconds_to_Days|Add4~71          ; |g20_Seconds_to_Days|Add4~71          ; out0             ;
+; |g20_Seconds_to_Days|Add4~72          ; |g20_Seconds_to_Days|Add4~72          ; out0             ;
+; |g20_Seconds_to_Days|Add4~73          ; |g20_Seconds_to_Days|Add4~73          ; out0             ;
+; |g20_Seconds_to_Days|Add4~74          ; |g20_Seconds_to_Days|Add4~74          ; out0             ;
+; |g20_Seconds_to_Days|Add4~77          ; |g20_Seconds_to_Days|Add4~77          ; out0             ;
+; |g20_Seconds_to_Days|Add4~78          ; |g20_Seconds_to_Days|Add4~78          ; out0             ;
+; |g20_Seconds_to_Days|Add4~80          ; |g20_Seconds_to_Days|Add4~80          ; out0             ;
+; |g20_Seconds_to_Days|Add4~81          ; |g20_Seconds_to_Days|Add4~81          ; out0             ;
+; |g20_Seconds_to_Days|Add5~0           ; |g20_Seconds_to_Days|Add5~0           ; out0             ;
+; |g20_Seconds_to_Days|Add5~1           ; |g20_Seconds_to_Days|Add5~1           ; out0             ;
+; |g20_Seconds_to_Days|Add5~2           ; |g20_Seconds_to_Days|Add5~2           ; out0             ;
+; |g20_Seconds_to_Days|Add5~3           ; |g20_Seconds_to_Days|Add5~3           ; out0             ;
+; |g20_Seconds_to_Days|Add5~4           ; |g20_Seconds_to_Days|Add5~4           ; out0             ;
+; |g20_Seconds_to_Days|Add5~5           ; |g20_Seconds_to_Days|Add5~5           ; out0             ;
+; |g20_Seconds_to_Days|Add5~6           ; |g20_Seconds_to_Days|Add5~6           ; out0             ;
+; |g20_Seconds_to_Days|Add5~7           ; |g20_Seconds_to_Days|Add5~7           ; out0             ;
+; |g20_Seconds_to_Days|Add5~8           ; |g20_Seconds_to_Days|Add5~8           ; out0             ;
+; |g20_Seconds_to_Days|Add5~9           ; |g20_Seconds_to_Days|Add5~9           ; out0             ;
+; |g20_Seconds_to_Days|Add5~10          ; |g20_Seconds_to_Days|Add5~10          ; out0             ;
+; |g20_Seconds_to_Days|Add5~11          ; |g20_Seconds_to_Days|Add5~11          ; out0             ;
+; |g20_Seconds_to_Days|Add5~12          ; |g20_Seconds_to_Days|Add5~12          ; out0             ;
+; |g20_Seconds_to_Days|Add5~13          ; |g20_Seconds_to_Days|Add5~13          ; out0             ;
+; |g20_Seconds_to_Days|Add5~14          ; |g20_Seconds_to_Days|Add5~14          ; out0             ;
+; |g20_Seconds_to_Days|Add5~15          ; |g20_Seconds_to_Days|Add5~15          ; out0             ;
+; |g20_Seconds_to_Days|Add5~16          ; |g20_Seconds_to_Days|Add5~16          ; out0             ;
+; |g20_Seconds_to_Days|Add5~17          ; |g20_Seconds_to_Days|Add5~17          ; out0             ;
+; |g20_Seconds_to_Days|Add5~18          ; |g20_Seconds_to_Days|Add5~18          ; out0             ;
+; |g20_Seconds_to_Days|Add5~19          ; |g20_Seconds_to_Days|Add5~19          ; out0             ;
+; |g20_Seconds_to_Days|Add5~20          ; |g20_Seconds_to_Days|Add5~20          ; out0             ;
+; |g20_Seconds_to_Days|Add5~21          ; |g20_Seconds_to_Days|Add5~21          ; out0             ;
+; |g20_Seconds_to_Days|Add5~22          ; |g20_Seconds_to_Days|Add5~22          ; out0             ;
+; |g20_Seconds_to_Days|Add5~23          ; |g20_Seconds_to_Days|Add5~23          ; out0             ;
+; |g20_Seconds_to_Days|Add5~24          ; |g20_Seconds_to_Days|Add5~24          ; out0             ;
+; |g20_Seconds_to_Days|Add5~25          ; |g20_Seconds_to_Days|Add5~25          ; out0             ;
+; |g20_Seconds_to_Days|Add5~26          ; |g20_Seconds_to_Days|Add5~26          ; out0             ;
+; |g20_Seconds_to_Days|Add5~27          ; |g20_Seconds_to_Days|Add5~27          ; out0             ;
+; |g20_Seconds_to_Days|Add5~28          ; |g20_Seconds_to_Days|Add5~28          ; out0             ;
+; |g20_Seconds_to_Days|Add5~29          ; |g20_Seconds_to_Days|Add5~29          ; out0             ;
+; |g20_Seconds_to_Days|Add5~30          ; |g20_Seconds_to_Days|Add5~30          ; out0             ;
+; |g20_Seconds_to_Days|Add5~31          ; |g20_Seconds_to_Days|Add5~31          ; out0             ;
+; |g20_Seconds_to_Days|Add5~32          ; |g20_Seconds_to_Days|Add5~32          ; out0             ;
+; |g20_Seconds_to_Days|Add5~33          ; |g20_Seconds_to_Days|Add5~33          ; out0             ;
+; |g20_Seconds_to_Days|Add5~34          ; |g20_Seconds_to_Days|Add5~34          ; out0             ;
+; |g20_Seconds_to_Days|Add5~35          ; |g20_Seconds_to_Days|Add5~35          ; out0             ;
+; |g20_Seconds_to_Days|Add5~36          ; |g20_Seconds_to_Days|Add5~36          ; out0             ;
+; |g20_Seconds_to_Days|Add5~37          ; |g20_Seconds_to_Days|Add5~37          ; out0             ;
+; |g20_Seconds_to_Days|Add5~38          ; |g20_Seconds_to_Days|Add5~38          ; out0             ;
+; |g20_Seconds_to_Days|Add5~39          ; |g20_Seconds_to_Days|Add5~39          ; out0             ;
+; |g20_Seconds_to_Days|Add5~40          ; |g20_Seconds_to_Days|Add5~40          ; out0             ;
+; |g20_Seconds_to_Days|Add5~41          ; |g20_Seconds_to_Days|Add5~41          ; out0             ;
+; |g20_Seconds_to_Days|Add5~42          ; |g20_Seconds_to_Days|Add5~42          ; out0             ;
+; |g20_Seconds_to_Days|Add5~43          ; |g20_Seconds_to_Days|Add5~43          ; out0             ;
+; |g20_Seconds_to_Days|Add5~44          ; |g20_Seconds_to_Days|Add5~44          ; out0             ;
+; |g20_Seconds_to_Days|Add5~45          ; |g20_Seconds_to_Days|Add5~45          ; out0             ;
+; |g20_Seconds_to_Days|Add5~46          ; |g20_Seconds_to_Days|Add5~46          ; out0             ;
+; |g20_Seconds_to_Days|Add5~47          ; |g20_Seconds_to_Days|Add5~47          ; out0             ;
+; |g20_Seconds_to_Days|Add5~48          ; |g20_Seconds_to_Days|Add5~48          ; out0             ;
+; |g20_Seconds_to_Days|Add5~49          ; |g20_Seconds_to_Days|Add5~49          ; out0             ;
+; |g20_Seconds_to_Days|Add5~50          ; |g20_Seconds_to_Days|Add5~50          ; out0             ;
+; |g20_Seconds_to_Days|Add5~51          ; |g20_Seconds_to_Days|Add5~51          ; out0             ;
+; |g20_Seconds_to_Days|Add5~52          ; |g20_Seconds_to_Days|Add5~52          ; out0             ;
+; |g20_Seconds_to_Days|Add5~53          ; |g20_Seconds_to_Days|Add5~53          ; out0             ;
+; |g20_Seconds_to_Days|Add5~54          ; |g20_Seconds_to_Days|Add5~54          ; out0             ;
+; |g20_Seconds_to_Days|Add5~55          ; |g20_Seconds_to_Days|Add5~55          ; out0             ;
+; |g20_Seconds_to_Days|Add5~56          ; |g20_Seconds_to_Days|Add5~56          ; out0             ;
+; |g20_Seconds_to_Days|Add5~57          ; |g20_Seconds_to_Days|Add5~57          ; out0             ;
+; |g20_Seconds_to_Days|Add5~58          ; |g20_Seconds_to_Days|Add5~58          ; out0             ;
+; |g20_Seconds_to_Days|Add5~60          ; |g20_Seconds_to_Days|Add5~60          ; out0             ;
+; |g20_Seconds_to_Days|Add5~61          ; |g20_Seconds_to_Days|Add5~61          ; out0             ;
+; |g20_Seconds_to_Days|Add5~62          ; |g20_Seconds_to_Days|Add5~62          ; out0             ;
+; |g20_Seconds_to_Days|Add5~63          ; |g20_Seconds_to_Days|Add5~63          ; out0             ;
+; |g20_Seconds_to_Days|Add5~64          ; |g20_Seconds_to_Days|Add5~64          ; out0             ;
+; |g20_Seconds_to_Days|Add5~67          ; |g20_Seconds_to_Days|Add5~67          ; out0             ;
+; |g20_Seconds_to_Days|Add5~68          ; |g20_Seconds_to_Days|Add5~68          ; out0             ;
+; |g20_Seconds_to_Days|Add5~69          ; |g20_Seconds_to_Days|Add5~69          ; out0             ;
+; |g20_Seconds_to_Days|Add5~70          ; |g20_Seconds_to_Days|Add5~70          ; out0             ;
+; |g20_Seconds_to_Days|Add5~71          ; |g20_Seconds_to_Days|Add5~71          ; out0             ;
+; |g20_Seconds_to_Days|Add5~72          ; |g20_Seconds_to_Days|Add5~72          ; out0             ;
+; |g20_Seconds_to_Days|Add5~77          ; |g20_Seconds_to_Days|Add5~77          ; out0             ;
+; |g20_Seconds_to_Days|Add6~0           ; |g20_Seconds_to_Days|Add6~0           ; out0             ;
+; |g20_Seconds_to_Days|Add6~1           ; |g20_Seconds_to_Days|Add6~1           ; out0             ;
+; |g20_Seconds_to_Days|Add6~2           ; |g20_Seconds_to_Days|Add6~2           ; out0             ;
+; |g20_Seconds_to_Days|Add6~3           ; |g20_Seconds_to_Days|Add6~3           ; out0             ;
+; |g20_Seconds_to_Days|Add6~4           ; |g20_Seconds_to_Days|Add6~4           ; out0             ;
+; |g20_Seconds_to_Days|Add6~5           ; |g20_Seconds_to_Days|Add6~5           ; out0             ;
+; |g20_Seconds_to_Days|Add6~6           ; |g20_Seconds_to_Days|Add6~6           ; out0             ;
+; |g20_Seconds_to_Days|Add6~7           ; |g20_Seconds_to_Days|Add6~7           ; out0             ;
+; |g20_Seconds_to_Days|Add6~8           ; |g20_Seconds_to_Days|Add6~8           ; out0             ;
+; |g20_Seconds_to_Days|Add6~9           ; |g20_Seconds_to_Days|Add6~9           ; out0             ;
+; |g20_Seconds_to_Days|Add6~10          ; |g20_Seconds_to_Days|Add6~10          ; out0             ;
+; |g20_Seconds_to_Days|Add6~11          ; |g20_Seconds_to_Days|Add6~11          ; out0             ;
+; |g20_Seconds_to_Days|Add6~12          ; |g20_Seconds_to_Days|Add6~12          ; out0             ;
+; |g20_Seconds_to_Days|Add6~13          ; |g20_Seconds_to_Days|Add6~13          ; out0             ;
+; |g20_Seconds_to_Days|Add6~15          ; |g20_Seconds_to_Days|Add6~15          ; out0             ;
+; |g20_Seconds_to_Days|Add6~16          ; |g20_Seconds_to_Days|Add6~16          ; out0             ;
+; |g20_Seconds_to_Days|Add6~17          ; |g20_Seconds_to_Days|Add6~17          ; out0             ;
+; |g20_Seconds_to_Days|Add6~18          ; |g20_Seconds_to_Days|Add6~18          ; out0             ;
+; |g20_Seconds_to_Days|Add6~19          ; |g20_Seconds_to_Days|Add6~19          ; out0             ;
+; |g20_Seconds_to_Days|Add6~20          ; |g20_Seconds_to_Days|Add6~20          ; out0             ;
+; |g20_Seconds_to_Days|Add6~21          ; |g20_Seconds_to_Days|Add6~21          ; out0             ;
+; |g20_Seconds_to_Days|Add6~22          ; |g20_Seconds_to_Days|Add6~22          ; out0             ;
+; |g20_Seconds_to_Days|Add6~23          ; |g20_Seconds_to_Days|Add6~23          ; out0             ;
+; |g20_Seconds_to_Days|Add6~24          ; |g20_Seconds_to_Days|Add6~24          ; out0             ;
+; |g20_Seconds_to_Days|Add6~25          ; |g20_Seconds_to_Days|Add6~25          ; out0             ;
+; |g20_Seconds_to_Days|Add6~26          ; |g20_Seconds_to_Days|Add6~26          ; out0             ;
+; |g20_Seconds_to_Days|Add6~27          ; |g20_Seconds_to_Days|Add6~27          ; out0             ;
+; |g20_Seconds_to_Days|Add6~28          ; |g20_Seconds_to_Days|Add6~28          ; out0             ;
+; |g20_Seconds_to_Days|Add6~29          ; |g20_Seconds_to_Days|Add6~29          ; out0             ;
+; |g20_Seconds_to_Days|Add6~30          ; |g20_Seconds_to_Days|Add6~30          ; out0             ;
+; |g20_Seconds_to_Days|Add6~31          ; |g20_Seconds_to_Days|Add6~31          ; out0             ;
+; |g20_Seconds_to_Days|Add6~32          ; |g20_Seconds_to_Days|Add6~32          ; out0             ;
+; |g20_Seconds_to_Days|Add6~33          ; |g20_Seconds_to_Days|Add6~33          ; out0             ;
+; |g20_Seconds_to_Days|Add6~34          ; |g20_Seconds_to_Days|Add6~34          ; out0             ;
+; |g20_Seconds_to_Days|Add6~35          ; |g20_Seconds_to_Days|Add6~35          ; out0             ;
+; |g20_Seconds_to_Days|Add6~36          ; |g20_Seconds_to_Days|Add6~36          ; out0             ;
+; |g20_Seconds_to_Days|Add6~37          ; |g20_Seconds_to_Days|Add6~37          ; out0             ;
+; |g20_Seconds_to_Days|Add6~38          ; |g20_Seconds_to_Days|Add6~38          ; out0             ;
+; |g20_Seconds_to_Days|Add6~39          ; |g20_Seconds_to_Days|Add6~39          ; out0             ;
+; |g20_Seconds_to_Days|Add6~40          ; |g20_Seconds_to_Days|Add6~40          ; out0             ;
+; |g20_Seconds_to_Days|Add6~41          ; |g20_Seconds_to_Days|Add6~41          ; out0             ;
+; |g20_Seconds_to_Days|Add6~42          ; |g20_Seconds_to_Days|Add6~42          ; out0             ;
+; |g20_Seconds_to_Days|Add6~43          ; |g20_Seconds_to_Days|Add6~43          ; out0             ;
+; |g20_Seconds_to_Days|Add6~44          ; |g20_Seconds_to_Days|Add6~44          ; out0             ;
+; |g20_Seconds_to_Days|Add6~45          ; |g20_Seconds_to_Days|Add6~45          ; out0             ;
+; |g20_Seconds_to_Days|Add6~46          ; |g20_Seconds_to_Days|Add6~46          ; out0             ;
+; |g20_Seconds_to_Days|Add6~47          ; |g20_Seconds_to_Days|Add6~47          ; out0             ;
+; |g20_Seconds_to_Days|Add6~48          ; |g20_Seconds_to_Days|Add6~48          ; out0             ;
+; |g20_Seconds_to_Days|Add6~49          ; |g20_Seconds_to_Days|Add6~49          ; out0             ;
+; |g20_Seconds_to_Days|Add6~50          ; |g20_Seconds_to_Days|Add6~50          ; out0             ;
+; |g20_Seconds_to_Days|Add6~51          ; |g20_Seconds_to_Days|Add6~51          ; out0             ;
+; |g20_Seconds_to_Days|Add6~52          ; |g20_Seconds_to_Days|Add6~52          ; out0             ;
+; |g20_Seconds_to_Days|Add6~53          ; |g20_Seconds_to_Days|Add6~53          ; out0             ;
+; |g20_Seconds_to_Days|Add6~54          ; |g20_Seconds_to_Days|Add6~54          ; out0             ;
+; |g20_Seconds_to_Days|Add6~55          ; |g20_Seconds_to_Days|Add6~55          ; out0             ;
+; |g20_Seconds_to_Days|Add6~56          ; |g20_Seconds_to_Days|Add6~56          ; out0             ;
+; |g20_Seconds_to_Days|Add6~57          ; |g20_Seconds_to_Days|Add6~57          ; out0             ;
+; |g20_Seconds_to_Days|Add6~58          ; |g20_Seconds_to_Days|Add6~58          ; out0             ;
+; |g20_Seconds_to_Days|Add6~60          ; |g20_Seconds_to_Days|Add6~60          ; out0             ;
+; |g20_Seconds_to_Days|Add6~61          ; |g20_Seconds_to_Days|Add6~61          ; out0             ;
+; |g20_Seconds_to_Days|Add6~62          ; |g20_Seconds_to_Days|Add6~62          ; out0             ;
+; |g20_Seconds_to_Days|Add6~67          ; |g20_Seconds_to_Days|Add6~67          ; out0             ;
+; |g20_Seconds_to_Days|Add6~71          ; |g20_Seconds_to_Days|Add6~71          ; out0             ;
+; |g20_Seconds_to_Days|Add7~0           ; |g20_Seconds_to_Days|Add7~0           ; out0             ;
+; |g20_Seconds_to_Days|Add7~1           ; |g20_Seconds_to_Days|Add7~1           ; out0             ;
+; |g20_Seconds_to_Days|Add7~2           ; |g20_Seconds_to_Days|Add7~2           ; out0             ;
+; |g20_Seconds_to_Days|Add7~3           ; |g20_Seconds_to_Days|Add7~3           ; out0             ;
+; |g20_Seconds_to_Days|Add7~4           ; |g20_Seconds_to_Days|Add7~4           ; out0             ;
+; |g20_Seconds_to_Days|Add7~5           ; |g20_Seconds_to_Days|Add7~5           ; out0             ;
+; |g20_Seconds_to_Days|Add7~6           ; |g20_Seconds_to_Days|Add7~6           ; out0             ;
+; |g20_Seconds_to_Days|Add7~7           ; |g20_Seconds_to_Days|Add7~7           ; out0             ;
+; |g20_Seconds_to_Days|Add7~8           ; |g20_Seconds_to_Days|Add7~8           ; out0             ;
+; |g20_Seconds_to_Days|Add7~11          ; |g20_Seconds_to_Days|Add7~11          ; out0             ;
+; |g20_Seconds_to_Days|Add7~12          ; |g20_Seconds_to_Days|Add7~12          ; out0             ;
+; |g20_Seconds_to_Days|Add7~13          ; |g20_Seconds_to_Days|Add7~13          ; out0             ;
+; |g20_Seconds_to_Days|Add7~15          ; |g20_Seconds_to_Days|Add7~15          ; out0             ;
+; |g20_Seconds_to_Days|Add7~16          ; |g20_Seconds_to_Days|Add7~16          ; out0             ;
+; |g20_Seconds_to_Days|Add7~17          ; |g20_Seconds_to_Days|Add7~17          ; out0             ;
+; |g20_Seconds_to_Days|Add7~18          ; |g20_Seconds_to_Days|Add7~18          ; out0             ;
+; |g20_Seconds_to_Days|Add7~19          ; |g20_Seconds_to_Days|Add7~19          ; out0             ;
+; |g20_Seconds_to_Days|Add7~20          ; |g20_Seconds_to_Days|Add7~20          ; out0             ;
+; |g20_Seconds_to_Days|Add7~21          ; |g20_Seconds_to_Days|Add7~21          ; out0             ;
+; |g20_Seconds_to_Days|Add7~22          ; |g20_Seconds_to_Days|Add7~22          ; out0             ;
+; |g20_Seconds_to_Days|Add7~23          ; |g20_Seconds_to_Days|Add7~23          ; out0             ;
+; |g20_Seconds_to_Days|Add7~24          ; |g20_Seconds_to_Days|Add7~24          ; out0             ;
+; |g20_Seconds_to_Days|Add7~25          ; |g20_Seconds_to_Days|Add7~25          ; out0             ;
+; |g20_Seconds_to_Days|Add7~26          ; |g20_Seconds_to_Days|Add7~26          ; out0             ;
+; |g20_Seconds_to_Days|Add7~27          ; |g20_Seconds_to_Days|Add7~27          ; out0             ;
+; |g20_Seconds_to_Days|Add7~28          ; |g20_Seconds_to_Days|Add7~28          ; out0             ;
+; |g20_Seconds_to_Days|Add7~29          ; |g20_Seconds_to_Days|Add7~29          ; out0             ;
+; |g20_Seconds_to_Days|Add7~30          ; |g20_Seconds_to_Days|Add7~30          ; out0             ;
+; |g20_Seconds_to_Days|Add7~31          ; |g20_Seconds_to_Days|Add7~31          ; out0             ;
+; |g20_Seconds_to_Days|Add7~32          ; |g20_Seconds_to_Days|Add7~32          ; out0             ;
+; |g20_Seconds_to_Days|Add7~33          ; |g20_Seconds_to_Days|Add7~33          ; out0             ;
+; |g20_Seconds_to_Days|Add7~34          ; |g20_Seconds_to_Days|Add7~34          ; out0             ;
+; |g20_Seconds_to_Days|Add7~35          ; |g20_Seconds_to_Days|Add7~35          ; out0             ;
+; |g20_Seconds_to_Days|Add7~36          ; |g20_Seconds_to_Days|Add7~36          ; out0             ;
+; |g20_Seconds_to_Days|Add7~37          ; |g20_Seconds_to_Days|Add7~37          ; out0             ;
+; |g20_Seconds_to_Days|Add7~38          ; |g20_Seconds_to_Days|Add7~38          ; out0             ;
+; |g20_Seconds_to_Days|Add7~40          ; |g20_Seconds_to_Days|Add7~40          ; out0             ;
+; |g20_Seconds_to_Days|Add7~41          ; |g20_Seconds_to_Days|Add7~41          ; out0             ;
+; |g20_Seconds_to_Days|Add7~42          ; |g20_Seconds_to_Days|Add7~42          ; out0             ;
+; |g20_Seconds_to_Days|Add7~43          ; |g20_Seconds_to_Days|Add7~43          ; out0             ;
+; |g20_Seconds_to_Days|Add7~44          ; |g20_Seconds_to_Days|Add7~44          ; out0             ;
+; |g20_Seconds_to_Days|Add7~45          ; |g20_Seconds_to_Days|Add7~45          ; out0             ;
+; |g20_Seconds_to_Days|Add7~46          ; |g20_Seconds_to_Days|Add7~46          ; out0             ;
+; |g20_Seconds_to_Days|Add7~47          ; |g20_Seconds_to_Days|Add7~47          ; out0             ;
+; |g20_Seconds_to_Days|Add7~48          ; |g20_Seconds_to_Days|Add7~48          ; out0             ;
+; |g20_Seconds_to_Days|Add7~51          ; |g20_Seconds_to_Days|Add7~51          ; out0             ;
+; |g20_Seconds_to_Days|Add7~52          ; |g20_Seconds_to_Days|Add7~52          ; out0             ;
+; |g20_Seconds_to_Days|Add7~53          ; |g20_Seconds_to_Days|Add7~53          ; out0             ;
+; |g20_Seconds_to_Days|Add7~55          ; |g20_Seconds_to_Days|Add7~55          ; out0             ;
+; |g20_Seconds_to_Days|Add7~56          ; |g20_Seconds_to_Days|Add7~56          ; out0             ;
+; |g20_Seconds_to_Days|Add7~57          ; |g20_Seconds_to_Days|Add7~57          ; out0             ;
+; |g20_Seconds_to_Days|Add7~58          ; |g20_Seconds_to_Days|Add7~58          ; out0             ;
+; |g20_Seconds_to_Days|Add7~61          ; |g20_Seconds_to_Days|Add7~61          ; out0             ;
+; |g20_Seconds_to_Days|Add7~62          ; |g20_Seconds_to_Days|Add7~62          ; out0             ;
+; |g20_Seconds_to_Days|Add7~64          ; |g20_Seconds_to_Days|Add7~64          ; out0             ;
+; |g20_Seconds_to_Days|Add7~68          ; |g20_Seconds_to_Days|Add7~68          ; out0             ;
+; |g20_Seconds_to_Days|Add8~0           ; |g20_Seconds_to_Days|Add8~0           ; out0             ;
+; |g20_Seconds_to_Days|Add8~1           ; |g20_Seconds_to_Days|Add8~1           ; out0             ;
+; |g20_Seconds_to_Days|Add8~2           ; |g20_Seconds_to_Days|Add8~2           ; out0             ;
+; |g20_Seconds_to_Days|Add8~3           ; |g20_Seconds_to_Days|Add8~3           ; out0             ;
+; |g20_Seconds_to_Days|Add8~4           ; |g20_Seconds_to_Days|Add8~4           ; out0             ;
+; |g20_Seconds_to_Days|Add8~5           ; |g20_Seconds_to_Days|Add8~5           ; out0             ;
+; |g20_Seconds_to_Days|Add8~6           ; |g20_Seconds_to_Days|Add8~6           ; out0             ;
+; |g20_Seconds_to_Days|Add8~7           ; |g20_Seconds_to_Days|Add8~7           ; out0             ;
+; |g20_Seconds_to_Days|Add8~8           ; |g20_Seconds_to_Days|Add8~8           ; out0             ;
+; |g20_Seconds_to_Days|Add8~9           ; |g20_Seconds_to_Days|Add8~9           ; out0             ;
+; |g20_Seconds_to_Days|Add8~10          ; |g20_Seconds_to_Days|Add8~10          ; out0             ;
+; |g20_Seconds_to_Days|Add8~11          ; |g20_Seconds_to_Days|Add8~11          ; out0             ;
+; |g20_Seconds_to_Days|Add8~12          ; |g20_Seconds_to_Days|Add8~12          ; out0             ;
+; |g20_Seconds_to_Days|Add8~13          ; |g20_Seconds_to_Days|Add8~13          ; out0             ;
+; |g20_Seconds_to_Days|Add8~14          ; |g20_Seconds_to_Days|Add8~14          ; out0             ;
+; |g20_Seconds_to_Days|Add8~15          ; |g20_Seconds_to_Days|Add8~15          ; out0             ;
+; |g20_Seconds_to_Days|Add8~16          ; |g20_Seconds_to_Days|Add8~16          ; out0             ;
+; |g20_Seconds_to_Days|Add8~17          ; |g20_Seconds_to_Days|Add8~17          ; out0             ;
+; |g20_Seconds_to_Days|Add8~18          ; |g20_Seconds_to_Days|Add8~18          ; out0             ;
+; |g20_Seconds_to_Days|Add8~19          ; |g20_Seconds_to_Days|Add8~19          ; out0             ;
+; |g20_Seconds_to_Days|Add8~20          ; |g20_Seconds_to_Days|Add8~20          ; out0             ;
+; |g20_Seconds_to_Days|Add8~21          ; |g20_Seconds_to_Days|Add8~21          ; out0             ;
+; |g20_Seconds_to_Days|Add8~22          ; |g20_Seconds_to_Days|Add8~22          ; out0             ;
+; |g20_Seconds_to_Days|Add8~23          ; |g20_Seconds_to_Days|Add8~23          ; out0             ;
+; |g20_Seconds_to_Days|Add8~24          ; |g20_Seconds_to_Days|Add8~24          ; out0             ;
+; |g20_Seconds_to_Days|Add8~25          ; |g20_Seconds_to_Days|Add8~25          ; out0             ;
+; |g20_Seconds_to_Days|Add8~26          ; |g20_Seconds_to_Days|Add8~26          ; out0             ;
+; |g20_Seconds_to_Days|Add8~27          ; |g20_Seconds_to_Days|Add8~27          ; out0             ;
+; |g20_Seconds_to_Days|Add8~28          ; |g20_Seconds_to_Days|Add8~28          ; out0             ;
+; |g20_Seconds_to_Days|Add8~29          ; |g20_Seconds_to_Days|Add8~29          ; out0             ;
+; |g20_Seconds_to_Days|Add8~30          ; |g20_Seconds_to_Days|Add8~30          ; out0             ;
+; |g20_Seconds_to_Days|Add8~31          ; |g20_Seconds_to_Days|Add8~31          ; out0             ;
+; |g20_Seconds_to_Days|Add8~32          ; |g20_Seconds_to_Days|Add8~32          ; out0             ;
+; |g20_Seconds_to_Days|Add8~33          ; |g20_Seconds_to_Days|Add8~33          ; out0             ;
+; |g20_Seconds_to_Days|Add8~34          ; |g20_Seconds_to_Days|Add8~34          ; out0             ;
+; |g20_Seconds_to_Days|Add8~35          ; |g20_Seconds_to_Days|Add8~35          ; out0             ;
+; |g20_Seconds_to_Days|Add8~36          ; |g20_Seconds_to_Days|Add8~36          ; out0             ;
+; |g20_Seconds_to_Days|Add8~37          ; |g20_Seconds_to_Days|Add8~37          ; out0             ;
+; |g20_Seconds_to_Days|Add8~38          ; |g20_Seconds_to_Days|Add8~38          ; out0             ;
+; |g20_Seconds_to_Days|Add8~39          ; |g20_Seconds_to_Days|Add8~39          ; out0             ;
+; |g20_Seconds_to_Days|Add8~40          ; |g20_Seconds_to_Days|Add8~40          ; out0             ;
+; |g20_Seconds_to_Days|Add8~41          ; |g20_Seconds_to_Days|Add8~41          ; out0             ;
+; |g20_Seconds_to_Days|Add8~42          ; |g20_Seconds_to_Days|Add8~42          ; out0             ;
+; |g20_Seconds_to_Days|Add8~43          ; |g20_Seconds_to_Days|Add8~43          ; out0             ;
+; |g20_Seconds_to_Days|Add8~44          ; |g20_Seconds_to_Days|Add8~44          ; out0             ;
+; |g20_Seconds_to_Days|Add8~45          ; |g20_Seconds_to_Days|Add8~45          ; out0             ;
+; |g20_Seconds_to_Days|Add8~46          ; |g20_Seconds_to_Days|Add8~46          ; out0             ;
+; |g20_Seconds_to_Days|Add8~47          ; |g20_Seconds_to_Days|Add8~47          ; out0             ;
+; |g20_Seconds_to_Days|Add8~48          ; |g20_Seconds_to_Days|Add8~48          ; out0             ;
+; |g20_Seconds_to_Days|Add8~49          ; |g20_Seconds_to_Days|Add8~49          ; out0             ;
+; |g20_Seconds_to_Days|Add8~50          ; |g20_Seconds_to_Days|Add8~50          ; out0             ;
+; |g20_Seconds_to_Days|Add8~51          ; |g20_Seconds_to_Days|Add8~51          ; out0             ;
+; |g20_Seconds_to_Days|Add8~52          ; |g20_Seconds_to_Days|Add8~52          ; out0             ;
+; |g20_Seconds_to_Days|Add8~53          ; |g20_Seconds_to_Days|Add8~53          ; out0             ;
+; |g20_Seconds_to_Days|Add8~54          ; |g20_Seconds_to_Days|Add8~54          ; out0             ;
+; |g20_Seconds_to_Days|Add8~55          ; |g20_Seconds_to_Days|Add8~55          ; out0             ;
+; |g20_Seconds_to_Days|Add8~56          ; |g20_Seconds_to_Days|Add8~56          ; out0             ;
+; |g20_Seconds_to_Days|Add8~57          ; |g20_Seconds_to_Days|Add8~57          ; out0             ;
+; |g20_Seconds_to_Days|Add8~58          ; |g20_Seconds_to_Days|Add8~58          ; out0             ;
+; |g20_Seconds_to_Days|Add8~60          ; |g20_Seconds_to_Days|Add8~60          ; out0             ;
+; |g20_Seconds_to_Days|Add8~61          ; |g20_Seconds_to_Days|Add8~61          ; out0             ;
+; |g20_Seconds_to_Days|Add8~62          ; |g20_Seconds_to_Days|Add8~62          ; out0             ;
+; |g20_Seconds_to_Days|Add8~67          ; |g20_Seconds_to_Days|Add8~67          ; out0             ;
+; |g20_Seconds_to_Days|Add8~72          ; |g20_Seconds_to_Days|Add8~72          ; out0             ;
+; |g20_Seconds_to_Days|Add8~77          ; |g20_Seconds_to_Days|Add8~77          ; out0             ;
++---------------------------------------+---------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                               ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |g20_Seconds_to_Days|seconds[13] ; |g20_Seconds_to_Days|seconds[13] ; out              ;
+; |g20_Seconds_to_Days|seconds[15] ; |g20_Seconds_to_Days|seconds[15] ; out              ;
+; |g20_Seconds_to_Days|Add0~24     ; |g20_Seconds_to_Days|Add0~24     ; out0             ;
+; |g20_Seconds_to_Days|Add0~25     ; |g20_Seconds_to_Days|Add0~25     ; out0             ;
+; |g20_Seconds_to_Days|Add0~36     ; |g20_Seconds_to_Days|Add0~36     ; out0             ;
+; |g20_Seconds_to_Days|Add0~54     ; |g20_Seconds_to_Days|Add0~54     ; out0             ;
+; |g20_Seconds_to_Days|Add0~55     ; |g20_Seconds_to_Days|Add0~55     ; out0             ;
+; |g20_Seconds_to_Days|Add0~59     ; |g20_Seconds_to_Days|Add0~59     ; out0             ;
+; |g20_Seconds_to_Days|Add0~63     ; |g20_Seconds_to_Days|Add0~63     ; out0             ;
+; |g20_Seconds_to_Days|Add0~64     ; |g20_Seconds_to_Days|Add0~64     ; out0             ;
+; |g20_Seconds_to_Days|Add0~65     ; |g20_Seconds_to_Days|Add0~65     ; out0             ;
+; |g20_Seconds_to_Days|Add0~66     ; |g20_Seconds_to_Days|Add0~66     ; out0             ;
+; |g20_Seconds_to_Days|Add0~67     ; |g20_Seconds_to_Days|Add0~67     ; out0             ;
+; |g20_Seconds_to_Days|Add0~69     ; |g20_Seconds_to_Days|Add0~69     ; out0             ;
+; |g20_Seconds_to_Days|Add0~71     ; |g20_Seconds_to_Days|Add0~71     ; out0             ;
+; |g20_Seconds_to_Days|Add0~73     ; |g20_Seconds_to_Days|Add0~73     ; out0             ;
+; |g20_Seconds_to_Days|Add0~75     ; |g20_Seconds_to_Days|Add0~75     ; out0             ;
+; |g20_Seconds_to_Days|Add1~14     ; |g20_Seconds_to_Days|Add1~14     ; out0             ;
+; |g20_Seconds_to_Days|Add1~19     ; |g20_Seconds_to_Days|Add1~19     ; out0             ;
+; |g20_Seconds_to_Days|Add1~44     ; |g20_Seconds_to_Days|Add1~44     ; out0             ;
+; |g20_Seconds_to_Days|Add1~49     ; |g20_Seconds_to_Days|Add1~49     ; out0             ;
+; |g20_Seconds_to_Days|Add1~50     ; |g20_Seconds_to_Days|Add1~50     ; out0             ;
+; |g20_Seconds_to_Days|Add1~54     ; |g20_Seconds_to_Days|Add1~54     ; out0             ;
+; |g20_Seconds_to_Days|Add1~59     ; |g20_Seconds_to_Days|Add1~59     ; out0             ;
+; |g20_Seconds_to_Days|Add1~63     ; |g20_Seconds_to_Days|Add1~63     ; out0             ;
+; |g20_Seconds_to_Days|Add1~64     ; |g20_Seconds_to_Days|Add1~64     ; out0             ;
+; |g20_Seconds_to_Days|Add1~65     ; |g20_Seconds_to_Days|Add1~65     ; out0             ;
+; |g20_Seconds_to_Days|Add1~66     ; |g20_Seconds_to_Days|Add1~66     ; out0             ;
+; |g20_Seconds_to_Days|Add1~68     ; |g20_Seconds_to_Days|Add1~68     ; out0             ;
+; |g20_Seconds_to_Days|Add1~69     ; |g20_Seconds_to_Days|Add1~69     ; out0             ;
+; |g20_Seconds_to_Days|Add1~70     ; |g20_Seconds_to_Days|Add1~70     ; out0             ;
+; |g20_Seconds_to_Days|Add1~72     ; |g20_Seconds_to_Days|Add1~72     ; out0             ;
+; |g20_Seconds_to_Days|Add2~39     ; |g20_Seconds_to_Days|Add2~39     ; out0             ;
+; |g20_Seconds_to_Days|Add2~54     ; |g20_Seconds_to_Days|Add2~54     ; out0             ;
+; |g20_Seconds_to_Days|Add2~59     ; |g20_Seconds_to_Days|Add2~59     ; out0             ;
+; |g20_Seconds_to_Days|Add2~60     ; |g20_Seconds_to_Days|Add2~60     ; out0             ;
+; |g20_Seconds_to_Days|Add2~63     ; |g20_Seconds_to_Days|Add2~63     ; out0             ;
+; |g20_Seconds_to_Days|Add2~64     ; |g20_Seconds_to_Days|Add2~64     ; out0             ;
+; |g20_Seconds_to_Days|Add2~65     ; |g20_Seconds_to_Days|Add2~65     ; out0             ;
+; |g20_Seconds_to_Days|Add2~66     ; |g20_Seconds_to_Days|Add2~66     ; out0             ;
+; |g20_Seconds_to_Days|Add2~68     ; |g20_Seconds_to_Days|Add2~68     ; out0             ;
+; |g20_Seconds_to_Days|Add2~69     ; |g20_Seconds_to_Days|Add2~69     ; out0             ;
+; |g20_Seconds_to_Days|Add2~70     ; |g20_Seconds_to_Days|Add2~70     ; out0             ;
+; |g20_Seconds_to_Days|Add2~71     ; |g20_Seconds_to_Days|Add2~71     ; out0             ;
+; |g20_Seconds_to_Days|Add2~72     ; |g20_Seconds_to_Days|Add2~72     ; out0             ;
+; |g20_Seconds_to_Days|Add2~73     ; |g20_Seconds_to_Days|Add2~73     ; out0             ;
+; |g20_Seconds_to_Days|Add2~75     ; |g20_Seconds_to_Days|Add2~75     ; out0             ;
+; |g20_Seconds_to_Days|Add3~65     ; |g20_Seconds_to_Days|Add3~65     ; out0             ;
+; |g20_Seconds_to_Days|Add3~66     ; |g20_Seconds_to_Days|Add3~66     ; out0             ;
+; |g20_Seconds_to_Days|Add3~69     ; |g20_Seconds_to_Days|Add3~69     ; out0             ;
+; |g20_Seconds_to_Days|Add3~70     ; |g20_Seconds_to_Days|Add3~70     ; out0             ;
+; |g20_Seconds_to_Days|Add3~75     ; |g20_Seconds_to_Days|Add3~75     ; out0             ;
+; |g20_Seconds_to_Days|Add3~76     ; |g20_Seconds_to_Days|Add3~76     ; out0             ;
+; |g20_Seconds_to_Days|Add3~79     ; |g20_Seconds_to_Days|Add3~79     ; out0             ;
+; |g20_Seconds_to_Days|Add3~80     ; |g20_Seconds_to_Days|Add3~80     ; out0             ;
+; |g20_Seconds_to_Days|Add4~65     ; |g20_Seconds_to_Days|Add4~65     ; out0             ;
+; |g20_Seconds_to_Days|Add4~66     ; |g20_Seconds_to_Days|Add4~66     ; out0             ;
+; |g20_Seconds_to_Days|Add4~75     ; |g20_Seconds_to_Days|Add4~75     ; out0             ;
+; |g20_Seconds_to_Days|Add4~76     ; |g20_Seconds_to_Days|Add4~76     ; out0             ;
+; |g20_Seconds_to_Days|Add4~79     ; |g20_Seconds_to_Days|Add4~79     ; out0             ;
+; |g20_Seconds_to_Days|Add5~59     ; |g20_Seconds_to_Days|Add5~59     ; out0             ;
+; |g20_Seconds_to_Days|Add5~65     ; |g20_Seconds_to_Days|Add5~65     ; out0             ;
+; |g20_Seconds_to_Days|Add5~66     ; |g20_Seconds_to_Days|Add5~66     ; out0             ;
+; |g20_Seconds_to_Days|Add5~73     ; |g20_Seconds_to_Days|Add5~73     ; out0             ;
+; |g20_Seconds_to_Days|Add5~74     ; |g20_Seconds_to_Days|Add5~74     ; out0             ;
+; |g20_Seconds_to_Days|Add5~75     ; |g20_Seconds_to_Days|Add5~75     ; out0             ;
+; |g20_Seconds_to_Days|Add5~76     ; |g20_Seconds_to_Days|Add5~76     ; out0             ;
+; |g20_Seconds_to_Days|Add5~78     ; |g20_Seconds_to_Days|Add5~78     ; out0             ;
+; |g20_Seconds_to_Days|Add6~14     ; |g20_Seconds_to_Days|Add6~14     ; out0             ;
+; |g20_Seconds_to_Days|Add6~59     ; |g20_Seconds_to_Days|Add6~59     ; out0             ;
+; |g20_Seconds_to_Days|Add6~63     ; |g20_Seconds_to_Days|Add6~63     ; out0             ;
+; |g20_Seconds_to_Days|Add6~64     ; |g20_Seconds_to_Days|Add6~64     ; out0             ;
+; |g20_Seconds_to_Days|Add6~65     ; |g20_Seconds_to_Days|Add6~65     ; out0             ;
+; |g20_Seconds_to_Days|Add6~66     ; |g20_Seconds_to_Days|Add6~66     ; out0             ;
+; |g20_Seconds_to_Days|Add6~68     ; |g20_Seconds_to_Days|Add6~68     ; out0             ;
+; |g20_Seconds_to_Days|Add6~69     ; |g20_Seconds_to_Days|Add6~69     ; out0             ;
+; |g20_Seconds_to_Days|Add6~70     ; |g20_Seconds_to_Days|Add6~70     ; out0             ;
+; |g20_Seconds_to_Days|Add6~72     ; |g20_Seconds_to_Days|Add6~72     ; out0             ;
+; |g20_Seconds_to_Days|Add7~9      ; |g20_Seconds_to_Days|Add7~9      ; out0             ;
+; |g20_Seconds_to_Days|Add7~10     ; |g20_Seconds_to_Days|Add7~10     ; out0             ;
+; |g20_Seconds_to_Days|Add7~14     ; |g20_Seconds_to_Days|Add7~14     ; out0             ;
+; |g20_Seconds_to_Days|Add7~39     ; |g20_Seconds_to_Days|Add7~39     ; out0             ;
+; |g20_Seconds_to_Days|Add7~49     ; |g20_Seconds_to_Days|Add7~49     ; out0             ;
+; |g20_Seconds_to_Days|Add7~50     ; |g20_Seconds_to_Days|Add7~50     ; out0             ;
+; |g20_Seconds_to_Days|Add7~54     ; |g20_Seconds_to_Days|Add7~54     ; out0             ;
+; |g20_Seconds_to_Days|Add7~59     ; |g20_Seconds_to_Days|Add7~59     ; out0             ;
+; |g20_Seconds_to_Days|Add7~60     ; |g20_Seconds_to_Days|Add7~60     ; out0             ;
+; |g20_Seconds_to_Days|Add7~63     ; |g20_Seconds_to_Days|Add7~63     ; out0             ;
+; |g20_Seconds_to_Days|Add7~65     ; |g20_Seconds_to_Days|Add7~65     ; out0             ;
+; |g20_Seconds_to_Days|Add7~66     ; |g20_Seconds_to_Days|Add7~66     ; out0             ;
+; |g20_Seconds_to_Days|Add7~67     ; |g20_Seconds_to_Days|Add7~67     ; out0             ;
+; |g20_Seconds_to_Days|Add7~69     ; |g20_Seconds_to_Days|Add7~69     ; out0             ;
+; |g20_Seconds_to_Days|Add8~59     ; |g20_Seconds_to_Days|Add8~59     ; out0             ;
+; |g20_Seconds_to_Days|Add8~63     ; |g20_Seconds_to_Days|Add8~63     ; out0             ;
+; |g20_Seconds_to_Days|Add8~64     ; |g20_Seconds_to_Days|Add8~64     ; out0             ;
+; |g20_Seconds_to_Days|Add8~65     ; |g20_Seconds_to_Days|Add8~65     ; out0             ;
+; |g20_Seconds_to_Days|Add8~66     ; |g20_Seconds_to_Days|Add8~66     ; out0             ;
+; |g20_Seconds_to_Days|Add8~68     ; |g20_Seconds_to_Days|Add8~68     ; out0             ;
+; |g20_Seconds_to_Days|Add8~69     ; |g20_Seconds_to_Days|Add8~69     ; out0             ;
+; |g20_Seconds_to_Days|Add8~70     ; |g20_Seconds_to_Days|Add8~70     ; out0             ;
+; |g20_Seconds_to_Days|Add8~71     ; |g20_Seconds_to_Days|Add8~71     ; out0             ;
+; |g20_Seconds_to_Days|Add8~73     ; |g20_Seconds_to_Days|Add8~73     ; out0             ;
+; |g20_Seconds_to_Days|Add8~74     ; |g20_Seconds_to_Days|Add8~74     ; out0             ;
+; |g20_Seconds_to_Days|Add8~75     ; |g20_Seconds_to_Days|Add8~75     ; out0             ;
+; |g20_Seconds_to_Days|Add8~76     ; |g20_Seconds_to_Days|Add8~76     ; out0             ;
++----------------------------------+----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                               ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |g20_Seconds_to_Days|seconds[13] ; |g20_Seconds_to_Days|seconds[13] ; out              ;
+; |g20_Seconds_to_Days|seconds[15] ; |g20_Seconds_to_Days|seconds[15] ; out              ;
+; |g20_Seconds_to_Days|Add0~24     ; |g20_Seconds_to_Days|Add0~24     ; out0             ;
+; |g20_Seconds_to_Days|Add0~25     ; |g20_Seconds_to_Days|Add0~25     ; out0             ;
+; |g20_Seconds_to_Days|Add0~36     ; |g20_Seconds_to_Days|Add0~36     ; out0             ;
+; |g20_Seconds_to_Days|Add0~54     ; |g20_Seconds_to_Days|Add0~54     ; out0             ;
+; |g20_Seconds_to_Days|Add0~55     ; |g20_Seconds_to_Days|Add0~55     ; out0             ;
+; |g20_Seconds_to_Days|Add0~59     ; |g20_Seconds_to_Days|Add0~59     ; out0             ;
+; |g20_Seconds_to_Days|Add0~63     ; |g20_Seconds_to_Days|Add0~63     ; out0             ;
+; |g20_Seconds_to_Days|Add0~64     ; |g20_Seconds_to_Days|Add0~64     ; out0             ;
+; |g20_Seconds_to_Days|Add0~65     ; |g20_Seconds_to_Days|Add0~65     ; out0             ;
+; |g20_Seconds_to_Days|Add0~66     ; |g20_Seconds_to_Days|Add0~66     ; out0             ;
+; |g20_Seconds_to_Days|Add0~67     ; |g20_Seconds_to_Days|Add0~67     ; out0             ;
+; |g20_Seconds_to_Days|Add0~69     ; |g20_Seconds_to_Days|Add0~69     ; out0             ;
+; |g20_Seconds_to_Days|Add0~71     ; |g20_Seconds_to_Days|Add0~71     ; out0             ;
+; |g20_Seconds_to_Days|Add0~73     ; |g20_Seconds_to_Days|Add0~73     ; out0             ;
+; |g20_Seconds_to_Days|Add0~75     ; |g20_Seconds_to_Days|Add0~75     ; out0             ;
+; |g20_Seconds_to_Days|Add1~14     ; |g20_Seconds_to_Days|Add1~14     ; out0             ;
+; |g20_Seconds_to_Days|Add1~19     ; |g20_Seconds_to_Days|Add1~19     ; out0             ;
+; |g20_Seconds_to_Days|Add1~44     ; |g20_Seconds_to_Days|Add1~44     ; out0             ;
+; |g20_Seconds_to_Days|Add1~49     ; |g20_Seconds_to_Days|Add1~49     ; out0             ;
+; |g20_Seconds_to_Days|Add1~50     ; |g20_Seconds_to_Days|Add1~50     ; out0             ;
+; |g20_Seconds_to_Days|Add1~54     ; |g20_Seconds_to_Days|Add1~54     ; out0             ;
+; |g20_Seconds_to_Days|Add1~59     ; |g20_Seconds_to_Days|Add1~59     ; out0             ;
+; |g20_Seconds_to_Days|Add1~63     ; |g20_Seconds_to_Days|Add1~63     ; out0             ;
+; |g20_Seconds_to_Days|Add1~64     ; |g20_Seconds_to_Days|Add1~64     ; out0             ;
+; |g20_Seconds_to_Days|Add1~65     ; |g20_Seconds_to_Days|Add1~65     ; out0             ;
+; |g20_Seconds_to_Days|Add1~66     ; |g20_Seconds_to_Days|Add1~66     ; out0             ;
+; |g20_Seconds_to_Days|Add1~68     ; |g20_Seconds_to_Days|Add1~68     ; out0             ;
+; |g20_Seconds_to_Days|Add1~69     ; |g20_Seconds_to_Days|Add1~69     ; out0             ;
+; |g20_Seconds_to_Days|Add1~70     ; |g20_Seconds_to_Days|Add1~70     ; out0             ;
+; |g20_Seconds_to_Days|Add1~72     ; |g20_Seconds_to_Days|Add1~72     ; out0             ;
+; |g20_Seconds_to_Days|Add2~39     ; |g20_Seconds_to_Days|Add2~39     ; out0             ;
+; |g20_Seconds_to_Days|Add2~54     ; |g20_Seconds_to_Days|Add2~54     ; out0             ;
+; |g20_Seconds_to_Days|Add2~59     ; |g20_Seconds_to_Days|Add2~59     ; out0             ;
+; |g20_Seconds_to_Days|Add2~60     ; |g20_Seconds_to_Days|Add2~60     ; out0             ;
+; |g20_Seconds_to_Days|Add2~63     ; |g20_Seconds_to_Days|Add2~63     ; out0             ;
+; |g20_Seconds_to_Days|Add2~64     ; |g20_Seconds_to_Days|Add2~64     ; out0             ;
+; |g20_Seconds_to_Days|Add2~65     ; |g20_Seconds_to_Days|Add2~65     ; out0             ;
+; |g20_Seconds_to_Days|Add2~66     ; |g20_Seconds_to_Days|Add2~66     ; out0             ;
+; |g20_Seconds_to_Days|Add2~68     ; |g20_Seconds_to_Days|Add2~68     ; out0             ;
+; |g20_Seconds_to_Days|Add2~69     ; |g20_Seconds_to_Days|Add2~69     ; out0             ;
+; |g20_Seconds_to_Days|Add2~70     ; |g20_Seconds_to_Days|Add2~70     ; out0             ;
+; |g20_Seconds_to_Days|Add2~71     ; |g20_Seconds_to_Days|Add2~71     ; out0             ;
+; |g20_Seconds_to_Days|Add2~72     ; |g20_Seconds_to_Days|Add2~72     ; out0             ;
+; |g20_Seconds_to_Days|Add2~73     ; |g20_Seconds_to_Days|Add2~73     ; out0             ;
+; |g20_Seconds_to_Days|Add2~75     ; |g20_Seconds_to_Days|Add2~75     ; out0             ;
+; |g20_Seconds_to_Days|Add3~65     ; |g20_Seconds_to_Days|Add3~65     ; out0             ;
+; |g20_Seconds_to_Days|Add3~66     ; |g20_Seconds_to_Days|Add3~66     ; out0             ;
+; |g20_Seconds_to_Days|Add3~69     ; |g20_Seconds_to_Days|Add3~69     ; out0             ;
+; |g20_Seconds_to_Days|Add3~70     ; |g20_Seconds_to_Days|Add3~70     ; out0             ;
+; |g20_Seconds_to_Days|Add3~75     ; |g20_Seconds_to_Days|Add3~75     ; out0             ;
+; |g20_Seconds_to_Days|Add3~76     ; |g20_Seconds_to_Days|Add3~76     ; out0             ;
+; |g20_Seconds_to_Days|Add3~79     ; |g20_Seconds_to_Days|Add3~79     ; out0             ;
+; |g20_Seconds_to_Days|Add3~80     ; |g20_Seconds_to_Days|Add3~80     ; out0             ;
+; |g20_Seconds_to_Days|Add4~65     ; |g20_Seconds_to_Days|Add4~65     ; out0             ;
+; |g20_Seconds_to_Days|Add4~66     ; |g20_Seconds_to_Days|Add4~66     ; out0             ;
+; |g20_Seconds_to_Days|Add4~75     ; |g20_Seconds_to_Days|Add4~75     ; out0             ;
+; |g20_Seconds_to_Days|Add4~76     ; |g20_Seconds_to_Days|Add4~76     ; out0             ;
+; |g20_Seconds_to_Days|Add4~79     ; |g20_Seconds_to_Days|Add4~79     ; out0             ;
+; |g20_Seconds_to_Days|Add5~59     ; |g20_Seconds_to_Days|Add5~59     ; out0             ;
+; |g20_Seconds_to_Days|Add5~65     ; |g20_Seconds_to_Days|Add5~65     ; out0             ;
+; |g20_Seconds_to_Days|Add5~66     ; |g20_Seconds_to_Days|Add5~66     ; out0             ;
+; |g20_Seconds_to_Days|Add5~73     ; |g20_Seconds_to_Days|Add5~73     ; out0             ;
+; |g20_Seconds_to_Days|Add5~74     ; |g20_Seconds_to_Days|Add5~74     ; out0             ;
+; |g20_Seconds_to_Days|Add5~75     ; |g20_Seconds_to_Days|Add5~75     ; out0             ;
+; |g20_Seconds_to_Days|Add5~76     ; |g20_Seconds_to_Days|Add5~76     ; out0             ;
+; |g20_Seconds_to_Days|Add5~78     ; |g20_Seconds_to_Days|Add5~78     ; out0             ;
+; |g20_Seconds_to_Days|Add6~14     ; |g20_Seconds_to_Days|Add6~14     ; out0             ;
+; |g20_Seconds_to_Days|Add6~59     ; |g20_Seconds_to_Days|Add6~59     ; out0             ;
+; |g20_Seconds_to_Days|Add6~63     ; |g20_Seconds_to_Days|Add6~63     ; out0             ;
+; |g20_Seconds_to_Days|Add6~64     ; |g20_Seconds_to_Days|Add6~64     ; out0             ;
+; |g20_Seconds_to_Days|Add6~65     ; |g20_Seconds_to_Days|Add6~65     ; out0             ;
+; |g20_Seconds_to_Days|Add6~66     ; |g20_Seconds_to_Days|Add6~66     ; out0             ;
+; |g20_Seconds_to_Days|Add6~68     ; |g20_Seconds_to_Days|Add6~68     ; out0             ;
+; |g20_Seconds_to_Days|Add6~69     ; |g20_Seconds_to_Days|Add6~69     ; out0             ;
+; |g20_Seconds_to_Days|Add6~70     ; |g20_Seconds_to_Days|Add6~70     ; out0             ;
+; |g20_Seconds_to_Days|Add6~72     ; |g20_Seconds_to_Days|Add6~72     ; out0             ;
+; |g20_Seconds_to_Days|Add7~9      ; |g20_Seconds_to_Days|Add7~9      ; out0             ;
+; |g20_Seconds_to_Days|Add7~10     ; |g20_Seconds_to_Days|Add7~10     ; out0             ;
+; |g20_Seconds_to_Days|Add7~14     ; |g20_Seconds_to_Days|Add7~14     ; out0             ;
+; |g20_Seconds_to_Days|Add7~39     ; |g20_Seconds_to_Days|Add7~39     ; out0             ;
+; |g20_Seconds_to_Days|Add7~49     ; |g20_Seconds_to_Days|Add7~49     ; out0             ;
+; |g20_Seconds_to_Days|Add7~50     ; |g20_Seconds_to_Days|Add7~50     ; out0             ;
+; |g20_Seconds_to_Days|Add7~54     ; |g20_Seconds_to_Days|Add7~54     ; out0             ;
+; |g20_Seconds_to_Days|Add7~59     ; |g20_Seconds_to_Days|Add7~59     ; out0             ;
+; |g20_Seconds_to_Days|Add7~60     ; |g20_Seconds_to_Days|Add7~60     ; out0             ;
+; |g20_Seconds_to_Days|Add7~63     ; |g20_Seconds_to_Days|Add7~63     ; out0             ;
+; |g20_Seconds_to_Days|Add7~65     ; |g20_Seconds_to_Days|Add7~65     ; out0             ;
+; |g20_Seconds_to_Days|Add7~66     ; |g20_Seconds_to_Days|Add7~66     ; out0             ;
+; |g20_Seconds_to_Days|Add7~67     ; |g20_Seconds_to_Days|Add7~67     ; out0             ;
+; |g20_Seconds_to_Days|Add7~69     ; |g20_Seconds_to_Days|Add7~69     ; out0             ;
+; |g20_Seconds_to_Days|Add8~59     ; |g20_Seconds_to_Days|Add8~59     ; out0             ;
+; |g20_Seconds_to_Days|Add8~63     ; |g20_Seconds_to_Days|Add8~63     ; out0             ;
+; |g20_Seconds_to_Days|Add8~64     ; |g20_Seconds_to_Days|Add8~64     ; out0             ;
+; |g20_Seconds_to_Days|Add8~65     ; |g20_Seconds_to_Days|Add8~65     ; out0             ;
+; |g20_Seconds_to_Days|Add8~66     ; |g20_Seconds_to_Days|Add8~66     ; out0             ;
+; |g20_Seconds_to_Days|Add8~68     ; |g20_Seconds_to_Days|Add8~68     ; out0             ;
+; |g20_Seconds_to_Days|Add8~69     ; |g20_Seconds_to_Days|Add8~69     ; out0             ;
+; |g20_Seconds_to_Days|Add8~70     ; |g20_Seconds_to_Days|Add8~70     ; out0             ;
+; |g20_Seconds_to_Days|Add8~71     ; |g20_Seconds_to_Days|Add8~71     ; out0             ;
+; |g20_Seconds_to_Days|Add8~73     ; |g20_Seconds_to_Days|Add8~73     ; out0             ;
+; |g20_Seconds_to_Days|Add8~74     ; |g20_Seconds_to_Days|Add8~74     ; out0             ;
+; |g20_Seconds_to_Days|Add8~75     ; |g20_Seconds_to_Days|Add8~75     ; out0             ;
+; |g20_Seconds_to_Days|Add8~76     ; |g20_Seconds_to_Days|Add8~76     ; out0             ;
++----------------------------------+----------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Fri Feb 07 20:34:23 2014
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off g20_lab1 -c g20_lab1
+Info: Using vector source file "C:/Users/asaha2/Downloads/documents-export-2014-02-07/Waveform1.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of Waveform1.vwf called g20_lab1.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      85.92 %
+Info: Number of transitions in simulation is 19714
+Info: Vector file Waveform1.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 153 megabytes
+    Info: Processing ended: Fri Feb 07 20:34:27 2014
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:00
+
+

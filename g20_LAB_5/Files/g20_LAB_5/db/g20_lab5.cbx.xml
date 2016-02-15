@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="g20_lab5">
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_Basic_Timer:sec_pulse_gen|LPM_CONSTANT:lpm_constant_mars" CBX_FILE_NAME="lpm_constant_8u6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_HMS_Counter:earth_hms_counter|LPM_COUNTER:second_counter" CBX_FILE_NAME="cntr_77l.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_Basic_Timer:sec_pulse_gen|LPM_CONSTANT:lpm_constant_earth" CBX_FILE_NAME="lpm_constant_mv6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_HMS_Counter:mars_hms_counter|LPM_COUNTER:hour_counter" CBX_FILE_NAME="cntr_67l.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_HMS_Counter:earth_hms_counter|LPM_COUNTER:hour_counter" CBX_FILE_NAME="cntr_67l.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_HMS_Counter:earth_hms_counter|LPM_COUNTER:minute_counter" CBX_FILE_NAME="cntr_77l.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_UTC_to_MTC:utc_to_mtc|LPM_MULT:mult0" CBX_FILE_NAME="mult_1up.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_UTC_to_MTC:utc_to_mtc|g20_HMS_to_sec:HMS_to_sec|LPM_MULT:lpm_mult_component1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_5ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_UTC_to_MTC:utc_to_mtc|g20_HMS_to_sec:HMS_to_sec|lpm_add_sub:lpm_add_sub_component0" CBX_FILE_NAME="add_sub_12j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_UTC_to_MTC:utc_to_mtc|lpm_add_sub:sub0" CBX_FILE_NAME="add_sub_ivg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_HMS_Counter:mars_hms_counter|LPM_COUNTER:second_counter" CBX_FILE_NAME="cntr_77l.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_UTC_to_MTC:utc_to_mtc|LPM_MULT:mult1" CBX_FILE_NAME="mult_8sp.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_UTC_to_MTC:utc_to_mtc|g20_HMS_Counter:hms_counter|LPM_COUNTER:hour_counter" CBX_FILE_NAME="cntr_67l.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_UTC_to_MTC:utc_to_mtc|g20_HMS_Counter:hms_counter|LPM_COUNTER:minute_counter" CBX_FILE_NAME="cntr_77l.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_UTC_to_MTC:utc_to_mtc|g20_HMS_to_sec:HMS_to_sec|LPM_MULT:lpm_mult_component0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_1ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_UTC_to_MTC:utc_to_mtc|g20_HMS_to_sec:HMS_to_sec|lpm_add_sub:lpm_add_sub_component1" CBX_FILE_NAME="add_sub_72j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_Basic_Timer:sec_pulse_gen|LPM_COUNTER:lpm_counter_mars" CBX_FILE_NAME="cntr_1rk.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_UTC_to_MTC:utc_to_mtc|LPM_MULT:mult2" CBX_FILE_NAME="mult_asp.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_UTC_to_MTC:utc_to_mtc|g20_HMS_to_sec:HMS_to_sec|LPM_MULT:lpm_mult_component1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_1ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_Basic_Timer:sec_pulse_gen|LPM_COUNTER:lpm_counter_earth" CBX_FILE_NAME="cntr_1rk.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_HMS_Counter:mars_hms_counter|LPM_COUNTER:minute_counter" CBX_FILE_NAME="cntr_77l.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_UTC_to_MTC:utc_to_mtc|LPM_MULT:mult3" CBX_FILE_NAME="mult_asp.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g20_lab5|g20_UTC_to_MTC:utc_to_mtc|g20_HMS_Counter:hms_counter|LPM_COUNTER:second_counter" CBX_FILE_NAME="cntr_77l.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

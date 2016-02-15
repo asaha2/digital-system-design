@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Apr 14 03:20:11 2014
+Quartus II 64-Bit Version : 9.1 Build 350 03/24/2010 SP 2 SJ Full Version
+Revision Name : g20_lab5
+Top-level Entity Name : g20_lab5
+Family : Cyclone II
+Device : EP2C20F484C7
+Timing Models : Final
+Total logic elements : 970 / 18,752 ( 5 % )
+    Total combinational functions : 952 / 18,752 ( 5 % )
+    Dedicated logic registers : 293 / 18,752 ( 2 % )
+Total registers : 293
+Total pins : 42 / 315 ( 13 % )
+Total virtual pins : 0
+Total memory bits : 0 / 239,616 ( 0 % )
+Embedded Multiplier 9-bit elements : 18 / 52 ( 35 % )
+Total PLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,187 @@
+-- this circuit is generated for the purpose of testing the previously made Basic Timer
+-- circuit; it uses the 7 Segment Decoder code from the previous lab for display of
+-- the two sets of 0-5 and 0-9 counters in the Altera board
+-- 
+-- entity name: g20_Test_Bed
+-- 
+-- Copyright (C) 2014 Aditya Saha- 260453165, 
+-- 					  Shayan Ahmad- 260350431
+-- Version 1.0
+-- Author: Aditya Saha- aditya.saha@mail.mcgill.ca, 
+-- 		   Shayan Ahmad- shayan.ahmad@mail.mcgill.ca
+--
+-- Date: March 14, 2014
+
+library ieee;
+use ieee.std_logic_1164.all; 
+use ieee.numeric_std.all;
+
+library lpm;
+use lpm.lpm_components.all;
+
+entity g20_Test_Bed is
+	port (
+		reset			: in std_logic;
+		enable			: in std_logic;
+		clock			: in std_logic;
+		earth_segment5	: out std_logic_vector(6 downto 0);
+		earth_segment9	: out std_logic_vector(6 downto 0);
+		mars_segment5	: out std_logic_vector(6 downto 0);
+		mars_segment9	: out std_logic_vector(6 downto 0));
+	end g20_Test_Bed;
+
+architecture behavior of g20_Test_Bed is
+	
+	signal earth_pulse_in	: std_logic;
+	signal earth_pulse_out1 : std_logic_vector(3 downto 0);
+	signal earth_pulse_out2 : std_logic_vector(3 downto 0);
+	signal earth_pulse_temp : std_logic;
+	
+	signal mars_pulse_in	: std_logic;
+	signal mars_pulse_out1	: std_logic_vector(3 downto 0);
+	signal mars_pulse_out2	: std_logic_vector(3 downto 0);
+	signal mars_pulse_temp	: std_logic;
+	
+	component g20_Basic_Timer 
+	port (
+		clock, reset, enable : in std_logic;
+		EPULSE, MPULSE: out std_logic
+	);
+	end component;
+	
+	component g20_lab2_7_segment_decoder
+	port (
+		code			: in std_logic_vector(3 downto 0);
+		RippleBlank_In	: in std_logic;
+		RippleBlank_Out	: out std_logic;
+		segments		: out std_logic_vector(6 downto 0)
+	);
+	end component;
+
+	begin
+	-------------------FOR EARTH---------------	
+	
+	earth_timer : g20_Basic_timer
+	PORT MAP (
+		clock => clock,
+		enable => enable,
+		reset => reset,
+		EPULSE => earth_pulse_in,
+		MPULSE => mars_pulse_in
+	);
+	
+	-- declaration of the 0-9 counter
+	earth_counter_component1 : lpm_counter
+	GENERIC MAP (
+		lpm_direction => "UP",
+		lpm_port_updown => "PORT_UNUSED",
+		lpm_type => "LPM_COUNTER",
+		lpm_modulus => 10, 
+		lpm_width => 4
+	)
+	
+	PORT MAP (
+		sload => not (reset),
+		cnt_en => earth_pulse_in, 
+		clock => clock,
+		q => earth_pulse_out1
+	);
+	
+	-- declare and increment the 0-5 counter when count of 
+	-- the preceding 0-9 counter reaches 9
+	earth_pulse_temp <= '1' when (earth_pulse_out1 = "1001") else '0';
+	earth_counter_component2 : lpm_counter
+	GENERIC MAP (
+		lpm_direction => "UP",
+		lpm_port_updown => "PORT_UNUSED",
+		lpm_type => "LPM_COUNTER",
+		lpm_modulus => 6, 
+		lpm_width => 4 
+	)
+	
+	PORT MAP (
+		sload => not (reset),
+		cnt_en => earth_pulse_temp and earth_pulse_in,
+		clock => clock,
+		q => earth_pulse_out2
+	);
+	-------------------FOR EARTH---------------
+	
+	-------------------FOR MARS---------------	
+	
+	-- declaration of the 0-9 counter
+	mars_counter_component1 : lpm_counter
+	GENERIC MAP (
+		lpm_direction => "UP",
+		lpm_port_updown => "PORT_UNUSED",
+		lpm_type => "LPM_COUNTER",
+		lpm_modulus => 10,
+		lpm_width => 4
+	)
+	PORT MAP (
+		sload => not (reset),
+		cnt_en => mars_pulse_in,
+		clock => clock,
+		q => mars_pulse_out1
+	);
+	
+	-- declare and increment the 0-5 counter when count of 
+	-- the preceding 0-9 counter reaches 9
+	mars_pulse_temp <= '1' when (mars_pulse_out1 = "1001") else '0';
+	mars_counter_component2 : lpm_counter
+	GENERIC MAP (
+		lpm_direction => "UP",
+		lpm_port_updown => "PORT_UNUSED",
+		lpm_type => "LPM_COUNTER",
+		lpm_modulus => 6,
+		lpm_width => 4
+	)
+	
+	PORT MAP (
+		sload => not (reset),
+		cnt_en => mars_pulse_temp and mars_pulse_in,
+		clock => clock,
+		q => mars_pulse_out2
+	);
+	-------------------FOR MARS---------------
+
+	-------------------DISPLAYS---------------
+	
+	-- NOTE: RippleBlank_In asserted to '0' always since we have
+	-- explicitly already defined each of the bit counters before
+	-- and don't have to worry about bit increment based on other
+	-- bits in the 7 segment decoder code
+	
+	-- Earth.
+	earth_display9 : g20_lab2_7_segment_decoder
+		port map (
+			code			=> earth_pulse_out1,
+			RippleBlank_In	=> '0',
+			segments		=> earth_segment9
+		);
+	
+	earth_display5 : g20_lab2_7_segment_decoder
+		port map (
+			code			=> earth_pulse_out2,
+			RippleBlank_In	=> '0',
+			segments		=> earth_segment5
+		);
+	
+	-- Mars.
+	mars_display9 : g20_lab2_7_segment_decoder
+		port map (
+			code			=> mars_pulse_out1,
+			RippleBlank_In	=> '0',
+			segments		=> mars_segment9
+		);
+	
+	mars_display5 : g20_lab2_7_segment_decoder
+		port map (
+			code			=> mars_pulse_out2,
+			RippleBlank_In	=> '0',
+			segments		=> mars_segment5
+		);
+
+	-------------------DISPLAYS---------------
+
+end behavior;

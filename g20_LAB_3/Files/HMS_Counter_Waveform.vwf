@@ -1,0 +1,4043 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	DATA_OFFSET = 0.0;
+	DATA_DURATION = 86400000.0;
+	SIMULATION_TIME = 11450300.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 10.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("clock")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("count_enable")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("end_of_day")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("H_Set")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 5;
+	LSB_INDEX = 0;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("H_Set[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "H_Set";
+}
+
+SIGNAL("H_Set[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "H_Set";
+}
+
+SIGNAL("H_Set[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "H_Set";
+}
+
+SIGNAL("H_Set[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "H_Set";
+}
+
+SIGNAL("H_Set[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "H_Set";
+}
+
+SIGNAL("Hours")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 5;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Hours[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Hours";
+}
+
+SIGNAL("Hours[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Hours";
+}
+
+SIGNAL("Hours[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Hours";
+}
+
+SIGNAL("Hours[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Hours";
+}
+
+SIGNAL("Hours[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Hours";
+}
+
+SIGNAL("load_enable")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("M_Set")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 6;
+	LSB_INDEX = 0;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("M_Set[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "M_Set";
+}
+
+SIGNAL("M_Set[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "M_Set";
+}
+
+SIGNAL("M_Set[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "M_Set";
+}
+
+SIGNAL("M_Set[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "M_Set";
+}
+
+SIGNAL("M_Set[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "M_Set";
+}
+
+SIGNAL("M_Set[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "M_Set";
+}
+
+SIGNAL("Minutes")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 6;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Minutes[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Minutes";
+}
+
+SIGNAL("Minutes[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Minutes";
+}
+
+SIGNAL("Minutes[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Minutes";
+}
+
+SIGNAL("Minutes[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Minutes";
+}
+
+SIGNAL("Minutes[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Minutes";
+}
+
+SIGNAL("Minutes[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Minutes";
+}
+
+SIGNAL("reset")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("S_Set")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 6;
+	LSB_INDEX = 0;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("S_Set[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "S_Set";
+}
+
+SIGNAL("S_Set[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "S_Set";
+}
+
+SIGNAL("S_Set[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "S_Set";
+}
+
+SIGNAL("S_Set[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "S_Set";
+}
+
+SIGNAL("S_Set[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "S_Set";
+}
+
+SIGNAL("S_Set[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "S_Set";
+}
+
+SIGNAL("sec_clock")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Seconds")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 6;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Seconds[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Seconds";
+}
+
+SIGNAL("Seconds[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Seconds";
+}
+
+SIGNAL("Seconds[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Seconds";
+}
+
+SIGNAL("Seconds[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Seconds";
+}
+
+SIGNAL("Seconds[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Seconds";
+}
+
+SIGNAL("Seconds[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Seconds";
+}
+
+TRANSITION_LIST("clock")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 2160000;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+		}
+	}
+}
+
+TRANSITION_LIST("count_enable")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("end_of_day")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 20.0;
+		NODE
+		{
+			REPEAT = 3;
+			LEVEL 0 FOR 3455960.0;
+			LEVEL 1 FOR 40.0;
+		}
+		LEVEL 0 FOR 1082280.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2373680.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 3455960.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 4170280.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 3409800.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 46160.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 3455960.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 4884440.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 3455960.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 2873560.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 582400.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 3455960.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 5360600.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 3455960.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 3167480.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 288480.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 3455960.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 7326680.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 3455960.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 2801680.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 654280.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 1 FOR 40.0;
+				LEVEL 0 FOR 3455960.0;
+			}
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 428040.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2021780.0;
+		}
+	}
+}
+
+TRANSITION_LIST("H_Set[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("H_Set[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("H_Set[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("H_Set[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("H_Set[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("Hours[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 2303980.0;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 2304000.0;
+		}
+		LEVEL 1 FOR 1152000.0;
+		LEVEL 0 FOR 1082320.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1221680.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 2304000.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 1725480.0;
+			LEVEL 1 FOR 2444840.0;
+			LEVEL 0 FOR 2304000.0;
+			LEVEL 1 FOR 1105840.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 46160.0;
+			LEVEL 0 FOR 2304000.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 1128920.0;
+			LEVEL 1 FOR 3755560.0;
+			LEVEL 0 FOR 2304000.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 2304000.0;
+			LEVEL 1 FOR 569600.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 582400.0;
+			LEVEL 0 FOR 2304000.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 294360.0;
+			LEVEL 1 FOR 5066280.0;
+			LEVEL 0 FOR 2304000.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 2304000.0;
+			LEVEL 1 FOR 863520.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 288480.0;
+			LEVEL 0 FOR 2304000.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 949720.0;
+			LEVEL 1 FOR 6377000.0;
+			LEVEL 0 FOR 2304000.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 2304000.0;
+			LEVEL 1 FOR 497720.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 654280.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 2304000.0;
+				LEVEL 1 FOR 1152000.0;
+			}
+			LEVEL 0 FOR 428080.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1875920.0;
+			LEVEL 1 FOR 145860.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Hours[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1151980.0;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 2304000.0;
+		}
+		LEVEL 1 FOR 1152000.0;
+		LEVEL 0 FOR 2234320.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 69680.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 1 FOR 1152000.0;
+				LEVEL 0 FOR 2304000.0;
+			}
+			LEVEL 1 FOR 573480.0;
+			LEVEL 0 FOR 3596840.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 1105840.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1198160.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 7188480.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 2304000.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 569600.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1734400.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 7664640.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 2304000.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 863520.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1440480.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 9630720.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 2304000.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 497720.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1806280.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 1 FOR 1152000.0;
+				LEVEL 0 FOR 2304000.0;
+			}
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 1580080.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 723920.0;
+			LEVEL 1 FOR 1152000.0;
+			LEVEL 0 FOR 145860.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Hours[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 575980.0;
+		NODE
+		{
+			REPEAT = 9;
+			LEVEL 1 FOR 576000.0;
+			LEVEL 0 FOR 576000.0;
+		}
+		LEVEL 1 FOR 506320.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 69680.0;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 0 FOR 576000.0;
+				LEVEL 1 FOR 576000.0;
+			}
+			LEVEL 0 FOR 573480.0;
+			LEVEL 1 FOR 2444840.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 0 FOR 576000.0;
+				LEVEL 1 FOR 576000.0;
+			}
+			LEVEL 0 FOR 576000.0;
+			LEVEL 1 FOR 529840.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 46160.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 576000.0;
+				LEVEL 1 FOR 576000.0;
+			}
+			LEVEL 0 FOR 576000.0;
+			LEVEL 1 FOR 4308480.0;
+			NODE
+			{
+				REPEAT = 5;
+				LEVEL 0 FOR 576000.0;
+				LEVEL 1 FOR 576000.0;
+			}
+			LEVEL 0 FOR 569600.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6400.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 1 FOR 576000.0;
+				LEVEL 0 FOR 576000.0;
+			}
+			LEVEL 1 FOR 576000.0;
+			LEVEL 0 FOR 294360.0;
+			LEVEL 1 FOR 5066280.0;
+			NODE
+			{
+				REPEAT = 5;
+				LEVEL 0 FOR 576000.0;
+				LEVEL 1 FOR 576000.0;
+			}
+			LEVEL 0 FOR 576000.0;
+			LEVEL 1 FOR 287520.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 288480.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 576000.0;
+				LEVEL 1 FOR 576000.0;
+			}
+			LEVEL 0 FOR 576000.0;
+			LEVEL 1 FOR 6750720.0;
+			NODE
+			{
+				REPEAT = 5;
+				LEVEL 0 FOR 576000.0;
+				LEVEL 1 FOR 576000.0;
+			}
+			LEVEL 0 FOR 497720.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 78280.0;
+			NODE
+			{
+				REPEAT = 9;
+				LEVEL 1 FOR 576000.0;
+				LEVEL 0 FOR 576000.0;
+			}
+			LEVEL 1 FOR 576000.0;
+			LEVEL 0 FOR 428080.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 147920.0;
+			LEVEL 1 FOR 576000.0;
+			LEVEL 0 FOR 576000.0;
+			LEVEL 1 FOR 576000.0;
+			LEVEL 0 FOR 145860.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Hours[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 287980.0;
+		NODE
+		{
+			REPEAT = 19;
+			LEVEL 1 FOR 288000.0;
+			LEVEL 0 FOR 288000.0;
+		}
+		LEVEL 1 FOR 218320.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 69680.0;
+			NODE
+			{
+				REPEAT = 12;
+				LEVEL 0 FOR 288000.0;
+				LEVEL 1 FOR 288000.0;
+			}
+			LEVEL 0 FOR 288000.0;
+			LEVEL 1 FOR 285480.0;
+			LEVEL 0 FOR 2156840.0;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 288000.0;
+				LEVEL 0 FOR 288000.0;
+			}
+			LEVEL 1 FOR 241840.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 46160.0;
+			NODE
+			{
+				REPEAT = 7;
+				LEVEL 0 FOR 288000.0;
+				LEVEL 1 FOR 288000.0;
+			}
+			LEVEL 0 FOR 288000.0;
+			LEVEL 1 FOR 264920.0;
+			LEVEL 0 FOR 3467560.0;
+			NODE
+			{
+				REPEAT = 11;
+				LEVEL 1 FOR 288000.0;
+				LEVEL 0 FOR 288000.0;
+			}
+			LEVEL 1 FOR 281600.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 6400.0;
+			NODE
+			{
+				REPEAT = 7;
+				LEVEL 0 FOR 288000.0;
+				LEVEL 1 FOR 288000.0;
+			}
+			LEVEL 0 FOR 288000.0;
+			LEVEL 1 FOR 6360.0;
+			LEVEL 0 FOR 4778280.0;
+			NODE
+			{
+				REPEAT = 11;
+				LEVEL 1 FOR 288000.0;
+				LEVEL 0 FOR 288000.0;
+			}
+			LEVEL 1 FOR 288000.0;
+			LEVEL 0 FOR 287520.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 480.0;
+			NODE
+			{
+				REPEAT = 8;
+				LEVEL 1 FOR 288000.0;
+				LEVEL 0 FOR 288000.0;
+			}
+			LEVEL 1 FOR 85720.0;
+			LEVEL 0 FOR 6089000.0;
+			NODE
+			{
+				REPEAT = 11;
+				LEVEL 1 FOR 288000.0;
+				LEVEL 0 FOR 288000.0;
+			}
+			LEVEL 1 FOR 209720.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 78280.0;
+			NODE
+			{
+				REPEAT = 19;
+				LEVEL 0 FOR 288000.0;
+				LEVEL 1 FOR 288000.0;
+			}
+			LEVEL 0 FOR 288000.0;
+			LEVEL 1 FOR 140080.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 147920.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 288000.0;
+				LEVEL 1 FOR 288000.0;
+			}
+			LEVEL 0 FOR 145860.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Hours[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 143980.0;
+		NODE
+		{
+			REPEAT = 39;
+			LEVEL 1 FOR 144000.0;
+			LEVEL 0 FOR 144000.0;
+		}
+		LEVEL 1 FOR 74320.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 69680.0;
+			NODE
+			{
+				REPEAT = 25;
+				LEVEL 0 FOR 144000.0;
+				LEVEL 1 FOR 144000.0;
+			}
+			LEVEL 0 FOR 144000.0;
+			LEVEL 1 FOR 141480.0;
+			LEVEL 0 FOR 2012840.0;
+			NODE
+			{
+				REPEAT = 13;
+				LEVEL 1 FOR 144000.0;
+				LEVEL 0 FOR 144000.0;
+			}
+			LEVEL 1 FOR 97840.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 46160.0;
+			NODE
+			{
+				REPEAT = 15;
+				LEVEL 0 FOR 144000.0;
+				LEVEL 1 FOR 144000.0;
+			}
+			LEVEL 0 FOR 144000.0;
+			LEVEL 1 FOR 120920.0;
+			LEVEL 0 FOR 3323560.0;
+			NODE
+			{
+				REPEAT = 23;
+				LEVEL 1 FOR 144000.0;
+				LEVEL 0 FOR 144000.0;
+			}
+			LEVEL 1 FOR 137600.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 6400.0;
+			NODE
+			{
+				REPEAT = 15;
+				LEVEL 0 FOR 144000.0;
+				LEVEL 1 FOR 144000.0;
+			}
+			LEVEL 0 FOR 4640640.0;
+			NODE
+			{
+				REPEAT = 24;
+				LEVEL 1 FOR 144000.0;
+				LEVEL 0 FOR 144000.0;
+			}
+			LEVEL 1 FOR 143520.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 480.0;
+			NODE
+			{
+				REPEAT = 16;
+				LEVEL 0 FOR 144000.0;
+				LEVEL 1 FOR 144000.0;
+			}
+			LEVEL 0 FOR 6030720.0;
+			NODE
+			{
+				REPEAT = 23;
+				LEVEL 1 FOR 144000.0;
+				LEVEL 0 FOR 144000.0;
+			}
+			LEVEL 1 FOR 65720.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 78280.0;
+			NODE
+			{
+				REPEAT = 39;
+				LEVEL 0 FOR 144000.0;
+				LEVEL 1 FOR 144000.0;
+			}
+			LEVEL 0 FOR 140080.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3920.0;
+			NODE
+			{
+				REPEAT = 7;
+				LEVEL 1 FOR 144000.0;
+				LEVEL 0 FOR 144000.0;
+			}
+			LEVEL 1 FOR 1860.0;
+		}
+	}
+}
+
+TRANSITION_LIST("load_enable")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 19005440.0;
+		LEVEL 1 FOR 1966080.0;
+		LEVEL 0 FOR 8519680.0;
+		LEVEL 1 FOR 3276800.0;
+		LEVEL 0 FOR 11141120.0;
+		LEVEL 1 FOR 4587520.0;
+		LEVEL 0 FOR 11796480.0;
+		LEVEL 1 FOR 5898240.0;
+		LEVEL 0 FOR 20208640.0;
+	}
+}
+
+TRANSITION_LIST("M_Set[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("M_Set[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("M_Set[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("M_Set[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("M_Set[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("M_Set[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("Minutes[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 76780.0;
+		NODE
+		{
+			REPEAT = 78;
+			LEVEL 1 FOR 67200.0;
+			LEVEL 0 FOR 76800.0;
+		}
+		LEVEL 1 FOR 67200.0;
+		LEVEL 0 FOR 74320.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2480.0;
+			NODE
+			{
+				REPEAT = 52;
+				LEVEL 1 FOR 67200.0;
+				LEVEL 0 FOR 76800.0;
+			}
+			LEVEL 1 FOR 2077520.0;
+			NODE
+			{
+				REPEAT = 26;
+				LEVEL 0 FOR 76800.0;
+				LEVEL 1 FOR 67200.0;
+			}
+			LEVEL 0 FOR 76800.0;
+			LEVEL 1 FOR 21040.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 46160.0;
+			NODE
+			{
+				REPEAT = 31;
+				LEVEL 0 FOR 76800.0;
+				LEVEL 1 FOR 67200.0;
+			}
+			LEVEL 0 FOR 76800.0;
+			LEVEL 1 FOR 3367680.0;
+			NODE
+			{
+				REPEAT = 46;
+				LEVEL 0 FOR 76800.0;
+				LEVEL 1 FOR 67200.0;
+			}
+			LEVEL 0 FOR 76800.0;
+			LEVEL 1 FOR 60800.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 6400.0;
+			NODE
+			{
+				REPEAT = 30;
+				LEVEL 0 FOR 76800.0;
+				LEVEL 1 FOR 67200.0;
+			}
+			LEVEL 0 FOR 6360.0;
+			LEVEL 1 FOR 4634280.0;
+			NODE
+			{
+				REPEAT = 48;
+				LEVEL 0 FOR 76800.0;
+				LEVEL 1 FOR 67200.0;
+			}
+			LEVEL 0 FOR 76800.0;
+			LEVEL 1 FOR 66720.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 480.0;
+			NODE
+			{
+				REPEAT = 32;
+				LEVEL 0 FOR 76800.0;
+				LEVEL 1 FOR 67200.0;
+			}
+			LEVEL 0 FOR 76800.0;
+			LEVEL 1 FOR 5953920.0;
+			NODE
+			{
+				REPEAT = 46;
+				LEVEL 0 FOR 76800.0;
+				LEVEL 1 FOR 67200.0;
+			}
+			LEVEL 0 FOR 65720.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 11080.0;
+			NODE
+			{
+				REPEAT = 79;
+				LEVEL 1 FOR 67200.0;
+				LEVEL 0 FOR 76800.0;
+			}
+			LEVEL 1 FOR 63280.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 3920.0;
+			NODE
+			{
+				REPEAT = 14;
+				LEVEL 0 FOR 76800.0;
+				LEVEL 1 FOR 67200.0;
+			}
+			LEVEL 0 FOR 1860.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Minutes[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 38380.0;
+		NODE
+		{
+			REPEAT = 79;
+			LEVEL 1 FOR 38400.0;
+			LEVEL 0 FOR 38400.0;
+			LEVEL 1 FOR 28800.0;
+			LEVEL 0 FOR 38400.0;
+		}
+		LEVEL 1 FOR 35920.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 2480.0;
+			NODE
+			{
+				REPEAT = 52;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 28800.0;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 38400.0;
+			}
+			LEVEL 0 FOR 38400.0;
+			LEVEL 1 FOR 26280.0;
+			LEVEL 0 FOR 1984040.0;
+			NODE
+			{
+				REPEAT = 26;
+				LEVEL 1 FOR 28800.0;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 38400.0;
+				LEVEL 0 FOR 38400.0;
+			}
+			LEVEL 1 FOR 28800.0;
+			LEVEL 0 FOR 38400.0;
+			LEVEL 1 FOR 38400.0;
+			LEVEL 0 FOR 21040.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 17360.0;
+			NODE
+			{
+				REPEAT = 32;
+				LEVEL 1 FOR 28800.0;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 38400.0;
+				LEVEL 0 FOR 38400.0;
+			}
+			LEVEL 1 FOR 5720.0;
+			LEVEL 0 FOR 3294760.0;
+			NODE
+			{
+				REPEAT = 47;
+				LEVEL 1 FOR 28800.0;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 38400.0;
+				LEVEL 0 FOR 38400.0;
+			}
+			LEVEL 1 FOR 22400.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 6400.0;
+			NODE
+			{
+				REPEAT = 30;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 38400.0;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 28800.0;
+			}
+			LEVEL 0 FOR 4611840.0;
+			NODE
+			{
+				REPEAT = 49;
+				LEVEL 1 FOR 28800.0;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 38400.0;
+				LEVEL 0 FOR 38400.0;
+			}
+			LEVEL 1 FOR 28320.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 480.0;
+			NODE
+			{
+				REPEAT = 32;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 38400.0;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 28800.0;
+			}
+			LEVEL 0 FOR 38400.0;
+			LEVEL 1 FOR 38400.0;
+			LEVEL 0 FOR 5925120.0;
+			NODE
+			{
+				REPEAT = 46;
+				LEVEL 1 FOR 28800.0;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 38400.0;
+				LEVEL 0 FOR 38400.0;
+			}
+			LEVEL 1 FOR 28800.0;
+			LEVEL 0 FOR 38400.0;
+			LEVEL 1 FOR 27320.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 11080.0;
+			NODE
+			{
+				REPEAT = 79;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 28800.0;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 38400.0;
+			}
+			LEVEL 0 FOR 38400.0;
+			LEVEL 1 FOR 24880.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 3920.0;
+			NODE
+			{
+				REPEAT = 14;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 38400.0;
+				LEVEL 0 FOR 38400.0;
+				LEVEL 1 FOR 28800.0;
+			}
+			LEVEL 0 FOR 1860.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Minutes[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 19180.0;
+		NODE
+		{
+			REPEAT = 3;
+			LEVEL 1 FOR 19200.0;
+			LEVEL 0 FOR 19200.0;
+		}
+		NODE
+		{
+			REPEAT = 78;
+			LEVEL 1 FOR 9600.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 19200.0;
+			}
+			LEVEL 0 FOR 19200.0;
+		}
+		LEVEL 1 FOR 9600.0;
+		LEVEL 0 FOR 19200.0;
+		LEVEL 1 FOR 19200.0;
+		LEVEL 0 FOR 19200.0;
+		LEVEL 1 FOR 16720.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 2480.0;
+			LEVEL 0 FOR 19200.0;
+			LEVEL 1 FOR 19200.0;
+			NODE
+			{
+				REPEAT = 52;
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 9600.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 19200.0;
+					LEVEL 1 FOR 19200.0;
+				}
+			}
+			LEVEL 0 FOR 19200.0;
+			LEVEL 1 FOR 1991120.0;
+			NODE
+			{
+				REPEAT = 26;
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 9600.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 19200.0;
+					LEVEL 1 FOR 19200.0;
+				}
+			}
+			LEVEL 0 FOR 19200.0;
+			LEVEL 1 FOR 9600.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 19200.0;
+			}
+			LEVEL 0 FOR 19200.0;
+			LEVEL 1 FOR 1840.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 17360.0;
+			NODE
+			{
+				REPEAT = 32;
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 9600.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 19200.0;
+					LEVEL 1 FOR 19200.0;
+				}
+			}
+			LEVEL 0 FOR 5720.0;
+			LEVEL 1 FOR 3294760.0;
+			NODE
+			{
+				REPEAT = 46;
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 9600.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 19200.0;
+					LEVEL 1 FOR 19200.0;
+				}
+			}
+			LEVEL 0 FOR 19200.0;
+			LEVEL 1 FOR 9600.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 19200.0;
+			}
+			LEVEL 0 FOR 19200.0;
+			LEVEL 1 FOR 3200.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 6400.0;
+			NODE
+			{
+				REPEAT = 30;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 19200.0;
+					LEVEL 1 FOR 19200.0;
+				}
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 9600.0;
+			}
+			LEVEL 0 FOR 6360.0;
+			LEVEL 1 FOR 4605480.0;
+			NODE
+			{
+				REPEAT = 48;
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 9600.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 19200.0;
+					LEVEL 1 FOR 19200.0;
+				}
+			}
+			LEVEL 0 FOR 19200.0;
+			LEVEL 1 FOR 9600.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 19200.0;
+			}
+			LEVEL 0 FOR 19200.0;
+			LEVEL 1 FOR 9120.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 480.0;
+			NODE
+			{
+				REPEAT = 32;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 19200.0;
+					LEVEL 1 FOR 19200.0;
+				}
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 9600.0;
+			}
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 19200.0;
+			}
+			LEVEL 0 FOR 8920.0;
+			LEVEL 1 FOR 5916200.0;
+			NODE
+			{
+				REPEAT = 46;
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 9600.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 19200.0;
+					LEVEL 1 FOR 19200.0;
+				}
+			}
+			LEVEL 0 FOR 19200.0;
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 19200.0;
+			LEVEL 1 FOR 19200.0;
+			LEVEL 0 FOR 19200.0;
+			LEVEL 1 FOR 8120.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 11080.0;
+			LEVEL 0 FOR 19200.0;
+			LEVEL 1 FOR 19200.0;
+			NODE
+			{
+				REPEAT = 78;
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 9600.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 19200.0;
+					LEVEL 1 FOR 19200.0;
+				}
+			}
+			LEVEL 0 FOR 19200.0;
+			LEVEL 1 FOR 9600.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 19200.0;
+			}
+			LEVEL 0 FOR 19200.0;
+			LEVEL 1 FOR 5680.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 3920.0;
+			NODE
+			{
+				REPEAT = 14;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 19200.0;
+					LEVEL 1 FOR 19200.0;
+				}
+				LEVEL 0 FOR 19200.0;
+				LEVEL 1 FOR 9600.0;
+			}
+			LEVEL 0 FOR 1860.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Minutes[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 9580.0;
+		NODE
+		{
+			REPEAT = 78;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 9600.0;
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 19200.0;
+		}
+		NODE
+		{
+			REPEAT = 6;
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 9600.0;
+		}
+		LEVEL 1 FOR 9600.0;
+		LEVEL 0 FOR 19200.0;
+		NODE
+		{
+			REPEAT = 3;
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 9600.0;
+		}
+		LEVEL 1 FOR 7120.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 2480.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 9600.0;
+				LEVEL 1 FOR 9600.0;
+			}
+			NODE
+			{
+				REPEAT = 52;
+				LEVEL 0 FOR 19200.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 9600.0;
+					LEVEL 0 FOR 9600.0;
+				}
+				LEVEL 1 FOR 9600.0;
+			}
+			LEVEL 0 FOR 1981520.0;
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 9600.0;
+			NODE
+			{
+				REPEAT = 26;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 19200.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 9600.0;
+					LEVEL 0 FOR 9600.0;
+				}
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 19200.0;
+			NODE
+			{
+				REPEAT = 4;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 9600.0;
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 1840.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 7760.0;
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 9600.0;
+			NODE
+			{
+				REPEAT = 30;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 19200.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 9600.0;
+					LEVEL 0 FOR 9600.0;
+				}
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 19200.0;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 9600.0;
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 19200.0;
+			NODE
+			{
+				REPEAT = 5;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 9600.0;
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 3290880.0;
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 9600.0;
+			NODE
+			{
+				REPEAT = 46;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 19200.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 9600.0;
+					LEVEL 0 FOR 9600.0;
+				}
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 19200.0;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 9600.0;
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 3200.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 16000.0;
+			NODE
+			{
+				REPEAT = 28;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 9600.0;
+					LEVEL 0 FOR 9600.0;
+				}
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 19200.0;
+			}
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 9600.0;
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 19200.0;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 9600.0;
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 4611840.0;
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 9600.0;
+			NODE
+			{
+				REPEAT = 48;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 19200.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 9600.0;
+					LEVEL 0 FOR 9600.0;
+				}
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 19200.0;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 9600.0;
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 9120.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10080.0;
+			NODE
+			{
+				REPEAT = 32;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 9600.0;
+					LEVEL 0 FOR 9600.0;
+				}
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 19200.0;
+			}
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 9600.0;
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 5915520.0;
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 9600.0;
+			NODE
+			{
+				REPEAT = 46;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 19200.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 9600.0;
+					LEVEL 0 FOR 9600.0;
+				}
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 19200.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 9600.0;
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 8120.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1480.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 9600.0;
+			}
+			NODE
+			{
+				REPEAT = 78;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 19200.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 9600.0;
+					LEVEL 0 FOR 9600.0;
+				}
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 19200.0;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 9600.0;
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 5680.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 13520.0;
+			NODE
+			{
+				REPEAT = 12;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 9600.0;
+					LEVEL 0 FOR 9600.0;
+				}
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 19200.0;
+			}
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 9600.0;
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 19200.0;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 9600.0;
+				LEVEL 0 FOR 9600.0;
+			}
+			LEVEL 1 FOR 9600.0;
+			LEVEL 0 FOR 11460.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Minutes[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 4780.0;
+		NODE
+		{
+			REPEAT = 1192;
+			LEVEL 1 FOR 4800.0;
+			LEVEL 0 FOR 4800.0;
+		}
+		LEVEL 1 FOR 2320.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 2480.0;
+			NODE
+			{
+				REPEAT = 786;
+				LEVEL 0 FOR 4800.0;
+				LEVEL 1 FOR 4800.0;
+			}
+			LEVEL 0 FOR 4800.0;
+			LEVEL 1 FOR 2280.0;
+			LEVEL 0 FOR 1969640.0;
+			NODE
+			{
+				REPEAT = 404;
+				LEVEL 1 FOR 4800.0;
+				LEVEL 0 FOR 4800.0;
+			}
+			LEVEL 1 FOR 4800.0;
+			LEVEL 0 FOR 1840.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2960.0;
+			NODE
+			{
+				REPEAT = 482;
+				LEVEL 1 FOR 4800.0;
+				LEVEL 0 FOR 4800.0;
+			}
+			LEVEL 1 FOR 920.0;
+			LEVEL 0 FOR 3280360.0;
+			NODE
+			{
+				REPEAT = 708;
+				LEVEL 1 FOR 4800.0;
+				LEVEL 0 FOR 4800.0;
+			}
+			LEVEL 1 FOR 4800.0;
+			LEVEL 0 FOR 3200.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1600.0;
+			NODE
+			{
+				REPEAT = 451;
+				LEVEL 1 FOR 4800.0;
+				LEVEL 0 FOR 4800.0;
+			}
+			LEVEL 1 FOR 1560.0;
+			LEVEL 0 FOR 4591080.0;
+			NODE
+			{
+				REPEAT = 739;
+				LEVEL 1 FOR 4800.0;
+				LEVEL 0 FOR 4800.0;
+			}
+			LEVEL 1 FOR 4320.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 480.0;
+			NODE
+			{
+				REPEAT = 488;
+				LEVEL 0 FOR 4800.0;
+				LEVEL 1 FOR 4800.0;
+			}
+			LEVEL 0 FOR 4800.0;
+			LEVEL 1 FOR 4120.0;
+			LEVEL 0 FOR 5901800.0;
+			NODE
+			{
+				REPEAT = 701;
+				LEVEL 1 FOR 4800.0;
+				LEVEL 0 FOR 4800.0;
+			}
+			LEVEL 1 FOR 3320.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1480.0;
+			NODE
+			{
+				REPEAT = 1192;
+				LEVEL 0 FOR 4800.0;
+				LEVEL 1 FOR 4800.0;
+			}
+			LEVEL 0 FOR 4800.0;
+			LEVEL 1 FOR 880.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 3920.0;
+			NODE
+			{
+				REPEAT = 210;
+				LEVEL 0 FOR 4800.0;
+				LEVEL 1 FOR 4800.0;
+			}
+			LEVEL 0 FOR 1860.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Minutes[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 2380.0;
+		NODE
+		{
+			REPEAT = 2384;
+			LEVEL 1 FOR 2400.0;
+			LEVEL 0 FOR 2400.0;
+		}
+		LEVEL 1 FOR 2400.0;
+		LEVEL 0 FOR 2320.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 80.0;
+			NODE
+			{
+				REPEAT = 1573;
+				LEVEL 1 FOR 2400.0;
+				LEVEL 0 FOR 2400.0;
+			}
+			LEVEL 1 FOR 2400.0;
+			LEVEL 0 FOR 1969520.0;
+			NODE
+			{
+				REPEAT = 809;
+				LEVEL 1 FOR 2400.0;
+				LEVEL 0 FOR 2400.0;
+			}
+			LEVEL 1 FOR 2400.0;
+			LEVEL 0 FOR 1840.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 560.0;
+			NODE
+			{
+				REPEAT = 964;
+				LEVEL 1 FOR 2400.0;
+				LEVEL 0 FOR 2400.0;
+			}
+			LEVEL 1 FOR 2400.0;
+			LEVEL 0 FOR 3278880.0;
+			NODE
+			{
+				REPEAT = 1418;
+				LEVEL 1 FOR 2400.0;
+				LEVEL 0 FOR 2400.0;
+			}
+			LEVEL 1 FOR 800.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1600.0;
+			NODE
+			{
+				REPEAT = 902;
+				LEVEL 0 FOR 2400.0;
+				LEVEL 1 FOR 2400.0;
+			}
+			LEVEL 0 FOR 4590240.0;
+			NODE
+			{
+				REPEAT = 1479;
+				LEVEL 1 FOR 2400.0;
+				LEVEL 0 FOR 2400.0;
+			}
+			LEVEL 1 FOR 1920.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 480.0;
+			NODE
+			{
+				REPEAT = 977;
+				LEVEL 0 FOR 2400.0;
+				LEVEL 1 FOR 2400.0;
+			}
+			LEVEL 0 FOR 2400.0;
+			LEVEL 1 FOR 1720.0;
+			LEVEL 0 FOR 5899400.0;
+			NODE
+			{
+				REPEAT = 1403;
+				LEVEL 1 FOR 2400.0;
+				LEVEL 0 FOR 2400.0;
+			}
+			LEVEL 1 FOR 920.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1480.0;
+			NODE
+			{
+				REPEAT = 2385;
+				LEVEL 0 FOR 2400.0;
+				LEVEL 1 FOR 2400.0;
+			}
+			LEVEL 0 FOR 880.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1520.0;
+			NODE
+			{
+				REPEAT = 420;
+				LEVEL 1 FOR 2400.0;
+				LEVEL 0 FOR 2400.0;
+			}
+			LEVEL 1 FOR 2400.0;
+			LEVEL 0 FOR 1860.0;
+		}
+	}
+}
+
+TRANSITION_LIST("reset")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("S_Set[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("S_Set[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("S_Set[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("S_Set[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("S_Set[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("S_Set[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("sec_clock")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 86400000.0;
+	}
+}
+
+TRANSITION_LIST("Seconds[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1260.0;
+		NODE
+		{
+			REPEAT = 4770;
+			LEVEL 1 FOR 1120.0;
+			LEVEL 0 FOR 1280.0;
+		}
+		LEVEL 1 FOR 1040.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 80.0;
+			NODE
+			{
+				REPEAT = 3147;
+				LEVEL 0 FOR 1280.0;
+				LEVEL 1 FOR 1120.0;
+			}
+			LEVEL 0 FOR 1280.0;
+			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1966120.0;
+			NODE
+			{
+				REPEAT = 1620;
+				LEVEL 1 FOR 1120.0;
+				LEVEL 0 FOR 1280.0;
+			}
+			LEVEL 1 FOR 560.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 560.0;
+			NODE
+			{
+				REPEAT = 1929;
+				LEVEL 0 FOR 1280.0;
+				LEVEL 1 FOR 1120.0;
+			}
+			LEVEL 0 FOR 3277760.0;
+			NODE
+			{
+				REPEAT = 2836;
+				LEVEL 1 FOR 1120.0;
+				LEVEL 0 FOR 1280.0;
+			}
+			LEVEL 1 FOR 1120.0;
+			LEVEL 0 FOR 800.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 480.0;
+			NODE
+			{
+				REPEAT = 1805;
+				LEVEL 1 FOR 1120.0;
+				LEVEL 0 FOR 1280.0;
+			}
+			LEVEL 1 FOR 280.0;
+			LEVEL 0 FOR 4587560.0;
+			NODE
+			{
+				REPEAT = 2959;
+				LEVEL 1 FOR 1120.0;
+				LEVEL 0 FOR 1280.0;
+			}
+			LEVEL 1 FOR 640.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 480.0;
+			NODE
+			{
+				REPEAT = 1955;
+				LEVEL 0 FOR 1280.0;
+				LEVEL 1 FOR 1120.0;
+			}
+			LEVEL 0 FOR 1280.0;
+			LEVEL 1 FOR 440.0;
+			LEVEL 0 FOR 5898280.0;
+			NODE
+			{
+				REPEAT = 2806;
+				LEVEL 1 FOR 1120.0;
+				LEVEL 0 FOR 1280.0;
+			}
+			LEVEL 1 FOR 1120.0;
+			LEVEL 0 FOR 920.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 360.0;
+			NODE
+			{
+				REPEAT = 4770;
+				LEVEL 1 FOR 1120.0;
+				LEVEL 0 FOR 1280.0;
+			}
+			LEVEL 1 FOR 1120.0;
+			LEVEL 0 FOR 880.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 400.0;
+			NODE
+			{
+				REPEAT = 842;
+				LEVEL 1 FOR 1120.0;
+				LEVEL 0 FOR 1280.0;
+			}
+			LEVEL 1 FOR 580.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Seconds[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 620.0;
+		NODE
+		{
+			REPEAT = 4770;
+			LEVEL 1 FOR 640.0;
+			LEVEL 0 FOR 640.0;
+			LEVEL 1 FOR 480.0;
+			LEVEL 0 FOR 640.0;
+		}
+		LEVEL 1 FOR 640.0;
+		LEVEL 0 FOR 640.0;
+		LEVEL 1 FOR 400.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 80.0;
+			NODE
+			{
+				REPEAT = 3147;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 640.0;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 480.0;
+			}
+			LEVEL 0 FOR 640.0;
+			LEVEL 1 FOR 640.0;
+			LEVEL 0 FOR 640.0;
+			LEVEL 1 FOR 1966480.0;
+			NODE
+			{
+				REPEAT = 1620;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 480.0;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 640.0;
+			}
+			LEVEL 0 FOR 560.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 80.0;
+			NODE
+			{
+				REPEAT = 1929;
+				LEVEL 1 FOR 480.0;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 640.0;
+				LEVEL 0 FOR 640.0;
+			}
+			LEVEL 1 FOR 480.0;
+			LEVEL 0 FOR 640.0;
+			LEVEL 1 FOR 3277120.0;
+			NODE
+			{
+				REPEAT = 2836;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 480.0;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 640.0;
+			}
+			LEVEL 0 FOR 640.0;
+			LEVEL 1 FOR 480.0;
+			LEVEL 0 FOR 640.0;
+			LEVEL 1 FOR 160.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 1 FOR 480.0;
+				LEVEL 0 FOR 640.0;
+			}
+			NODE
+			{
+				REPEAT = 1804;
+				LEVEL 1 FOR 640.0;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 480.0;
+				LEVEL 0 FOR 640.0;
+			}
+			LEVEL 1 FOR 640.0;
+			LEVEL 0 FOR 280.0;
+			LEVEL 1 FOR 4587560.0;
+			NODE
+			{
+				REPEAT = 2959;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 480.0;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 640.0;
+			}
+			LEVEL 0 FOR 640.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 1955;
+				LEVEL 1 FOR 480.0;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 640.0;
+				LEVEL 0 FOR 640.0;
+			}
+			LEVEL 1 FOR 480.0;
+			LEVEL 0 FOR 640.0;
+			LEVEL 1 FOR 640.0;
+			LEVEL 0 FOR 440.0;
+			LEVEL 1 FOR 5898280.0;
+			NODE
+			{
+				REPEAT = 2806;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 480.0;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 640.0;
+			}
+			LEVEL 0 FOR 640.0;
+			LEVEL 1 FOR 480.0;
+			LEVEL 0 FOR 640.0;
+			LEVEL 1 FOR 280.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 360.0;
+			NODE
+			{
+				REPEAT = 4770;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 480.0;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 640.0;
+			}
+			LEVEL 0 FOR 640.0;
+			LEVEL 1 FOR 480.0;
+			LEVEL 0 FOR 640.0;
+			LEVEL 1 FOR 240.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 400.0;
+			NODE
+			{
+				REPEAT = 842;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 480.0;
+				LEVEL 0 FOR 640.0;
+				LEVEL 1 FOR 640.0;
+			}
+			LEVEL 0 FOR 580.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Seconds[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 300.0;
+		NODE
+		{
+			REPEAT = 3;
+			LEVEL 1 FOR 320.0;
+			LEVEL 0 FOR 320.0;
+		}
+		NODE
+		{
+			REPEAT = 4770;
+			LEVEL 1 FOR 160.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 320.0;
+			}
+			LEVEL 0 FOR 320.0;
+		}
+		LEVEL 1 FOR 80.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 80.0;
+			NODE
+			{
+				REPEAT = 3146;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 320.0;
+					LEVEL 1 FOR 320.0;
+				}
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 160.0;
+			}
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 320.0;
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 160.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 320.0;
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 1966160.0;
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 320.0;
+			NODE
+			{
+				REPEAT = 1618;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 160.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 320.0;
+					LEVEL 1 FOR 320.0;
+				}
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 160.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 320.0;
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 160.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 320.0;
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 240.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 80.0;
+			NODE
+			{
+				REPEAT = 1928;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 160.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 320.0;
+					LEVEL 1 FOR 320.0;
+				}
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 160.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 320.0;
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 320.0;
+			LEVEL 0 FOR 280.0;
+			LEVEL 1 FOR 3276840.0;
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 320.0;
+			NODE
+			{
+				REPEAT = 2836;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 160.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 320.0;
+					LEVEL 1 FOR 320.0;
+				}
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 320.0;
+			LEVEL 0 FOR 160.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 160.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 1 FOR 320.0;
+				LEVEL 0 FOR 320.0;
+			}
+			NODE
+			{
+				REPEAT = 1804;
+				LEVEL 1 FOR 160.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 320.0;
+					LEVEL 1 FOR 320.0;
+				}
+				LEVEL 0 FOR 320.0;
+			}
+			LEVEL 1 FOR 160.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 320.0;
+			}
+			LEVEL 0 FOR 280.0;
+			LEVEL 1 FOR 4587560.0;
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 320.0;
+			NODE
+			{
+				REPEAT = 2958;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 160.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 320.0;
+					LEVEL 1 FOR 320.0;
+				}
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 160.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 320.0;
+			}
+		}
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 1954;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 160.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 320.0;
+					LEVEL 1 FOR 320.0;
+				}
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 160.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 320.0;
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 160.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 320.0;
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 5898400.0;
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 320.0;
+			NODE
+			{
+				REPEAT = 2806;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 160.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 320.0;
+					LEVEL 1 FOR 320.0;
+				}
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 320.0;
+			LEVEL 0 FOR 280.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 40.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 1 FOR 320.0;
+				LEVEL 0 FOR 320.0;
+			}
+			NODE
+			{
+				REPEAT = 4770;
+				LEVEL 1 FOR 160.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 320.0;
+					LEVEL 1 FOR 320.0;
+				}
+				LEVEL 0 FOR 320.0;
+			}
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 320.0;
+			LEVEL 0 FOR 240.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 80.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 1 FOR 320.0;
+				LEVEL 0 FOR 320.0;
+			}
+			NODE
+			{
+				REPEAT = 840;
+				LEVEL 1 FOR 160.0;
+				NODE
+				{
+					REPEAT = 3;
+					LEVEL 0 FOR 320.0;
+					LEVEL 1 FOR 320.0;
+				}
+				LEVEL 0 FOR 320.0;
+			}
+			LEVEL 1 FOR 160.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 320.0;
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 160.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 0 FOR 320.0;
+				LEVEL 1 FOR 320.0;
+			}
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 260.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Seconds[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 140.0;
+		NODE
+		{
+			REPEAT = 4770;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 320.0;
+		}
+		NODE
+		{
+			REPEAT = 6;
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 160.0;
+		}
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 80.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 240.0;
+			NODE
+			{
+				REPEAT = 3146;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 160.0;
+					LEVEL 0 FOR 160.0;
+				}
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 320.0;
+			}
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 320.0;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 1966120.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 160.0;
+				LEVEL 1 FOR 160.0;
+			}
+			NODE
+			{
+				REPEAT = 1618;
+				LEVEL 0 FOR 320.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 160.0;
+					LEVEL 0 FOR 160.0;
+				}
+				LEVEL 1 FOR 160.0;
+			}
+			LEVEL 0 FOR 320.0;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 320.0;
+			NODE
+			{
+				REPEAT = 5;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 80.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 160.0;
+			NODE
+			{
+				REPEAT = 1928;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 320.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 160.0;
+					LEVEL 0 FOR 160.0;
+				}
+			}
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 320.0;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 320.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 3276960.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 160.0;
+				LEVEL 1 FOR 160.0;
+			}
+			NODE
+			{
+				REPEAT = 2836;
+				LEVEL 0 FOR 320.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 160.0;
+					LEVEL 0 FOR 160.0;
+				}
+				LEVEL 1 FOR 160.0;
+			}
+			LEVEL 0 FOR 320.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+		}
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 4;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			NODE
+			{
+				REPEAT = 1804;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 320.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 160.0;
+					LEVEL 0 FOR 160.0;
+				}
+			}
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 320.0;
+			NODE
+			{
+				REPEAT = 4;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 4587680.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 160.0;
+				LEVEL 1 FOR 160.0;
+			}
+			NODE
+			{
+				REPEAT = 2958;
+				LEVEL 0 FOR 320.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 160.0;
+					LEVEL 0 FOR 160.0;
+				}
+				LEVEL 1 FOR 160.0;
+			}
+			LEVEL 0 FOR 320.0;
+			NODE
+			{
+				REPEAT = 5;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 160.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 160.0;
+			NODE
+			{
+				REPEAT = 1954;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 320.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 160.0;
+					LEVEL 0 FOR 160.0;
+				}
+			}
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 320.0;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 320.0;
+			NODE
+			{
+				REPEAT = 4;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 120.0;
+			LEVEL 1 FOR 5898280.0;
+			NODE
+			{
+				REPEAT = 3;
+				LEVEL 0 FOR 160.0;
+				LEVEL 1 FOR 160.0;
+			}
+			NODE
+			{
+				REPEAT = 2806;
+				LEVEL 0 FOR 320.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 160.0;
+					LEVEL 0 FOR 160.0;
+				}
+				LEVEL 1 FOR 160.0;
+			}
+			LEVEL 0 FOR 320.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 120.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 40.0;
+			NODE
+			{
+				REPEAT = 4;
+				LEVEL 0 FOR 160.0;
+				LEVEL 1 FOR 160.0;
+			}
+			NODE
+			{
+				REPEAT = 4770;
+				LEVEL 0 FOR 320.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 160.0;
+					LEVEL 0 FOR 160.0;
+				}
+				LEVEL 1 FOR 160.0;
+			}
+			LEVEL 0 FOR 320.0;
+			NODE
+			{
+				REPEAT = 2;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 80.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 80.0;
+			NODE
+			{
+				REPEAT = 4;
+				LEVEL 0 FOR 160.0;
+				LEVEL 1 FOR 160.0;
+			}
+			NODE
+			{
+				REPEAT = 840;
+				LEVEL 0 FOR 320.0;
+				NODE
+				{
+					REPEAT = 6;
+					LEVEL 1 FOR 160.0;
+					LEVEL 0 FOR 160.0;
+				}
+				LEVEL 1 FOR 160.0;
+			}
+			LEVEL 0 FOR 320.0;
+			NODE
+			{
+				REPEAT = 6;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 320.0;
+			NODE
+			{
+				REPEAT = 5;
+				LEVEL 1 FOR 160.0;
+				LEVEL 0 FOR 160.0;
+			}
+			LEVEL 1 FOR 100.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Seconds[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 60.0;
+		NODE
+		{
+			REPEAT = 71564;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 47219;
+				LEVEL 1 FOR 80.0;
+				LEVEL 0 FOR 80.0;
+			}
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 1966120.0;
+			NODE
+			{
+				REPEAT = 24303;
+				LEVEL 0 FOR 80.0;
+				LEVEL 1 FOR 80.0;
+			}
+			LEVEL 0 FOR 80.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 28944;
+				LEVEL 1 FOR 80.0;
+				LEVEL 0 FOR 80.0;
+			}
+			LEVEL 1 FOR 3276880.0;
+			NODE
+			{
+				REPEAT = 42552;
+				LEVEL 0 FOR 80.0;
+				LEVEL 1 FOR 80.0;
+			}
+		}
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 27079;
+				LEVEL 0 FOR 80.0;
+				LEVEL 1 FOR 80.0;
+			}
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 4587600.0;
+			NODE
+			{
+				REPEAT = 44389;
+				LEVEL 0 FOR 80.0;
+				LEVEL 1 FOR 80.0;
+			}
+		}
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 29338;
+				LEVEL 0 FOR 80.0;
+				LEVEL 1 FOR 80.0;
+			}
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 5898320.0;
+			NODE
+			{
+				REPEAT = 42102;
+				LEVEL 0 FOR 80.0;
+				LEVEL 1 FOR 80.0;
+			}
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 40.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 40.0;
+			NODE
+			{
+				REPEAT = 71564;
+				LEVEL 0 FOR 80.0;
+				LEVEL 1 FOR 80.0;
+			}
+			LEVEL 0 FOR 80.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 12636;
+				LEVEL 1 FOR 80.0;
+				LEVEL 0 FOR 80.0;
+			}
+			LEVEL 1 FOR 20.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Seconds[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 20.0;
+		NODE
+		{
+			REPEAT = 143128;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 40.0;
+		}
+		LEVEL 1 FOR 40.0;
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 94439;
+				LEVEL 0 FOR 40.0;
+				LEVEL 1 FOR 40.0;
+			}
+			LEVEL 0 FOR 1966120.0;
+			NODE
+			{
+				REPEAT = 48607;
+				LEVEL 1 FOR 40.0;
+				LEVEL 0 FOR 40.0;
+			}
+			LEVEL 1 FOR 40.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 57888;
+				LEVEL 0 FOR 40.0;
+				LEVEL 1 FOR 40.0;
+			}
+			LEVEL 0 FOR 3276840.0;
+			NODE
+			{
+				REPEAT = 85104;
+				LEVEL 1 FOR 40.0;
+				LEVEL 0 FOR 40.0;
+			}
+			LEVEL 1 FOR 40.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 54159;
+				LEVEL 0 FOR 40.0;
+				LEVEL 1 FOR 40.0;
+			}
+			LEVEL 0 FOR 4587560.0;
+			NODE
+			{
+				REPEAT = 88778;
+				LEVEL 1 FOR 40.0;
+				LEVEL 0 FOR 40.0;
+			}
+			LEVEL 1 FOR 40.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 58677;
+				LEVEL 0 FOR 40.0;
+				LEVEL 1 FOR 40.0;
+			}
+			LEVEL 0 FOR 5898280.0;
+			NODE
+			{
+				REPEAT = 84206;
+				LEVEL 1 FOR 40.0;
+				LEVEL 0 FOR 40.0;
+			}
+		}
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 143129;
+				LEVEL 1 FOR 40.0;
+				LEVEL 0 FOR 40.0;
+			}
+			LEVEL 1 FOR 40.0;
+		}
+		NODE
+		{
+			REPEAT = 1;
+			NODE
+			{
+				REPEAT = 25272;
+				LEVEL 0 FOR 40.0;
+				LEVEL 1 FOR 40.0;
+			}
+			LEVEL 0 FOR 20.0;
+		}
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clock";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "reset";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "count_enable";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "load_enable";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sec_clock";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "H_Set";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 0;
+	CHILDREN = 6, 7, 8, 9, 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "H_Set[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 1;
+	PARENT = 5;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "H_Set[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 1;
+	PARENT = 5;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "H_Set[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 1;
+	PARENT = 5;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "H_Set[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 1;
+	PARENT = 5;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "H_Set[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 1;
+	PARENT = 5;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "M_Set";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 0;
+	CHILDREN = 12, 13, 14, 15, 16, 17;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "M_Set[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 1;
+	PARENT = 11;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "M_Set[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 1;
+	PARENT = 11;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "M_Set[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 14;
+	TREE_LEVEL = 1;
+	PARENT = 11;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "M_Set[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 15;
+	TREE_LEVEL = 1;
+	PARENT = 11;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "M_Set[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 16;
+	TREE_LEVEL = 1;
+	PARENT = 11;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "M_Set[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 17;
+	TREE_LEVEL = 1;
+	PARENT = 11;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "S_Set";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 18;
+	TREE_LEVEL = 0;
+	CHILDREN = 19, 20, 21, 22, 23, 24;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "S_Set[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 19;
+	TREE_LEVEL = 1;
+	PARENT = 18;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "S_Set[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 20;
+	TREE_LEVEL = 1;
+	PARENT = 18;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "S_Set[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 21;
+	TREE_LEVEL = 1;
+	PARENT = 18;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "S_Set[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 22;
+	TREE_LEVEL = 1;
+	PARENT = 18;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "S_Set[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 23;
+	TREE_LEVEL = 1;
+	PARENT = 18;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "S_Set[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 24;
+	TREE_LEVEL = 1;
+	PARENT = 18;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Hours";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 25;
+	TREE_LEVEL = 0;
+	CHILDREN = 26, 27, 28, 29, 30;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Hours[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 26;
+	TREE_LEVEL = 1;
+	PARENT = 25;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Hours[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 27;
+	TREE_LEVEL = 1;
+	PARENT = 25;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Hours[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 28;
+	TREE_LEVEL = 1;
+	PARENT = 25;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Hours[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 29;
+	TREE_LEVEL = 1;
+	PARENT = 25;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Hours[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 30;
+	TREE_LEVEL = 1;
+	PARENT = 25;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Minutes";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 31;
+	TREE_LEVEL = 0;
+	CHILDREN = 32, 33, 34, 35, 36, 37;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Minutes[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 32;
+	TREE_LEVEL = 1;
+	PARENT = 31;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Minutes[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 33;
+	TREE_LEVEL = 1;
+	PARENT = 31;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Minutes[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 34;
+	TREE_LEVEL = 1;
+	PARENT = 31;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Minutes[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 35;
+	TREE_LEVEL = 1;
+	PARENT = 31;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Minutes[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 36;
+	TREE_LEVEL = 1;
+	PARENT = 31;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Minutes[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 37;
+	TREE_LEVEL = 1;
+	PARENT = 31;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Seconds";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 38;
+	TREE_LEVEL = 0;
+	CHILDREN = 39, 40, 41, 42, 43, 44;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Seconds[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 39;
+	TREE_LEVEL = 1;
+	PARENT = 38;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Seconds[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 40;
+	TREE_LEVEL = 1;
+	PARENT = 38;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Seconds[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 41;
+	TREE_LEVEL = 1;
+	PARENT = 38;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Seconds[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 42;
+	TREE_LEVEL = 1;
+	PARENT = 38;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Seconds[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 43;
+	TREE_LEVEL = 1;
+	PARENT = 38;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Seconds[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 44;
+	TREE_LEVEL = 1;
+	PARENT = 38;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_of_day";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 45;
+	TREE_LEVEL = 0;
+}
+
+TIME_BAR
+{
+	TIME = 0;
+	MASTER = TRUE;
+}
+;

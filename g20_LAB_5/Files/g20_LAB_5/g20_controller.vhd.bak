@@ -1,0 +1,395 @@
+-- this circuit is the controller unit corresponding to the g20_lab5 datapath module
+--
+-- entity name: g20_controller
+-- 
+-- Copyright (C) 2014 Aditya Saha- 260453165, 
+-- 					  Shayan Ahmad- 260350431
+-- Version 1.0
+-- Author: Aditya Saha- aditya.saha@mail.mcgill.ca, 
+-- 		   Shayan Ahmad- shayan.ahmad@mail.mcgill.ca
+--
+-- Date: February 10, 2014
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+
+entity g20_controller is
+	port (
+		clk					: in std_logic;
+		rst					: in std_logic;
+		switches			: in std_logic_vector(9 downto 0);
+		perform				: in std_logic;
+		sync_done			: in std_logic;
+		sec_pulse_en		: out std_logic;
+		earth_hms_count_en	: out std_logic;
+		earth_hms_load_en	: out std_logic;
+		earth_ymd_load_en	: out std_logic;
+		mars_hms_count_en	: out std_logic;
+		mars_hms_load_en	: out std_logic;
+		sync_time_en		: out std_logic;
+		sync_rst			: out std_logic;
+		
+		earth_year_out		: out std_logic_vector(11 downto 0);
+		earth_month_out		: out std_logic_vector(3 downto 0);
+		earth_day_out		: out std_logic_vector(4 downto 0);
+		earth_hour_out		: out std_logic_vector(4 downto 0);
+		earth_min_out		: out std_logic_vector(5 downto 0);
+		earth_sec_out		: out std_logic_vector(5 downto 0);
+		
+		earth_dst_out		: out std_logic;
+		
+		earth_tz_out		: out std_logic_vector(4 downto 0);
+		mars_tz_out			: out std_logic_vector(4 downto 0)
+	);
+end g20_controller;
+
+architecture rtl of g20_controller is
+
+	type state_type is (
+		idle, choose1, choose2,
+		set_earth_tz, etztemp, set_mars_tz, mtztemp,
+		get_earth_time, get_earth_date, get_earth_month, get_earth_year,
+		get_earth_hour, get_earth_min, get_earth_sec, get_earth_dst,
+		set_earth_time,
+		etemp1, etemp2, etemp3, etemp4, etemp5, etemp6, etemp7,
+		begin_mars_sync, msynctemp, load_earth_time, start_sync,
+		reset_sync_module, set_mars_time
+	);
+	
+	-- FSM states
+	signal present_state	: state_type;
+	signal next_state		: state_type;
+	
+	-- 000 -> display Earth time + DST
+	-- 001 -> display Mars time
+	-- 010 -> display Earth date
+	-- 011 -> set Earth time zone
+	-- 100 -> set Mars time zone
+	-- 101 -> set Earth time and date
+	-- 110 -> sync Earth and Mars times
+	signal mode				: std_logic_vector(2 downto 0);
+	
+	-- temporary date and time registers
+	signal earth_day_i		: std_logic_vector(4 downto 0);
+	signal earth_month_i	: std_logic_vector(3 downto 0);
+	signal earth_year_i		: std_logic_vector(11 downto 0);
+	signal earth_hour_i		: std_logic_vector(4 downto 0);
+	signal earth_min_i		: std_logic_vector(5 downto 0);
+	signal earth_sec_i		: std_logic_vector(5 downto 0);
+	
+	-- time zone registers
+	signal earth_tz_i		: std_logic_vector(4 downto 0);
+	signal mars_tz_i		: std_logic_vector(4 downto 0);
+	
+	-- DST register
+	signal earth_dst_i		: std_logic;
+	
+	-- misc
+	signal button			: std_logic;
+	
+begin
+	
+	---------------------------------------------------------------------------
+	-- next state logic
+	---------------------------------------------------------------------------
+	state_comb : process(present_state, mode, button, sync_done)
+	begin
+		case present_state is
+		when idle =>
+			next_state <= choose1;
+		-------------------------------------------------------
+		-- choose operation
+		when choose1 =>
+			if (button = '0') then
+				next_state <= choose1;
+			else
+				next_state <= choose2;
+			end if;
+		when choose2 =>
+			if (button = '1') then
+				next_state <= choose2;
+			else
+				if (mode = "011") then
+					next_state <= set_earth_tz;
+				elsif (mode = "100") then
+					next_state <= set_mars_tz;
+				elsif (mode = "101") then
+					next_state <= get_earth_time;
+				elsif (mode = "110") then
+					next_state <= begin_mars_sync;
+				else
+					next_state <= choose1;
+				end if;
+			end if;
+		-------------------------------------------------------
+		-- set Earth time zone
+		when set_earth_tz =>
+--			if (mode /= "011") then
+--				next_state <= choose;
+--			els
+			if (button = '0') then
+				next_state <= set_earth_tz;
+			else
+				next_state <= etztemp;
+			end if;
+		when etztemp =>
+			if (button = '1') then
+				next_state <= etztemp;
+			else
+				next_state <= choose1;
+			end if;
+		-------------------------------------------------------
+		-- set Mars time zone
+		when set_mars_tz =>
+--			if (mode /= "100") then
+--				next_state <= choose;
+--			els
+			if (button = '0') then
+				next_state <= set_mars_tz;
+			else
+				next_state <= mtztemp;
+			end if;
+		when mtztemp =>
+			if (button = '1') then
+				next_state <= mtztemp;
+			else
+				next_state <= choose1;
+			end if;
+		-------------------------------------------------------
+		-- set Earth time
+		when get_earth_time =>
+			next_state <= get_earth_date;
+		when get_earth_date =>
+			if (button = '0') then
+				next_state <= get_earth_date;
+			else
+				next_state <= etemp1;
+			end if;
+		when etemp1 =>
+			if (button = '1') then
+				next_state <= etemp1;
+			else
+				next_state <= get_earth_month;
+			end if;
+		when get_earth_month =>
+			if (button = '0') then
+				next_state <= get_earth_month;
+			else
+				next_state <= etemp2;
+			end if;
+		when etemp2 =>
+			if (button = '1') then
+				next_state <= etemp2;
+			else
+				next_state <= get_earth_year;
+			end if;
+		when get_earth_year =>
+			if (button = '0') then
+				next_state <= get_earth_year;
+			else
+				next_state <= etemp3;
+			end if;
+		when etemp3 =>
+			if (button = '1') then
+				next_state <= etemp3;
+			else
+				next_state <= get_earth_hour;
+			end if;
+		when get_earth_hour =>
+			if (button = '0') then
+				next_state <= get_earth_hour;
+			else
+				next_state <= etemp4;
+			end if;
+		when etemp4 =>
+			if (button = '1') then
+				next_state <= etemp4;
+			else
+				next_state <= get_earth_min;
+			end if;
+		when get_earth_min =>
+			if (button = '0') then
+				next_state <= get_earth_min;
+			else
+				next_state <= etemp5;
+			end if;
+		when etemp5 =>
+			if (button = '1') then
+				next_state <= etemp5;
+			else
+				next_state <= get_earth_sec;
+			end if;
+		when get_earth_sec =>
+			if (button = '0') then
+				next_state <= get_earth_sec;
+			else
+				next_state <= etemp6;
+			end if;
+		when etemp6 =>
+			if (button = '1') then
+				next_state <= etemp6;
+			else
+				next_state <= get_earth_dst;
+			end if;
+		when get_earth_dst =>
+			if (button = '0') then
+				next_state <= get_earth_dst;
+			else
+				next_state <= etemp7;
+			end if;
+		when etemp7 =>
+			if (button = '1') then
+				next_state <= etemp7;
+			else
+				next_state <= set_earth_time;
+			end if;
+		when set_earth_time =>
+			next_state <= choose1;
+		-------------------------------------------------------
+		-- sync Mars clock with Earth clock
+		when begin_mars_sync =>
+			if (button = '0') then
+				next_state <= begin_mars_sync;
+			else
+				next_state <= msynctemp;
+			end if;
+		when msynctemp =>
+			if (button = '1') then
+				next_state <= msynctemp;
+			else
+				next_state <= load_earth_time;
+			end if;
+		when load_earth_time =>
+			next_state <= start_sync;
+		when start_sync =>
+			if (sync_done = '0') then
+				next_state <= start_sync;
+			else
+				next_state <= set_mars_time;
+			end if;
+		when set_mars_time =>
+			next_state <= reset_sync_module;
+		when reset_sync_module =>
+			next_state <= choose1;
+		-------------------------------------------------------
+		-- this should never happen (ONLY IF HELL BREAKS LOOSE!!)
+		when others =>
+			next_state <= idle;
+		end case;
+	end process state_comb;
+	
+	---------------------------------------------------------------------------	
+	-- state update
+	---------------------------------------------------------------------------
+	state_update : process(clk, rst)
+	begin
+		if (rst = '1') then
+			present_state <= idle;
+		elsif (rising_edge(clk)) then
+			present_state <= next_state;
+		end if;
+	end process state_update;
+	
+	---------------------------------------------------------------------------	
+	-- output logic
+	---------------------------------------------------------------------------
+	sec_pulse_en <= '0' when present_state = idle
+		else '1';
+	
+	earth_hms_count_en <= '0' when present_state = idle
+		else '1';
+	
+	earth_hms_load_en <= '1' when present_state = set_earth_time
+		else '0';
+	
+	earth_ymd_load_en <= '1' when present_state = set_earth_time
+		else '0';
+	
+	mars_hms_count_en <= '0' when present_state = idle
+		else '1';
+	
+	mars_hms_load_en <= '1' when present_state = set_mars_time
+		else '0';
+	
+	sync_time_en <= '1' when present_state = start_sync
+		else '0';
+	
+	sync_rst <= '1' when (rst = '1' or present_state = reset_sync_module)
+		else '0';
+	
+	earth_year_out <= earth_year_i;
+	earth_month_out <= earth_month_i;
+	earth_day_out <= earth_day_i;
+	earth_hour_out <= earth_hour_i;
+	earth_min_out <= earth_min_i;
+	earth_sec_out <= earth_sec_i;
+	
+	earth_dst_out <= earth_dst_i;
+	
+	earth_tz_out <= earth_tz_i;
+	mars_tz_out <= mars_tz_i;
+	
+	---------------------------------------------------------------------------	
+	-- intermediate registers
+	---------------------------------------------------------------------------
+	reg_update : process(clk, rst)
+	begin
+		if (rst = '1') then
+			earth_day_i <= (others => '0');
+			earth_month_i <= (others => '0');
+			earth_year_i <= (others => '0');
+			earth_hour_i <= (others => '0');
+			earth_min_i <= (others => '0');
+			earth_sec_i <= (others => '0');
+			earth_tz_i <= (others => '0');
+			mars_tz_i <= (others => '0');
+			earth_dst_i <= '0';
+		elsif (rising_edge(clk)) then
+			if (present_state = get_earth_date) then
+				earth_day_i <= switches(7 downto 3);
+			end if;
+			
+			if (present_state = get_earth_month) then
+				earth_month_i <= switches(6 downto 3);
+			end if;
+			
+			-- base year is 2000
+			if (present_state = get_earth_year) then
+				earth_year_i <= "011111010000" + ("00000" & switches(9 downto 3));
+			end if;
+			
+			if (present_state = get_earth_hour) then
+				earth_hour_i <= switches(7 downto 3);
+			end if;
+			
+			if (present_state = get_earth_min) then
+				earth_min_i <= switches(8 downto 3);
+			end if;
+			
+			if (present_state = get_earth_sec) then
+				earth_sec_i <= switches(8 downto 3);
+			end if;
+			
+			if (present_state = get_earth_dst) then
+				earth_dst_i <= switches(3);
+			end if;
+			
+			if (present_state = set_earth_tz) then
+				earth_tz_i <= switches(7 downto 3);
+			end if;
+			
+			if (present_state = set_mars_tz) then
+				mars_tz_i <= switches(7 downto 3);
+			end if;
+		end if;
+	end process reg_update;
+	
+	---------------------------------------------------------------------------	
+	-- misc
+	---------------------------------------------------------------------------
+	mode <= switches(2 downto 0);
+	button <= not perform;
+	---------------------------------------------------------------------------
+end rtl;

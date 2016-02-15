@@ -1,0 +1,630 @@
+Simulator report for g20_lab5
+Mon Apr 14 03:19:38 2014
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 278 nodes    ;
+; Simulation Coverage         ;      40.29 % ;
+; Total Number of Transitions ; 1121         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                ;
++--------------------------------------------------------------------------------------------+----------------------+---------------+
+; Option                                                                                     ; Setting              ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------+---------------+
+; Simulation mode                                                                            ; Functional           ; Timing        ;
+; Start time                                                                                 ; 0 ns                 ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                 ;               ;
+; Vector input source                                                                        ; state_transition.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                   ; On            ;
+; Check outputs                                                                              ; Off                  ; Off           ;
+; Report simulation coverage                                                                 ; On                   ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                   ; On            ;
+; Display missing 1-value coverage report                                                    ; On                   ; On            ;
+; Display missing 0-value coverage report                                                    ; On                   ; On            ;
+; Detect setup and hold time violations                                                      ; Off                  ; Off           ;
+; Detect glitches                                                                            ; Off                  ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                  ; Off           ;
+; Generate Signal Activity File                                                              ; Off                  ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                  ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                  ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                   ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE           ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                  ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                   ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                 ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      40.29 % ;
+; Total nodes checked                                 ; 278          ;
+; Total output ports checked                          ; 278          ;
+; Total output ports with complete 1/0-value coverage ; 112          ;
+; Total output ports with no 1/0-value coverage       ; 158          ;
+; Total output ports with no 1-value coverage         ; 161          ;
+; Total output ports with no 0-value coverage         ; 163          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                        ;
++------------------------------------------------+------------------------------------------------+------------------+
+; Node Name                                      ; Output Port Name                               ; Output Port Type ;
++------------------------------------------------+------------------------------------------------+------------------+
+; |g20_controller|next_state~9                   ; |g20_controller|next_state~9                   ; out              ;
+; |g20_controller|next_state~12                  ; |g20_controller|next_state~12                  ; out              ;
+; |g20_controller|WideOr0                        ; |g20_controller|WideOr0                        ; out0             ;
+; |g20_controller|next_state~14                  ; |g20_controller|next_state~14                  ; out0             ;
+; |g20_controller|next_state.choose2             ; |g20_controller|next_state.choose2             ; out              ;
+; |g20_controller|next_state.get_earth_time      ; |g20_controller|next_state.get_earth_time      ; out              ;
+; |g20_controller|WideOr5                        ; |g20_controller|WideOr5                        ; out0             ;
+; |g20_controller|WideOr6                        ; |g20_controller|WideOr6                        ; out0             ;
+; |g20_controller|WideOr7                        ; |g20_controller|WideOr7                        ; out0             ;
+; |g20_controller|WideOr8                        ; |g20_controller|WideOr8                        ; out0             ;
+; |g20_controller|WideOr9                        ; |g20_controller|WideOr9                        ; out0             ;
+; |g20_controller|WideOr10                       ; |g20_controller|WideOr10                       ; out0             ;
+; |g20_controller|next_state.set_earth_time      ; |g20_controller|next_state.set_earth_time      ; out              ;
+; |g20_controller|next_state~17                  ; |g20_controller|next_state~17                  ; out0             ;
+; |g20_controller|next_state.etemp1              ; |g20_controller|next_state.etemp1              ; out              ;
+; |g20_controller|next_state~18                  ; |g20_controller|next_state~18                  ; out0             ;
+; |g20_controller|next_state.etemp2              ; |g20_controller|next_state.etemp2              ; out              ;
+; |g20_controller|next_state~19                  ; |g20_controller|next_state~19                  ; out0             ;
+; |g20_controller|next_state.etemp3              ; |g20_controller|next_state.etemp3              ; out              ;
+; |g20_controller|next_state~20                  ; |g20_controller|next_state~20                  ; out0             ;
+; |g20_controller|next_state.etemp4              ; |g20_controller|next_state.etemp4              ; out              ;
+; |g20_controller|next_state~21                  ; |g20_controller|next_state~21                  ; out0             ;
+; |g20_controller|next_state.etemp5              ; |g20_controller|next_state.etemp5              ; out              ;
+; |g20_controller|next_state~22                  ; |g20_controller|next_state~22                  ; out0             ;
+; |g20_controller|next_state.etemp6              ; |g20_controller|next_state.etemp6              ; out              ;
+; |g20_controller|next_state~23                  ; |g20_controller|next_state~23                  ; out0             ;
+; |g20_controller|next_state.etemp7              ; |g20_controller|next_state.etemp7              ; out              ;
+; |g20_controller|present_state.idle             ; |g20_controller|present_state.idle             ; regout           ;
+; |g20_controller|present_state.choose1          ; |g20_controller|present_state.choose1          ; regout           ;
+; |g20_controller|present_state.choose2          ; |g20_controller|present_state.choose2          ; regout           ;
+; |g20_controller|present_state.get_earth_time   ; |g20_controller|present_state.get_earth_time   ; regout           ;
+; |g20_controller|present_state.get_earth_date   ; |g20_controller|present_state.get_earth_date   ; regout           ;
+; |g20_controller|present_state.get_earth_month  ; |g20_controller|present_state.get_earth_month  ; regout           ;
+; |g20_controller|present_state.get_earth_year   ; |g20_controller|present_state.get_earth_year   ; regout           ;
+; |g20_controller|present_state.get_earth_hour   ; |g20_controller|present_state.get_earth_hour   ; regout           ;
+; |g20_controller|present_state.get_earth_min    ; |g20_controller|present_state.get_earth_min    ; regout           ;
+; |g20_controller|present_state.get_earth_sec    ; |g20_controller|present_state.get_earth_sec    ; regout           ;
+; |g20_controller|present_state.get_earth_dst    ; |g20_controller|present_state.get_earth_dst    ; regout           ;
+; |g20_controller|present_state.set_earth_time   ; |g20_controller|present_state.set_earth_time   ; regout           ;
+; |g20_controller|present_state.etemp1           ; |g20_controller|present_state.etemp1           ; regout           ;
+; |g20_controller|present_state.etemp2           ; |g20_controller|present_state.etemp2           ; regout           ;
+; |g20_controller|present_state.etemp3           ; |g20_controller|present_state.etemp3           ; regout           ;
+; |g20_controller|present_state.etemp4           ; |g20_controller|present_state.etemp4           ; regout           ;
+; |g20_controller|present_state.etemp5           ; |g20_controller|present_state.etemp5           ; regout           ;
+; |g20_controller|present_state.etemp6           ; |g20_controller|present_state.etemp6           ; regout           ;
+; |g20_controller|present_state.etemp7           ; |g20_controller|present_state.etemp7           ; regout           ;
+; |g20_controller|sync_rst~0                     ; |g20_controller|sync_rst~0                     ; out0             ;
+; |g20_controller|earth_year_i[10]               ; |g20_controller|earth_year_i[10]               ; regout           ;
+; |g20_controller|earth_year_i[9]                ; |g20_controller|earth_year_i[9]                ; regout           ;
+; |g20_controller|earth_year_i[8]                ; |g20_controller|earth_year_i[8]                ; regout           ;
+; |g20_controller|earth_year_i[7]                ; |g20_controller|earth_year_i[7]                ; regout           ;
+; |g20_controller|earth_year_i[6]                ; |g20_controller|earth_year_i[6]                ; regout           ;
+; |g20_controller|earth_year_i[4]                ; |g20_controller|earth_year_i[4]                ; regout           ;
+; |g20_controller|clk                            ; |g20_controller|clk                            ; out              ;
+; |g20_controller|rst                            ; |g20_controller|rst                            ; out              ;
+; |g20_controller|perform                        ; |g20_controller|perform                        ; out              ;
+; |g20_controller|sec_pulse_en                   ; |g20_controller|sec_pulse_en                   ; pin_out          ;
+; |g20_controller|earth_hms_count_en             ; |g20_controller|earth_hms_count_en             ; pin_out          ;
+; |g20_controller|earth_hms_load_en              ; |g20_controller|earth_hms_load_en              ; pin_out          ;
+; |g20_controller|earth_ymd_load_en              ; |g20_controller|earth_ymd_load_en              ; pin_out          ;
+; |g20_controller|mars_hms_count_en              ; |g20_controller|mars_hms_count_en              ; pin_out          ;
+; |g20_controller|sync_rst                       ; |g20_controller|sync_rst                       ; pin_out          ;
+; |g20_controller|earth_year_out[4]              ; |g20_controller|earth_year_out[4]              ; pin_out          ;
+; |g20_controller|earth_year_out[6]              ; |g20_controller|earth_year_out[6]              ; pin_out          ;
+; |g20_controller|earth_year_out[7]              ; |g20_controller|earth_year_out[7]              ; pin_out          ;
+; |g20_controller|earth_year_out[8]              ; |g20_controller|earth_year_out[8]              ; pin_out          ;
+; |g20_controller|earth_year_out[9]              ; |g20_controller|earth_year_out[9]              ; pin_out          ;
+; |g20_controller|earth_year_out[10]             ; |g20_controller|earth_year_out[10]             ; pin_out          ;
+; |g20_controller|present_state~0                ; |g20_controller|present_state~0                ; out0             ;
+; |g20_controller|present_state~1                ; |g20_controller|present_state~1                ; out0             ;
+; |g20_controller|mars_hms_count_en~0            ; |g20_controller|mars_hms_count_en~0            ; out0             ;
+; |g20_controller|Selector0~0                    ; |g20_controller|Selector0~0                    ; out0             ;
+; |g20_controller|present_state.choose2~0        ; |g20_controller|present_state.choose2~0        ; out0             ;
+; |g20_controller|Selector0~1                    ; |g20_controller|Selector0~1                    ; out0             ;
+; |g20_controller|present_state.get_earth_time~0 ; |g20_controller|present_state.get_earth_time~0 ; out0             ;
+; |g20_controller|WideOr1~2                      ; |g20_controller|WideOr1~2                      ; out0             ;
+; |g20_controller|WideOr1~3                      ; |g20_controller|WideOr1~3                      ; out0             ;
+; |g20_controller|WideOr1~4                      ; |g20_controller|WideOr1~4                      ; out0             ;
+; |g20_controller|WideOr1~5                      ; |g20_controller|WideOr1~5                      ; out0             ;
+; |g20_controller|WideOr1~6                      ; |g20_controller|WideOr1~6                      ; out0             ;
+; |g20_controller|WideOr1~7                      ; |g20_controller|WideOr1~7                      ; out0             ;
+; |g20_controller|WideOr1~8                      ; |g20_controller|WideOr1~8                      ; out0             ;
+; |g20_controller|WideOr1~9                      ; |g20_controller|WideOr1~9                      ; out0             ;
+; |g20_controller|present_state.set_earth_time~0 ; |g20_controller|present_state.set_earth_time~0 ; out0             ;
+; |g20_controller|WideOr0~0                      ; |g20_controller|WideOr0~0                      ; out0             ;
+; |g20_controller|present_state.etemp1~0         ; |g20_controller|present_state.etemp1~0         ; out0             ;
+; |g20_controller|WideOr1~10                     ; |g20_controller|WideOr1~10                     ; out0             ;
+; |g20_controller|present_state.etemp2~0         ; |g20_controller|present_state.etemp2~0         ; out0             ;
+; |g20_controller|WideOr1~11                     ; |g20_controller|WideOr1~11                     ; out0             ;
+; |g20_controller|present_state.etemp3~0         ; |g20_controller|present_state.etemp3~0         ; out0             ;
+; |g20_controller|WideOr1~12                     ; |g20_controller|WideOr1~12                     ; out0             ;
+; |g20_controller|present_state.etemp4~0         ; |g20_controller|present_state.etemp4~0         ; out0             ;
+; |g20_controller|WideOr1~13                     ; |g20_controller|WideOr1~13                     ; out0             ;
+; |g20_controller|present_state.etemp5~0         ; |g20_controller|present_state.etemp5~0         ; out0             ;
+; |g20_controller|WideOr1~14                     ; |g20_controller|WideOr1~14                     ; out0             ;
+; |g20_controller|present_state.etemp6~0         ; |g20_controller|present_state.etemp6~0         ; out0             ;
+; |g20_controller|WideOr1~15                     ; |g20_controller|WideOr1~15                     ; out0             ;
+; |g20_controller|present_state.etemp7~0         ; |g20_controller|present_state.etemp7~0         ; out0             ;
+; |g20_controller|WideOr1~16                     ; |g20_controller|WideOr1~16                     ; out0             ;
+; |g20_controller|present_state~5                ; |g20_controller|present_state~5                ; out0             ;
+; |g20_controller|present_state~9                ; |g20_controller|present_state~9                ; out0             ;
+; |g20_controller|Selector0~4                    ; |g20_controller|Selector0~4                    ; out0             ;
+; |g20_controller|Selector0~7                    ; |g20_controller|Selector0~7                    ; out0             ;
+; |g20_controller|Selector0~8                    ; |g20_controller|Selector0~8                    ; out0             ;
+; |g20_controller|Selector3~0                    ; |g20_controller|Selector3~0                    ; out0             ;
+; |g20_controller|Selector3~1                    ; |g20_controller|Selector3~1                    ; out0             ;
+; |g20_controller|Selector4~0                    ; |g20_controller|Selector4~0                    ; out0             ;
+; |g20_controller|Selector5~0                    ; |g20_controller|Selector5~0                    ; out0             ;
+; |g20_controller|Selector6~0                    ; |g20_controller|Selector6~0                    ; out0             ;
+; |g20_controller|Selector7~0                    ; |g20_controller|Selector7~0                    ; out0             ;
+; |g20_controller|Selector8~0                    ; |g20_controller|Selector8~0                    ; out0             ;
+; |g20_controller|Selector9~0                    ; |g20_controller|Selector9~0                    ; out0             ;
++------------------------------------------------+------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; Node Name                                       ; Output Port Name                                ; Output Port Type ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; |g20_controller|next_state~0                    ; |g20_controller|next_state~0                    ; out              ;
+; |g20_controller|next_state~1                    ; |g20_controller|next_state~1                    ; out              ;
+; |g20_controller|next_state~2                    ; |g20_controller|next_state~2                    ; out              ;
+; |g20_controller|next_state~4                    ; |g20_controller|next_state~4                    ; out              ;
+; |g20_controller|next_state~5                    ; |g20_controller|next_state~5                    ; out              ;
+; |g20_controller|next_state~6                    ; |g20_controller|next_state~6                    ; out              ;
+; |g20_controller|next_state~8                    ; |g20_controller|next_state~8                    ; out              ;
+; |g20_controller|next_state~10                   ; |g20_controller|next_state~10                   ; out              ;
+; |g20_controller|next_state~11                   ; |g20_controller|next_state~11                   ; out              ;
+; |g20_controller|next_state~13                   ; |g20_controller|next_state~13                   ; out              ;
+; |g20_controller|next_state~15                   ; |g20_controller|next_state~15                   ; out0             ;
+; |g20_controller|next_state.etztemp              ; |g20_controller|next_state.etztemp              ; out              ;
+; |g20_controller|next_state~16                   ; |g20_controller|next_state~16                   ; out0             ;
+; |g20_controller|next_state.mtztemp              ; |g20_controller|next_state.mtztemp              ; out              ;
+; |g20_controller|next_state~24                   ; |g20_controller|next_state~24                   ; out0             ;
+; |g20_controller|next_state.msynctemp            ; |g20_controller|next_state.msynctemp            ; out              ;
+; |g20_controller|next_state.load_earth_time      ; |g20_controller|next_state.load_earth_time      ; out              ;
+; |g20_controller|next_state.set_mars_time        ; |g20_controller|next_state.set_mars_time        ; out              ;
+; |g20_controller|present_state.set_earth_tz      ; |g20_controller|present_state.set_earth_tz      ; regout           ;
+; |g20_controller|present_state.etztemp           ; |g20_controller|present_state.etztemp           ; regout           ;
+; |g20_controller|present_state.set_mars_tz       ; |g20_controller|present_state.set_mars_tz       ; regout           ;
+; |g20_controller|present_state.mtztemp           ; |g20_controller|present_state.mtztemp           ; regout           ;
+; |g20_controller|present_state.begin_mars_sync   ; |g20_controller|present_state.begin_mars_sync   ; regout           ;
+; |g20_controller|present_state.msynctemp         ; |g20_controller|present_state.msynctemp         ; regout           ;
+; |g20_controller|present_state.load_earth_time   ; |g20_controller|present_state.load_earth_time   ; regout           ;
+; |g20_controller|present_state.start_sync        ; |g20_controller|present_state.start_sync        ; regout           ;
+; |g20_controller|present_state.reset_sync_module ; |g20_controller|present_state.reset_sync_module ; regout           ;
+; |g20_controller|earth_dst_i                     ; |g20_controller|earth_dst_i                     ; regout           ;
+; |g20_controller|present_state.set_mars_time     ; |g20_controller|present_state.set_mars_time     ; regout           ;
+; |g20_controller|earth_day_i[4]                  ; |g20_controller|earth_day_i[4]                  ; regout           ;
+; |g20_controller|earth_day_i[3]                  ; |g20_controller|earth_day_i[3]                  ; regout           ;
+; |g20_controller|earth_day_i[2]                  ; |g20_controller|earth_day_i[2]                  ; regout           ;
+; |g20_controller|earth_day_i[1]                  ; |g20_controller|earth_day_i[1]                  ; regout           ;
+; |g20_controller|earth_day_i[0]                  ; |g20_controller|earth_day_i[0]                  ; regout           ;
+; |g20_controller|earth_month_i[3]                ; |g20_controller|earth_month_i[3]                ; regout           ;
+; |g20_controller|earth_month_i[2]                ; |g20_controller|earth_month_i[2]                ; regout           ;
+; |g20_controller|earth_month_i[1]                ; |g20_controller|earth_month_i[1]                ; regout           ;
+; |g20_controller|earth_month_i[0]                ; |g20_controller|earth_month_i[0]                ; regout           ;
+; |g20_controller|earth_year_i[11]                ; |g20_controller|earth_year_i[11]                ; regout           ;
+; |g20_controller|earth_year_i[5]                 ; |g20_controller|earth_year_i[5]                 ; regout           ;
+; |g20_controller|earth_year_i[3]                 ; |g20_controller|earth_year_i[3]                 ; regout           ;
+; |g20_controller|earth_year_i[2]                 ; |g20_controller|earth_year_i[2]                 ; regout           ;
+; |g20_controller|earth_year_i[1]                 ; |g20_controller|earth_year_i[1]                 ; regout           ;
+; |g20_controller|earth_year_i[0]                 ; |g20_controller|earth_year_i[0]                 ; regout           ;
+; |g20_controller|earth_hour_i[4]                 ; |g20_controller|earth_hour_i[4]                 ; regout           ;
+; |g20_controller|earth_hour_i[3]                 ; |g20_controller|earth_hour_i[3]                 ; regout           ;
+; |g20_controller|earth_hour_i[2]                 ; |g20_controller|earth_hour_i[2]                 ; regout           ;
+; |g20_controller|earth_hour_i[1]                 ; |g20_controller|earth_hour_i[1]                 ; regout           ;
+; |g20_controller|earth_hour_i[0]                 ; |g20_controller|earth_hour_i[0]                 ; regout           ;
+; |g20_controller|earth_min_i[5]                  ; |g20_controller|earth_min_i[5]                  ; regout           ;
+; |g20_controller|earth_min_i[4]                  ; |g20_controller|earth_min_i[4]                  ; regout           ;
+; |g20_controller|earth_min_i[3]                  ; |g20_controller|earth_min_i[3]                  ; regout           ;
+; |g20_controller|earth_min_i[2]                  ; |g20_controller|earth_min_i[2]                  ; regout           ;
+; |g20_controller|earth_min_i[1]                  ; |g20_controller|earth_min_i[1]                  ; regout           ;
+; |g20_controller|earth_min_i[0]                  ; |g20_controller|earth_min_i[0]                  ; regout           ;
+; |g20_controller|earth_sec_i[5]                  ; |g20_controller|earth_sec_i[5]                  ; regout           ;
+; |g20_controller|earth_sec_i[4]                  ; |g20_controller|earth_sec_i[4]                  ; regout           ;
+; |g20_controller|earth_sec_i[3]                  ; |g20_controller|earth_sec_i[3]                  ; regout           ;
+; |g20_controller|earth_sec_i[2]                  ; |g20_controller|earth_sec_i[2]                  ; regout           ;
+; |g20_controller|earth_sec_i[1]                  ; |g20_controller|earth_sec_i[1]                  ; regout           ;
+; |g20_controller|earth_sec_i[0]                  ; |g20_controller|earth_sec_i[0]                  ; regout           ;
+; |g20_controller|earth_tz_i[4]                   ; |g20_controller|earth_tz_i[4]                   ; regout           ;
+; |g20_controller|earth_tz_i[3]                   ; |g20_controller|earth_tz_i[3]                   ; regout           ;
+; |g20_controller|earth_tz_i[2]                   ; |g20_controller|earth_tz_i[2]                   ; regout           ;
+; |g20_controller|earth_tz_i[1]                   ; |g20_controller|earth_tz_i[1]                   ; regout           ;
+; |g20_controller|earth_tz_i[0]                   ; |g20_controller|earth_tz_i[0]                   ; regout           ;
+; |g20_controller|mars_tz_i[4]                    ; |g20_controller|mars_tz_i[4]                    ; regout           ;
+; |g20_controller|mars_tz_i[3]                    ; |g20_controller|mars_tz_i[3]                    ; regout           ;
+; |g20_controller|mars_tz_i[2]                    ; |g20_controller|mars_tz_i[2]                    ; regout           ;
+; |g20_controller|mars_tz_i[1]                    ; |g20_controller|mars_tz_i[1]                    ; regout           ;
+; |g20_controller|mars_tz_i[0]                    ; |g20_controller|mars_tz_i[0]                    ; regout           ;
+; |g20_controller|switches[1]                     ; |g20_controller|switches[1]                     ; out              ;
+; |g20_controller|switches[3]                     ; |g20_controller|switches[3]                     ; out              ;
+; |g20_controller|switches[4]                     ; |g20_controller|switches[4]                     ; out              ;
+; |g20_controller|switches[5]                     ; |g20_controller|switches[5]                     ; out              ;
+; |g20_controller|switches[6]                     ; |g20_controller|switches[6]                     ; out              ;
+; |g20_controller|switches[7]                     ; |g20_controller|switches[7]                     ; out              ;
+; |g20_controller|switches[8]                     ; |g20_controller|switches[8]                     ; out              ;
+; |g20_controller|switches[9]                     ; |g20_controller|switches[9]                     ; out              ;
+; |g20_controller|sync_done                       ; |g20_controller|sync_done                       ; out              ;
+; |g20_controller|mars_hms_load_en                ; |g20_controller|mars_hms_load_en                ; pin_out          ;
+; |g20_controller|sync_time_en                    ; |g20_controller|sync_time_en                    ; pin_out          ;
+; |g20_controller|earth_year_out[0]               ; |g20_controller|earth_year_out[0]               ; pin_out          ;
+; |g20_controller|earth_year_out[1]               ; |g20_controller|earth_year_out[1]               ; pin_out          ;
+; |g20_controller|earth_year_out[2]               ; |g20_controller|earth_year_out[2]               ; pin_out          ;
+; |g20_controller|earth_year_out[3]               ; |g20_controller|earth_year_out[3]               ; pin_out          ;
+; |g20_controller|earth_year_out[5]               ; |g20_controller|earth_year_out[5]               ; pin_out          ;
+; |g20_controller|earth_year_out[11]              ; |g20_controller|earth_year_out[11]              ; pin_out          ;
+; |g20_controller|earth_month_out[0]              ; |g20_controller|earth_month_out[0]              ; pin_out          ;
+; |g20_controller|earth_month_out[1]              ; |g20_controller|earth_month_out[1]              ; pin_out          ;
+; |g20_controller|earth_month_out[2]              ; |g20_controller|earth_month_out[2]              ; pin_out          ;
+; |g20_controller|earth_month_out[3]              ; |g20_controller|earth_month_out[3]              ; pin_out          ;
+; |g20_controller|earth_day_out[0]                ; |g20_controller|earth_day_out[0]                ; pin_out          ;
+; |g20_controller|earth_day_out[1]                ; |g20_controller|earth_day_out[1]                ; pin_out          ;
+; |g20_controller|earth_day_out[2]                ; |g20_controller|earth_day_out[2]                ; pin_out          ;
+; |g20_controller|earth_day_out[3]                ; |g20_controller|earth_day_out[3]                ; pin_out          ;
+; |g20_controller|earth_day_out[4]                ; |g20_controller|earth_day_out[4]                ; pin_out          ;
+; |g20_controller|earth_hour_out[0]               ; |g20_controller|earth_hour_out[0]               ; pin_out          ;
+; |g20_controller|earth_hour_out[1]               ; |g20_controller|earth_hour_out[1]               ; pin_out          ;
+; |g20_controller|earth_hour_out[2]               ; |g20_controller|earth_hour_out[2]               ; pin_out          ;
+; |g20_controller|earth_hour_out[3]               ; |g20_controller|earth_hour_out[3]               ; pin_out          ;
+; |g20_controller|earth_hour_out[4]               ; |g20_controller|earth_hour_out[4]               ; pin_out          ;
+; |g20_controller|earth_min_out[0]                ; |g20_controller|earth_min_out[0]                ; pin_out          ;
+; |g20_controller|earth_min_out[1]                ; |g20_controller|earth_min_out[1]                ; pin_out          ;
+; |g20_controller|earth_min_out[2]                ; |g20_controller|earth_min_out[2]                ; pin_out          ;
+; |g20_controller|earth_min_out[3]                ; |g20_controller|earth_min_out[3]                ; pin_out          ;
+; |g20_controller|earth_min_out[4]                ; |g20_controller|earth_min_out[4]                ; pin_out          ;
+; |g20_controller|earth_min_out[5]                ; |g20_controller|earth_min_out[5]                ; pin_out          ;
+; |g20_controller|earth_sec_out[0]                ; |g20_controller|earth_sec_out[0]                ; pin_out          ;
+; |g20_controller|earth_sec_out[1]                ; |g20_controller|earth_sec_out[1]                ; pin_out          ;
+; |g20_controller|earth_sec_out[2]                ; |g20_controller|earth_sec_out[2]                ; pin_out          ;
+; |g20_controller|earth_sec_out[3]                ; |g20_controller|earth_sec_out[3]                ; pin_out          ;
+; |g20_controller|earth_sec_out[4]                ; |g20_controller|earth_sec_out[4]                ; pin_out          ;
+; |g20_controller|earth_sec_out[5]                ; |g20_controller|earth_sec_out[5]                ; pin_out          ;
+; |g20_controller|earth_dst_out                   ; |g20_controller|earth_dst_out                   ; pin_out          ;
+; |g20_controller|earth_tz_out[0]                 ; |g20_controller|earth_tz_out[0]                 ; pin_out          ;
+; |g20_controller|earth_tz_out[1]                 ; |g20_controller|earth_tz_out[1]                 ; pin_out          ;
+; |g20_controller|earth_tz_out[2]                 ; |g20_controller|earth_tz_out[2]                 ; pin_out          ;
+; |g20_controller|earth_tz_out[3]                 ; |g20_controller|earth_tz_out[3]                 ; pin_out          ;
+; |g20_controller|earth_tz_out[4]                 ; |g20_controller|earth_tz_out[4]                 ; pin_out          ;
+; |g20_controller|mars_tz_out[0]                  ; |g20_controller|mars_tz_out[0]                  ; pin_out          ;
+; |g20_controller|mars_tz_out[1]                  ; |g20_controller|mars_tz_out[1]                  ; pin_out          ;
+; |g20_controller|mars_tz_out[2]                  ; |g20_controller|mars_tz_out[2]                  ; pin_out          ;
+; |g20_controller|mars_tz_out[3]                  ; |g20_controller|mars_tz_out[3]                  ; pin_out          ;
+; |g20_controller|mars_tz_out[4]                  ; |g20_controller|mars_tz_out[4]                  ; pin_out          ;
+; |g20_controller|WideOr1~0                       ; |g20_controller|WideOr1~0                       ; out0             ;
+; |g20_controller|present_state.etztemp~0         ; |g20_controller|present_state.etztemp~0         ; out0             ;
+; |g20_controller|Selector0~2                     ; |g20_controller|Selector0~2                     ; out0             ;
+; |g20_controller|WideOr1~1                       ; |g20_controller|WideOr1~1                       ; out0             ;
+; |g20_controller|present_state.mtztemp~0         ; |g20_controller|present_state.mtztemp~0         ; out0             ;
+; |g20_controller|Selector0~3                     ; |g20_controller|Selector0~3                     ; out0             ;
+; |g20_controller|WideOr1~17                      ; |g20_controller|WideOr1~17                      ; out0             ;
+; |g20_controller|present_state.msynctemp~0       ; |g20_controller|present_state.msynctemp~0       ; out0             ;
+; |g20_controller|WideOr1~18                      ; |g20_controller|WideOr1~18                      ; out0             ;
+; |g20_controller|present_state.load_earth_time~0 ; |g20_controller|present_state.load_earth_time~0 ; out0             ;
+; |g20_controller|WideOr1~19                      ; |g20_controller|WideOr1~19                      ; out0             ;
+; |g20_controller|WideOr1~20                      ; |g20_controller|WideOr1~20                      ; out0             ;
+; |g20_controller|WideOr0~1                       ; |g20_controller|WideOr0~1                       ; out0             ;
+; |g20_controller|present_state.set_mars_time~0   ; |g20_controller|present_state.set_mars_time~0   ; out0             ;
+; |g20_controller|next_state.reset_sync_module    ; |g20_controller|next_state.reset_sync_module    ; out0             ;
+; |g20_controller|Selector0~5                     ; |g20_controller|Selector0~5                     ; out0             ;
+; |g20_controller|Selector0~6                     ; |g20_controller|Selector0~6                     ; out0             ;
+; |g20_controller|Selector1~0                     ; |g20_controller|Selector1~0                     ; out0             ;
+; |g20_controller|Selector1~1                     ; |g20_controller|Selector1~1                     ; out0             ;
+; |g20_controller|Selector1~2                     ; |g20_controller|Selector1~2                     ; out0             ;
+; |g20_controller|Selector2~0                     ; |g20_controller|Selector2~0                     ; out0             ;
+; |g20_controller|Selector2~1                     ; |g20_controller|Selector2~1                     ; out0             ;
+; |g20_controller|Selector2~2                     ; |g20_controller|Selector2~2                     ; out0             ;
+; |g20_controller|Selector10~0                    ; |g20_controller|Selector10~0                    ; out0             ;
+; |g20_controller|Selector10~1                    ; |g20_controller|Selector10~1                    ; out0             ;
+; |g20_controller|Selector10~2                    ; |g20_controller|Selector10~2                    ; out0             ;
+; |g20_controller|Selector11~0                    ; |g20_controller|Selector11~0                    ; out0             ;
+; |g20_controller|Selector11~1                    ; |g20_controller|Selector11~1                    ; out0             ;
+; |g20_controller|Add0~0                          ; |g20_controller|Add0~0                          ; out0             ;
+; |g20_controller|Add0~1                          ; |g20_controller|Add0~1                          ; out0             ;
+; |g20_controller|Add0~2                          ; |g20_controller|Add0~2                          ; out0             ;
+; |g20_controller|Add0~3                          ; |g20_controller|Add0~3                          ; out0             ;
+; |g20_controller|Add0~4                          ; |g20_controller|Add0~4                          ; out0             ;
+; |g20_controller|Equal0~0                        ; |g20_controller|Equal0~0                        ; out0             ;
+; |g20_controller|Equal1~0                        ; |g20_controller|Equal1~0                        ; out0             ;
+; |g20_controller|Equal3~0                        ; |g20_controller|Equal3~0                        ; out0             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; Node Name                                       ; Output Port Name                                ; Output Port Type ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; |g20_controller|next_state~1                    ; |g20_controller|next_state~1                    ; out              ;
+; |g20_controller|next_state~3                    ; |g20_controller|next_state~3                    ; out              ;
+; |g20_controller|next_state~4                    ; |g20_controller|next_state~4                    ; out              ;
+; |g20_controller|next_state~6                    ; |g20_controller|next_state~6                    ; out              ;
+; |g20_controller|next_state~7                    ; |g20_controller|next_state~7                    ; out              ;
+; |g20_controller|next_state~8                    ; |g20_controller|next_state~8                    ; out              ;
+; |g20_controller|next_state~10                   ; |g20_controller|next_state~10                   ; out              ;
+; |g20_controller|next_state~11                   ; |g20_controller|next_state~11                   ; out              ;
+; |g20_controller|next_state~13                   ; |g20_controller|next_state~13                   ; out              ;
+; |g20_controller|next_state~15                   ; |g20_controller|next_state~15                   ; out0             ;
+; |g20_controller|next_state.etztemp              ; |g20_controller|next_state.etztemp              ; out              ;
+; |g20_controller|next_state~16                   ; |g20_controller|next_state~16                   ; out0             ;
+; |g20_controller|next_state.mtztemp              ; |g20_controller|next_state.mtztemp              ; out              ;
+; |g20_controller|next_state~24                   ; |g20_controller|next_state~24                   ; out0             ;
+; |g20_controller|next_state.msynctemp            ; |g20_controller|next_state.msynctemp            ; out              ;
+; |g20_controller|next_state.load_earth_time      ; |g20_controller|next_state.load_earth_time      ; out              ;
+; |g20_controller|next_state.set_mars_time        ; |g20_controller|next_state.set_mars_time        ; out              ;
+; |g20_controller|present_state.set_earth_tz      ; |g20_controller|present_state.set_earth_tz      ; regout           ;
+; |g20_controller|present_state.etztemp           ; |g20_controller|present_state.etztemp           ; regout           ;
+; |g20_controller|present_state.set_mars_tz       ; |g20_controller|present_state.set_mars_tz       ; regout           ;
+; |g20_controller|present_state.mtztemp           ; |g20_controller|present_state.mtztemp           ; regout           ;
+; |g20_controller|present_state.begin_mars_sync   ; |g20_controller|present_state.begin_mars_sync   ; regout           ;
+; |g20_controller|present_state.msynctemp         ; |g20_controller|present_state.msynctemp         ; regout           ;
+; |g20_controller|present_state.load_earth_time   ; |g20_controller|present_state.load_earth_time   ; regout           ;
+; |g20_controller|present_state.start_sync        ; |g20_controller|present_state.start_sync        ; regout           ;
+; |g20_controller|present_state.reset_sync_module ; |g20_controller|present_state.reset_sync_module ; regout           ;
+; |g20_controller|earth_dst_i                     ; |g20_controller|earth_dst_i                     ; regout           ;
+; |g20_controller|present_state.set_mars_time     ; |g20_controller|present_state.set_mars_time     ; regout           ;
+; |g20_controller|earth_day_i[4]                  ; |g20_controller|earth_day_i[4]                  ; regout           ;
+; |g20_controller|earth_day_i[3]                  ; |g20_controller|earth_day_i[3]                  ; regout           ;
+; |g20_controller|earth_day_i[2]                  ; |g20_controller|earth_day_i[2]                  ; regout           ;
+; |g20_controller|earth_day_i[1]                  ; |g20_controller|earth_day_i[1]                  ; regout           ;
+; |g20_controller|earth_day_i[0]                  ; |g20_controller|earth_day_i[0]                  ; regout           ;
+; |g20_controller|earth_month_i[3]                ; |g20_controller|earth_month_i[3]                ; regout           ;
+; |g20_controller|earth_month_i[2]                ; |g20_controller|earth_month_i[2]                ; regout           ;
+; |g20_controller|earth_month_i[1]                ; |g20_controller|earth_month_i[1]                ; regout           ;
+; |g20_controller|earth_month_i[0]                ; |g20_controller|earth_month_i[0]                ; regout           ;
+; |g20_controller|earth_year_i[11]                ; |g20_controller|earth_year_i[11]                ; regout           ;
+; |g20_controller|earth_year_i[5]                 ; |g20_controller|earth_year_i[5]                 ; regout           ;
+; |g20_controller|earth_year_i[3]                 ; |g20_controller|earth_year_i[3]                 ; regout           ;
+; |g20_controller|earth_year_i[2]                 ; |g20_controller|earth_year_i[2]                 ; regout           ;
+; |g20_controller|earth_year_i[1]                 ; |g20_controller|earth_year_i[1]                 ; regout           ;
+; |g20_controller|earth_year_i[0]                 ; |g20_controller|earth_year_i[0]                 ; regout           ;
+; |g20_controller|earth_hour_i[4]                 ; |g20_controller|earth_hour_i[4]                 ; regout           ;
+; |g20_controller|earth_hour_i[3]                 ; |g20_controller|earth_hour_i[3]                 ; regout           ;
+; |g20_controller|earth_hour_i[2]                 ; |g20_controller|earth_hour_i[2]                 ; regout           ;
+; |g20_controller|earth_hour_i[1]                 ; |g20_controller|earth_hour_i[1]                 ; regout           ;
+; |g20_controller|earth_hour_i[0]                 ; |g20_controller|earth_hour_i[0]                 ; regout           ;
+; |g20_controller|earth_min_i[5]                  ; |g20_controller|earth_min_i[5]                  ; regout           ;
+; |g20_controller|earth_min_i[4]                  ; |g20_controller|earth_min_i[4]                  ; regout           ;
+; |g20_controller|earth_min_i[3]                  ; |g20_controller|earth_min_i[3]                  ; regout           ;
+; |g20_controller|earth_min_i[2]                  ; |g20_controller|earth_min_i[2]                  ; regout           ;
+; |g20_controller|earth_min_i[1]                  ; |g20_controller|earth_min_i[1]                  ; regout           ;
+; |g20_controller|earth_min_i[0]                  ; |g20_controller|earth_min_i[0]                  ; regout           ;
+; |g20_controller|earth_sec_i[5]                  ; |g20_controller|earth_sec_i[5]                  ; regout           ;
+; |g20_controller|earth_sec_i[4]                  ; |g20_controller|earth_sec_i[4]                  ; regout           ;
+; |g20_controller|earth_sec_i[3]                  ; |g20_controller|earth_sec_i[3]                  ; regout           ;
+; |g20_controller|earth_sec_i[2]                  ; |g20_controller|earth_sec_i[2]                  ; regout           ;
+; |g20_controller|earth_sec_i[1]                  ; |g20_controller|earth_sec_i[1]                  ; regout           ;
+; |g20_controller|earth_sec_i[0]                  ; |g20_controller|earth_sec_i[0]                  ; regout           ;
+; |g20_controller|earth_tz_i[4]                   ; |g20_controller|earth_tz_i[4]                   ; regout           ;
+; |g20_controller|earth_tz_i[3]                   ; |g20_controller|earth_tz_i[3]                   ; regout           ;
+; |g20_controller|earth_tz_i[2]                   ; |g20_controller|earth_tz_i[2]                   ; regout           ;
+; |g20_controller|earth_tz_i[1]                   ; |g20_controller|earth_tz_i[1]                   ; regout           ;
+; |g20_controller|earth_tz_i[0]                   ; |g20_controller|earth_tz_i[0]                   ; regout           ;
+; |g20_controller|mars_tz_i[4]                    ; |g20_controller|mars_tz_i[4]                    ; regout           ;
+; |g20_controller|mars_tz_i[3]                    ; |g20_controller|mars_tz_i[3]                    ; regout           ;
+; |g20_controller|mars_tz_i[2]                    ; |g20_controller|mars_tz_i[2]                    ; regout           ;
+; |g20_controller|mars_tz_i[1]                    ; |g20_controller|mars_tz_i[1]                    ; regout           ;
+; |g20_controller|mars_tz_i[0]                    ; |g20_controller|mars_tz_i[0]                    ; regout           ;
+; |g20_controller|switches[0]                     ; |g20_controller|switches[0]                     ; out              ;
+; |g20_controller|switches[1]                     ; |g20_controller|switches[1]                     ; out              ;
+; |g20_controller|switches[2]                     ; |g20_controller|switches[2]                     ; out              ;
+; |g20_controller|switches[3]                     ; |g20_controller|switches[3]                     ; out              ;
+; |g20_controller|switches[4]                     ; |g20_controller|switches[4]                     ; out              ;
+; |g20_controller|switches[5]                     ; |g20_controller|switches[5]                     ; out              ;
+; |g20_controller|switches[6]                     ; |g20_controller|switches[6]                     ; out              ;
+; |g20_controller|switches[7]                     ; |g20_controller|switches[7]                     ; out              ;
+; |g20_controller|switches[8]                     ; |g20_controller|switches[8]                     ; out              ;
+; |g20_controller|switches[9]                     ; |g20_controller|switches[9]                     ; out              ;
+; |g20_controller|sync_done                       ; |g20_controller|sync_done                       ; out              ;
+; |g20_controller|mars_hms_load_en                ; |g20_controller|mars_hms_load_en                ; pin_out          ;
+; |g20_controller|sync_time_en                    ; |g20_controller|sync_time_en                    ; pin_out          ;
+; |g20_controller|earth_year_out[0]               ; |g20_controller|earth_year_out[0]               ; pin_out          ;
+; |g20_controller|earth_year_out[1]               ; |g20_controller|earth_year_out[1]               ; pin_out          ;
+; |g20_controller|earth_year_out[2]               ; |g20_controller|earth_year_out[2]               ; pin_out          ;
+; |g20_controller|earth_year_out[3]               ; |g20_controller|earth_year_out[3]               ; pin_out          ;
+; |g20_controller|earth_year_out[5]               ; |g20_controller|earth_year_out[5]               ; pin_out          ;
+; |g20_controller|earth_year_out[11]              ; |g20_controller|earth_year_out[11]              ; pin_out          ;
+; |g20_controller|earth_month_out[0]              ; |g20_controller|earth_month_out[0]              ; pin_out          ;
+; |g20_controller|earth_month_out[1]              ; |g20_controller|earth_month_out[1]              ; pin_out          ;
+; |g20_controller|earth_month_out[2]              ; |g20_controller|earth_month_out[2]              ; pin_out          ;
+; |g20_controller|earth_month_out[3]              ; |g20_controller|earth_month_out[3]              ; pin_out          ;
+; |g20_controller|earth_day_out[0]                ; |g20_controller|earth_day_out[0]                ; pin_out          ;
+; |g20_controller|earth_day_out[1]                ; |g20_controller|earth_day_out[1]                ; pin_out          ;
+; |g20_controller|earth_day_out[2]                ; |g20_controller|earth_day_out[2]                ; pin_out          ;
+; |g20_controller|earth_day_out[3]                ; |g20_controller|earth_day_out[3]                ; pin_out          ;
+; |g20_controller|earth_day_out[4]                ; |g20_controller|earth_day_out[4]                ; pin_out          ;
+; |g20_controller|earth_hour_out[0]               ; |g20_controller|earth_hour_out[0]               ; pin_out          ;
+; |g20_controller|earth_hour_out[1]               ; |g20_controller|earth_hour_out[1]               ; pin_out          ;
+; |g20_controller|earth_hour_out[2]               ; |g20_controller|earth_hour_out[2]               ; pin_out          ;
+; |g20_controller|earth_hour_out[3]               ; |g20_controller|earth_hour_out[3]               ; pin_out          ;
+; |g20_controller|earth_hour_out[4]               ; |g20_controller|earth_hour_out[4]               ; pin_out          ;
+; |g20_controller|earth_min_out[0]                ; |g20_controller|earth_min_out[0]                ; pin_out          ;
+; |g20_controller|earth_min_out[1]                ; |g20_controller|earth_min_out[1]                ; pin_out          ;
+; |g20_controller|earth_min_out[2]                ; |g20_controller|earth_min_out[2]                ; pin_out          ;
+; |g20_controller|earth_min_out[3]                ; |g20_controller|earth_min_out[3]                ; pin_out          ;
+; |g20_controller|earth_min_out[4]                ; |g20_controller|earth_min_out[4]                ; pin_out          ;
+; |g20_controller|earth_min_out[5]                ; |g20_controller|earth_min_out[5]                ; pin_out          ;
+; |g20_controller|earth_sec_out[0]                ; |g20_controller|earth_sec_out[0]                ; pin_out          ;
+; |g20_controller|earth_sec_out[1]                ; |g20_controller|earth_sec_out[1]                ; pin_out          ;
+; |g20_controller|earth_sec_out[2]                ; |g20_controller|earth_sec_out[2]                ; pin_out          ;
+; |g20_controller|earth_sec_out[3]                ; |g20_controller|earth_sec_out[3]                ; pin_out          ;
+; |g20_controller|earth_sec_out[4]                ; |g20_controller|earth_sec_out[4]                ; pin_out          ;
+; |g20_controller|earth_sec_out[5]                ; |g20_controller|earth_sec_out[5]                ; pin_out          ;
+; |g20_controller|earth_dst_out                   ; |g20_controller|earth_dst_out                   ; pin_out          ;
+; |g20_controller|earth_tz_out[0]                 ; |g20_controller|earth_tz_out[0]                 ; pin_out          ;
+; |g20_controller|earth_tz_out[1]                 ; |g20_controller|earth_tz_out[1]                 ; pin_out          ;
+; |g20_controller|earth_tz_out[2]                 ; |g20_controller|earth_tz_out[2]                 ; pin_out          ;
+; |g20_controller|earth_tz_out[3]                 ; |g20_controller|earth_tz_out[3]                 ; pin_out          ;
+; |g20_controller|earth_tz_out[4]                 ; |g20_controller|earth_tz_out[4]                 ; pin_out          ;
+; |g20_controller|mars_tz_out[0]                  ; |g20_controller|mars_tz_out[0]                  ; pin_out          ;
+; |g20_controller|mars_tz_out[1]                  ; |g20_controller|mars_tz_out[1]                  ; pin_out          ;
+; |g20_controller|mars_tz_out[2]                  ; |g20_controller|mars_tz_out[2]                  ; pin_out          ;
+; |g20_controller|mars_tz_out[3]                  ; |g20_controller|mars_tz_out[3]                  ; pin_out          ;
+; |g20_controller|mars_tz_out[4]                  ; |g20_controller|mars_tz_out[4]                  ; pin_out          ;
+; |g20_controller|WideOr1~0                       ; |g20_controller|WideOr1~0                       ; out0             ;
+; |g20_controller|present_state.etztemp~0         ; |g20_controller|present_state.etztemp~0         ; out0             ;
+; |g20_controller|Selector0~2                     ; |g20_controller|Selector0~2                     ; out0             ;
+; |g20_controller|WideOr1~1                       ; |g20_controller|WideOr1~1                       ; out0             ;
+; |g20_controller|present_state.mtztemp~0         ; |g20_controller|present_state.mtztemp~0         ; out0             ;
+; |g20_controller|Selector0~3                     ; |g20_controller|Selector0~3                     ; out0             ;
+; |g20_controller|WideOr1~17                      ; |g20_controller|WideOr1~17                      ; out0             ;
+; |g20_controller|present_state.msynctemp~0       ; |g20_controller|present_state.msynctemp~0       ; out0             ;
+; |g20_controller|WideOr1~18                      ; |g20_controller|WideOr1~18                      ; out0             ;
+; |g20_controller|present_state.load_earth_time~0 ; |g20_controller|present_state.load_earth_time~0 ; out0             ;
+; |g20_controller|WideOr1~19                      ; |g20_controller|WideOr1~19                      ; out0             ;
+; |g20_controller|WideOr1~20                      ; |g20_controller|WideOr1~20                      ; out0             ;
+; |g20_controller|WideOr0~1                       ; |g20_controller|WideOr0~1                       ; out0             ;
+; |g20_controller|present_state.set_mars_time~0   ; |g20_controller|present_state.set_mars_time~0   ; out0             ;
+; |g20_controller|next_state.reset_sync_module    ; |g20_controller|next_state.reset_sync_module    ; out0             ;
+; |g20_controller|Selector0~5                     ; |g20_controller|Selector0~5                     ; out0             ;
+; |g20_controller|Selector0~6                     ; |g20_controller|Selector0~6                     ; out0             ;
+; |g20_controller|Selector1~0                     ; |g20_controller|Selector1~0                     ; out0             ;
+; |g20_controller|Selector1~1                     ; |g20_controller|Selector1~1                     ; out0             ;
+; |g20_controller|Selector1~2                     ; |g20_controller|Selector1~2                     ; out0             ;
+; |g20_controller|Selector2~0                     ; |g20_controller|Selector2~0                     ; out0             ;
+; |g20_controller|Selector2~1                     ; |g20_controller|Selector2~1                     ; out0             ;
+; |g20_controller|Selector2~2                     ; |g20_controller|Selector2~2                     ; out0             ;
+; |g20_controller|Selector10~0                    ; |g20_controller|Selector10~0                    ; out0             ;
+; |g20_controller|Selector10~1                    ; |g20_controller|Selector10~1                    ; out0             ;
+; |g20_controller|Selector10~2                    ; |g20_controller|Selector10~2                    ; out0             ;
+; |g20_controller|Selector11~0                    ; |g20_controller|Selector11~0                    ; out0             ;
+; |g20_controller|Selector11~1                    ; |g20_controller|Selector11~1                    ; out0             ;
+; |g20_controller|Add0~0                          ; |g20_controller|Add0~0                          ; out0             ;
+; |g20_controller|Add0~1                          ; |g20_controller|Add0~1                          ; out0             ;
+; |g20_controller|Add0~2                          ; |g20_controller|Add0~2                          ; out0             ;
+; |g20_controller|Add0~3                          ; |g20_controller|Add0~3                          ; out0             ;
+; |g20_controller|Add0~4                          ; |g20_controller|Add0~4                          ; out0             ;
+; |g20_controller|Equal0~0                        ; |g20_controller|Equal0~0                        ; out0             ;
+; |g20_controller|Equal1~0                        ; |g20_controller|Equal1~0                        ; out0             ;
+; |g20_controller|Equal2~0                        ; |g20_controller|Equal2~0                        ; out0             ;
+; |g20_controller|Equal3~0                        ; |g20_controller|Equal3~0                        ; out0             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Mon Apr 14 03:19:37 2014
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off g20_lab5 -c g20_lab5
+Info: Using vector source file "C:/altera/91sp2/quartus/g20_LAB_5/state_transition.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of state_transition.vwf called g20_lab5.sim_ori.vwf has been created in the db folder
+Warning: Can't find node "dst_out" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex0[0]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex0[1]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex0[2]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex0[3]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex0[4]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex0[5]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex0[6]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex1[0]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex1[1]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex1[2]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex1[3]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex1[4]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex1[5]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex1[6]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex2[0]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex2[1]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex2[2]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex2[3]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex2[4]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex2[5]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex2[6]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex3[0]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex3[1]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex3[2]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex3[3]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex3[4]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex3[5]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "hex3[6]" for functional simulation. Ignored vector source file node.
+Warning: Can't find signal in vector source file for input pin "|g20_controller|sync_done"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      40.29 %
+Info: Number of transitions in simulation is 1121
+Info: Vector file state_transition.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 176 megabytes
+    Info: Processing ended: Mon Apr 14 03:19:40 2014
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,12 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,g20_UTC_to_MTC:utc_to_mtc|lpm_mult:mult2|mult_asp:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,g20_UTC_to_MTC:utc_to_mtc|lpm_mult:mult1|mult_8sp:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,g20_UTC_to_MTC:utc_to_mtc|lpm_mult:mult3|mult_asp:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,g20_UTC_to_MTC:utc_to_mtc|lpm_mult:mult0|mult_1up:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,g20_UTC_to_MTC:utc_to_mtc|lpm_mult:mult0|mult_1up:auto_generated|mac_out6,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,g20_UTC_to_MTC:utc_to_mtc|lpm_mult:mult0|mult_1up:auto_generated|mac_out4,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,g20_UTC_to_MTC:utc_to_mtc|lpm_mult:mult0|mult_1up:auto_generated|mac_out12,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,g20_UTC_to_MTC:utc_to_mtc|lpm_mult:mult0|mult_1up:auto_generated|mac_out10,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,g20_UTC_to_MTC:utc_to_mtc|lpm_mult:mult0|mult_1up:auto_generated|mac_out8,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,g20_UTC_to_MTC:utc_to_mtc|lpm_mult:mult0|mult_1up:auto_generated|mac_mult11,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,g20_UTC_to_MTC:utc_to_mtc|lpm_mult:mult0|mult_1up:auto_generated|mac_mult9,
